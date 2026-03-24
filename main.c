@@ -1,0 +1,246 @@
+//*****************************************************************************
+// source:  main.c
+// author:  LL
+// created: 03/2024
+// project: graphicKit ver1 graphic display DOGM128 controll - example
+//*****************************************************************************
+#include <xc.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "config.h"
+#include "mcu.h"
+#include "moduleDogm128.h"
+
+
+void setInterrupt(void);
+void setPinout(void);
+void clearLeds(void);
+void setTimer0(void);
+void setTimer2(void);
+uint8_t switches = 0;
+
+void hadleSwitches(void);
+void drawUi(void);
+
+char* utoa32(uint32_t value, char* buffer);
+
+char DispCtrStr[5] = "asdd";
+int cnt = 0;
+volatile uint32_t millis = 0;
+
+
+void handleSwitches(void){
+    if (!PORTBbits.RB5){
+        switches |= (1 << 0);
+    } else {
+        switches &= ~(1 << 0);
+    }
+    if (!PORTBbits.RB4){
+        switches |= (1 << 1);
+    } else {
+        switches &= ~(1 << 1);
+    }
+    if (!PORTBbits.RB3){
+        switches |= (1 << 2);
+    } else {
+        switches &= ~(1 << 2);
+    }
+    if (!PORTBbits.RB0){
+        switches |= (1 << 3);
+    } else {
+        switches &= ~(1 << 3);
+    }
+}
+
+void drawUi(){
+    if (switches & 0x01){
+        drawRect(2, 60, 28, 4);
+        fillRect(3, 61, 26, 2, 1);
+    } else {
+        drawRect(2, 60, 28, 4);
+        fillRect(3, 61, 26, 2, 0);
+    }
+    
+    if (switches & 0x02){
+        drawRect(34, 60, 28, 4);
+        fillRect(35, 61, 26, 2, 1);
+    } else {
+        drawRect(34, 60, 28, 4);
+        fillRect(35, 61, 26, 2, 0);
+    }
+    
+    if (switches & 0x04){
+        drawRect(66, 60, 28, 4);
+        fillRect(67, 61, 26, 2, 1);
+    } else {
+        drawRect(66, 60, 28, 4);
+        fillRect(67, 61, 26, 2, 0);
+    }
+    
+    if (switches & 0x08){
+        drawRect(98, 60, 28, 4);
+        fillRect(99, 61, 26, 2, 1);
+    } else {
+        drawRect(98, 60, 28, 4);
+        fillRect(99, 61, 26, 2, 0);
+    }
+    utoa32(switches, DispCtrStr);
+    drawText(0,0, DispCtrStr);
+}
+
+
+void main() 
+{
+    setPinout();
+    clearLeds();
+    setTimer0();
+    setTimer2();
+    
+    initDisplay();
+    setInterrupt();
+    
+    
+    clearBuffer();
+    
+    //handleSwitches();
+
+    //drawLine(0, 0, 127, 63);
+    //drawRect(10, 10, 50, 30);
+    //fillRect(70, 20, 30, 20);
+
+    //updateDisplay();
+    
+    //fillChessBoardDisplay();
+    //writeTextToDisplay(0,0, DispCtrStr);
+    //writeTextToDisplay(0,0, DispCtrStr);
+    /*writeTextToDisplay(1,0, "technicke v Brne");
+    writeTextToDisplay(2,0, "nejoblibenejsi");
+    writeTextToDisplay(3,0, "predmet je");
+    writeTextToDisplay(4,0, "MPC-NEN");
+    writeTextToDisplay(5,10, "pokus");
+    writeTextToDisplay(6,20, "&&& example ###");
+    writeTextToDisplay(7,20, "!!! do toho $$$ ");*/
+    
+    while(1)
+    {
+        if ( (uint32_t) millis%2 == 0){
+            handleSwitches();
+        }
+        if ( (uint32_t) millis%50 == 0){
+            drawUi();
+            updateDisplay();
+            //clearBuffer();
+            //sprintf(DispCtrStr, "%u", (uint32_t)millis / 100);
+            
+            //LED2_TOGGLE;
+        }
+        
+        
+        
+        
+        
+    }
+}
+
+//*****************************************************************************
+// interrupt
+void __interrupt() isr(void)
+{
+    // of Timer 0
+    if(TMR0IF && TMR0IE)
+    {
+        
+        TMR0IF = 0;
+    }
+    // of Timer 2
+    if(TMR2IF && TMR2IE)
+    {
+       
+       (uint32_t) millis++;
+        TMR2IF = 0;
+    }
+    // other interrupts...    
+}
+
+//*****************************************************************************
+// global + peripherial interrupt
+void setInterrupt(void)
+{
+    INTCONbits.PEIE = 1;    // enable peripheries
+    INTCONbits.GIE = 1;     // enable globale interrupt
+}
+
+//*****************************************************************************
+// pinout of MCU for GRAPHIC KIT 1
+void setPinout(void)
+{
+    TRISA = 0;      //
+    TRISB = 0x3D;   // RB0,2,3,4,5 are buttons (inputs) other outputs
+    TRISC = 0;      //
+    TRISD = 0;      //
+    TRISE = 0;      //
+}
+
+//*****************************************************************************
+//
+void clearLeds(void)
+{
+    LED1_OFF;
+    LED2_OFF;
+    LED3_OFF;
+    LED4_OFF;
+    LED5_OFF;
+}
+
+//*****************************************************************************
+// set and open the timer 0
+void setTimer0(void)
+{
+    T0CON = 0xC3;           // ON, 8bit timer, fosc/4, prescaler, 1:16
+    TMR0 = 0;               //
+    INTCONbits.TMR0IF = 0;  // TMR0 flag is cleared
+    INTCONbits.TMR0IE = 1;  // TMR0 interuupt is disabled
+}
+
+//*****************************************************************************
+// set and open the timer 2 source fosc/4
+void setTimer2(void)                        //millis timer, do not touch
+{
+    T2CON = 0x1F;           // ON, Prescaler 1:16, Postscaler 1:1
+    PR2 = 187;              //
+    PIR1bits.TMR2IF = 0;    //
+    PIE1bits.TMR2IE = 1;    //
+}
+
+char* utoa32(uint32_t value, char* buffer)
+{
+    char temp[10]; // max 10 digits for uint32_t
+    int i = 0;
+
+    // Handle 0 explicitly
+    if (value == 0)
+    {
+        buffer[0] = '0';
+        buffer[1] = '\0';
+        return buffer;
+    }
+
+    // Convert to reversed string
+    while (value > 0)
+    {
+        temp[i++] = (value % 10) + '0';
+        value /= 10;
+    }
+
+    // Reverse into buffer
+    int j = 0;
+    while (i > 0)
+    {
+        buffer[j++] = temp[--i];
+    }
+
+    buffer[j] = '\0';
+
+    return buffer;
+}
+
