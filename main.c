@@ -90,7 +90,16 @@ struct tile* tileInit(uint32_t start, uint16_t len){
 void drawColl(uint8_t x, struct tile activeCol[]){
     for(uint8_t i=0; i<10; i++){
         if(activeCol[i].len){
-            drawRect(x, (uint8_t)((activeCol[i].start + millis))/100, 28, (uint8_t)activeCol[i].len/100 );
+            int16_t y = (millis - activeCol[i].start) / 100;
+            uint8_t height = activeCol[i].len / 100;
+
+            // draw only if visible on screen
+            if (y < 64 && (y + height) > 0){
+                drawRect(x, y, 26, height);
+            }
+            // debug text
+            utoa32(y, DispCtrStr);
+            drawText(i, 0, DispCtrStr);
         }
     }
 }
@@ -129,10 +138,10 @@ void drawUi(){
         fillRect(99, 61, 26, 2, 0);
     }
     
-    drawColl(2, Col1);
+    drawColl(3, Col1);
     drawColl(34, Col2);
-    drawColl(66, Col3);
-    drawColl(98, Col4);
+    drawColl(67, Col3);
+    drawColl(99, Col4);
     
     
     //utoa32(switches, DispCtrStr);
@@ -153,7 +162,9 @@ void main()
     
     
     clearBuffer();
-    Col1[0] = *tileInit(1000, 1000);
+    Col4[0] = *tileInit(1000, 500);
+    Col4[1] = *tileInit(2000, 100);
+    Col4[2] = *tileInit(3000, 700);
     
     //handleSwitches();
 
@@ -179,9 +190,10 @@ void main()
         if ( (uint32_t) millis%2 == 0){
             handleSwitches();
         }
-        if ( (uint32_t) millis%50 == 0){
+        if ( (uint32_t) millis%100 == 0){
             drawUi();
             updateDisplay();
+            clearBuffer();
             //clearBuffer();
             //sprintf(DispCtrStr, "%u", (uint32_t)millis / 100);
             

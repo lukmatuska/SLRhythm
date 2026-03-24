@@ -1,4 +1,4 @@
-# 1 "moduleDogm128.c"
+# 1 "spi.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "moduleDogm128.c" 2
+# 1 "spi.c" 2
+
+
 
 
 
@@ -5729,10 +5731,6 @@ __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer suppor
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\errata.h" 1 3
 # 28 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\\pic\\include\\pic18.h" 2 3
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\trace18.h" 1 3
-# 31 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\\pic\\include\\pic18.h" 2 3
 # 156 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\\pic\\include\\pic18.h" 3
 __attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
 __attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
@@ -5741,408 +5739,29 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 2 3
-# 7 "moduleDogm128.c" 2
-
-# 1 "./moduleDogm128.h" 1
-# 23 "./moduleDogm128.h"
-void initDisplay(void);
-void clearAllDisplay(void);
-void clearPageDisplay(unsigned char page);
-void fillChessBoardDisplay(void);
-void writeTextToDisplay(unsigned char page, unsigned char column, char* txt);
-
-void drawText(uint8_t page, uint8_t column, const char* txt);
-void updateDisplay(void);
-void drawPixel(uint8_t x, uint8_t y, uint8_t color);
-void drawLine(int x0, int y0, int x1, int y1);
-void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h);
-void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t color);
-void clearBuffer(void);
-# 8 "moduleDogm128.c" 2
+# 9 "spi.c" 2
 
 # 1 "./spi.h" 1
 # 23 "./spi.h"
 void initSpi(void);
 unsigned char sendByteSpi(unsigned char dat);
-# 9 "moduleDogm128.c" 2
+# 10 "spi.c" 2
 
-# 1 "./fontA.h" 1
-# 13 "./fontA.h"
-const unsigned char font5x7[][5] =
+
+
+void initSpi(void)
 {
- {0x00, 0x00, 0x00, 0x00, 0x00},
- {0x00, 0x00, 0x2f, 0x00, 0x00},
- {0x00, 0x07, 0x00, 0x07, 0x00},
- {0x14, 0x7f, 0x14, 0x7f, 0x14},
- {0x24, 0x2a, 0x7f, 0x2a, 0x12},
- {0x62, 0x64, 0x08, 0x13, 0x23},
- {0x36, 0x49, 0x55, 0x22, 0x50},
- {0x00, 0x05, 0x03, 0x00, 0x00},
- {0x00, 0x1c, 0x22, 0x41, 0x00},
- {0x00, 0x41, 0x22, 0x1c, 0x00},
- {0x14, 0x08, 0x3E, 0x08, 0x14},
- {0x08, 0x08, 0x3E, 0x08, 0x08},
- {0x00, 0x00, 0xA0, 0x60, 0x00},
- {0x08, 0x08, 0x08, 0x08, 0x08},
- {0x00, 0x60, 0x60, 0x00, 0x00},
- {0x20, 0x10, 0x08, 0x04, 0x02},
- {0x3E, 0x51, 0x49, 0x45, 0x3E},
- {0x00, 0x42, 0x7F, 0x40, 0x00},
- {0x42, 0x61, 0x51, 0x49, 0x46},
- {0x21, 0x41, 0x45, 0x4B, 0x31},
- {0x18, 0x14, 0x12, 0x7F, 0x10},
- {0x27, 0x45, 0x45, 0x45, 0x39},
- {0x3C, 0x4A, 0x49, 0x49, 0x30},
- {0x01, 0x71, 0x09, 0x05, 0x03},
- {0x36, 0x49, 0x49, 0x49, 0x36},
- {0x06, 0x49, 0x49, 0x29, 0x1E},
- {0x00, 0x36, 0x36, 0x00, 0x00},
- {0x00, 0x56, 0x36, 0x00, 0x00},
- {0x08, 0x14, 0x22, 0x41, 0x00},
- {0x14, 0x14, 0x14, 0x14, 0x14},
- {0x00, 0x41, 0x22, 0x14, 0x08},
- {0x02, 0x01, 0x51, 0x09, 0x06},
- {0x32, 0x49, 0x59, 0x51, 0x3E},
- {0x7C, 0x12, 0x11, 0x12, 0x7C},
- {0x7F, 0x49, 0x49, 0x49, 0x36},
- {0x3E, 0x41, 0x41, 0x41, 0x22},
- {0x7F, 0x41, 0x41, 0x22, 0x1C},
- {0x7F, 0x49, 0x49, 0x49, 0x41},
- {0x7F, 0x09, 0x09, 0x09, 0x01},
- {0x3E, 0x41, 0x49, 0x49, 0x7A},
- {0x7F, 0x08, 0x08, 0x08, 0x7F},
- {0x00, 0x41, 0x7F, 0x41, 0x00},
- {0x20, 0x40, 0x41, 0x3F, 0x01},
- {0x7F, 0x08, 0x14, 0x22, 0x41},
- {0x7F, 0x40, 0x40, 0x40, 0x40},
- {0x7F, 0x02, 0x0C, 0x02, 0x7F},
- {0x7F, 0x04, 0x08, 0x10, 0x7F},
- {0x3E, 0x41, 0x41, 0x41, 0x3E},
- {0x7F, 0x09, 0x09, 0x09, 0x06},
- {0x3E, 0x41, 0x51, 0x21, 0x5E},
- {0x7F, 0x09, 0x19, 0x29, 0x46},
- {0x46, 0x49, 0x49, 0x49, 0x31},
- {0x01, 0x01, 0x7F, 0x01, 0x01},
- {0x3F, 0x40, 0x40, 0x40, 0x3F},
- {0x1F, 0x20, 0x40, 0x20, 0x1F},
- {0x3F, 0x40, 0x38, 0x40, 0x3F},
- {0x63, 0x14, 0x08, 0x14, 0x63},
- {0x07, 0x08, 0x70, 0x08, 0x07},
- {0x61, 0x51, 0x49, 0x45, 0x43},
- {0x00, 0x7F, 0x41, 0x41, 0x00},
- {0x55, 0x2A, 0x55, 0x2A, 0x55},
- {0x00, 0x41, 0x41, 0x7F, 0x00},
- {0x04, 0x02, 0x01, 0x02, 0x04},
- {0x40, 0x40, 0x40, 0x40, 0x40},
- {0x00, 0x01, 0x02, 0x04, 0x00},
- {0x20, 0x54, 0x54, 0x54, 0x78},
- {0x7F, 0x48, 0x44, 0x44, 0x38},
- {0x38, 0x44, 0x44, 0x44, 0x20},
- {0x38, 0x44, 0x44, 0x48, 0x7F},
- {0x38, 0x54, 0x54, 0x54, 0x18},
- {0x08, 0x7E, 0x09, 0x01, 0x02},
- {0x18, 0xA4, 0xA4, 0xA4, 0x7C},
- {0x7F, 0x08, 0x04, 0x04, 0x78},
- {0x00, 0x44, 0x7D, 0x40, 0x00},
- {0x40, 0x80, 0x84, 0x7D, 0x00},
- {0x7F, 0x10, 0x28, 0x44, 0x00},
- {0x00, 0x41, 0x7F, 0x40, 0x00},
- {0x7C, 0x04, 0x18, 0x04, 0x78},
- {0x7C, 0x08, 0x04, 0x04, 0x78},
- {0x38, 0x44, 0x44, 0x44, 0x38},
- {0xFC, 0x24, 0x24, 0x24, 0x18},
- {0x18, 0x24, 0x24, 0x18, 0xFC},
- {0x7C, 0x08, 0x04, 0x04, 0x08},
- {0x48, 0x54, 0x54, 0x54, 0x20},
- {0x04, 0x3F, 0x44, 0x40, 0x20},
- {0x3C, 0x40, 0x40, 0x20, 0x7C},
- {0x1C, 0x20, 0x40, 0x20, 0x1C},
- {0x3C, 0x40, 0x30, 0x40, 0x3C},
- {0x44, 0x28, 0x10, 0x28, 0x44},
- {0x1C, 0xA0, 0xA0, 0xA0, 0x7C},
- {0x44, 0x64, 0x54, 0x4C, 0x44},
- {0x7F, 0x41, 0x41, 0x41, 0x7F},
-};
-# 10 "moduleDogm128.c" 2
-
-
-
-void sendCommandToDisplay(unsigned char comm);
-void sendDataToDisplay(unsigned char dat);
-void setColumnAddress(unsigned char column);
-void setPageAddress(unsigned char page);
-
-
-static uint8_t displayBuffer[8][128];
-
-
-
-
-void initDisplay(void)
-{
-    initSpi();
-    (LATC |= (1<<2));
-    (LATC |= (1<<1));
-
-
-    sendCommandToDisplay(0x40);
-    sendCommandToDisplay(0xA1);
-    sendCommandToDisplay(0xC0);
-    sendCommandToDisplay(0xA6);
-    sendCommandToDisplay(0xA2);
-    sendCommandToDisplay(0x2F);
-    sendCommandToDisplay(0xF8);
-    sendCommandToDisplay(0x00);
-    sendCommandToDisplay(0x27);
-    sendCommandToDisplay(0x81);
-    sendCommandToDisplay(0x16);
-    sendCommandToDisplay(0xAC);
-    sendCommandToDisplay(0x00);
-    sendCommandToDisplay(0xAF);
-
-    clearAllDisplay();
+    SSPSTAT = 0x00;
+    SSPCON1 = 0x10;
+    SSPCON1bits.SSPEN = 1;
+    PIR1bits.SSPIF = 0;
+    PIE1bits.SSPIE = 0;
 }
 
-
-
-void clearAllDisplay(void)
+unsigned char sendByteSpi(unsigned char dat)
 {
-    unsigned char pg;
-    for(pg=0; pg<8; pg++)
-    {
-        clearPageDisplay(pg);
-    }
-}
-
-
-
-void clearPageDisplay(unsigned char page)
-{
-    int cl;
-    setColumnAddress(0);
-    setPageAddress(page);
-    for(cl=0; cl<128;cl++)
-    {
-        sendDataToDisplay(0x00);
-    }
-}
-
-
-
-void fillChessBoardDisplay(void)
-{
-    unsigned char cl, pg;
-    for(pg=0; pg<8; pg++)
-    {
-        setColumnAddress(0);
-        setPageAddress(pg);
-        for(cl=0; cl<128;cl++)
-        {
-            sendDataToDisplay(0xAA);
-            sendDataToDisplay(0x55);
-        }
-    }
-}
-
-
-
-
-void writeTextToDisplay(unsigned char page, unsigned char column, char* txt)
-{
-    unsigned char c, i, d, x;
-
-
-    setColumnAddress(column);
-    setPageAddress(page);
-
-    for(c=0; c<21; c++)
-    {
-        if(txt[c] == 0)
-            break;
-
-        x = txt[c]-0x20;
-        for(i=0; i<5; i++)
-        {
-            d = font5x7[x][i];
-            sendDataToDisplay(d);
-        }
-        sendDataToDisplay(0x00);
-    }
-}
-
-
-
-
-
-void sendCommandToDisplay(unsigned char comm)
-{
-    (LATD &= ~(1<<0));
-    (LATC &= ~(1<<0));
-    __nop();
-    sendByteSpi(comm);
-    __nop();
-    (LATC |= (1<<0));
-}
-
-
-
-void sendDataToDisplay(unsigned char dat)
-{
-    (LATD |= (1<<0));
-    (LATC &= ~(1<<0));
-    __nop();
-    sendByteSpi(dat);
-    __nop();
-    (LATC |= (1<<0));
-}
-
-
-
-void setColumnAddress(unsigned char column)
-{
-    unsigned char col;
-    if(column > 127)
-    {
-        column = 127;
-    }
-    col = (column & 0x0F) | 0x00;
-    sendCommandToDisplay(col);
-    col = (column >> 4) | 0x10;
-    sendCommandToDisplay(col);
-}
-
-
-
-void setPageAddress(unsigned char page)
-{
-    if(page > 7)
-    {
-        page = 7;
-    }
-    sendCommandToDisplay(0xB0 | page);
-}
-
-void drawText(uint8_t page, uint8_t column, const char* txt)
-{
-    uint8_t c, i, d, x;
-    uint8_t col = column;
-
-    if (page > 7 || column > 127) return;
-
-    for (c = 0; txt[c] != '\0'; c++)
-    {
-        if (col > 122) break;
-
-        x = txt[c] - 0x20;
-
-
-        for (i = 0; i < 5; i++)
-        {
-            d = font5x7[x][i];
-            displayBuffer[page][col++] = d;
-        }
-
-
-        displayBuffer[page][col++] = 0x00;
-    }
-}
-
-void updateDisplay(void)
-{
-    for (uint8_t pg = 0; pg < 8; pg++)
-    {
-        setColumnAddress(0);
-        setPageAddress(pg);
-
-        for (uint8_t col = 0; col < 128; col++)
-        {
-            sendDataToDisplay(displayBuffer[pg][col]);
-        }
-    }
-}
-
-void drawPixel(uint8_t x, uint8_t y, uint8_t color)
-{
-    if (x >= 128 || y >= 64) return;
-
-    uint8_t page = y >> 3;
-    uint8_t bit = y & 0x07;
-
-    if (color)
-        displayBuffer[page][x] |= (1 << bit);
-    else
-        displayBuffer[page][x] &= ~(1 << bit);
-}
-
-void drawLine(int x0, int y0, int x1, int y1)
-{
-    int dx = abs(x1 - x0);
-    int sx = x0 < x1 ? 1 : -1;
-    int dy = -abs(y1 - y0);
-    int sy = y0 < y1 ? 1 : -1;
-    int err = dx + dy;
-
-    while (1)
-    {
-        drawPixel(x0, y0, 1);
-
-        if (x0 == x1 && y0 == y1) break;
-
-        int e2 = 2 * err;
-
-        if (e2 >= dy)
-        {
-            err += dy;
-            x0 += sx;
-        }
-        if (e2 <= dx)
-        {
-            err += dx;
-            y0 += sy;
-        }
-    }
-}
-
-void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h)
-{
-
-    if(x <=128 && y <= 128 && x)
-    for (uint8_t i = 0; i < w; i++)
-    {
-        drawPixel(x + i, y, 1);
-        drawPixel(x + i, y + h - 1, 1);
-    }
-
-
-    for (uint8_t i = 0; i < h; i++)
-    {
-        drawPixel(x, y + i, 1);
-        drawPixel(x + w - 1, y + i, 1);
-    }
-}
-
-void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t color)
-{
-
-    if(h>=2 && w>=2 ){
-        for (uint8_t i = 0; i < h; i++)
-        {
-            for (uint8_t j = 0; j < w; j++)
-            {
-                drawPixel(x + j, y + i, color);
-            }
-        }
-    }
-
-}
-
-void clearBuffer(void)
-{
-    for (uint8_t pg = 0; pg < 8; pg++)
-    {
-        for (uint8_t col = 0; col < 128; col++)
-        {
-            displayBuffer[pg][col] = 0x00;
-        }
-    }
+    SSPBUF = dat;
+    while(!(PIR1bits.SSPIF));
+    PIR1bits.SSPIF = 0;
+    return SSPBUF;
 }

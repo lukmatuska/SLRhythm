@@ -249,6 +249,7 @@ void drawLine(int x0, int y0, int x1, int y1)
 void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h)
 {
     // top & bottom
+    if(x <=128 && y <= 128 && x)
     for (uint8_t i = 0; i < w; i++)
     {
         drawPixel(x + i, y, 1);

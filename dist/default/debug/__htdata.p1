@@ -1,0 +1,25 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"1 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic18\realice\__htdata.c
+[; ;C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic18\realice\__htdata.c: 1: char _IT_ID;
+[v __IT_ID `uc ~T0 @X0 1 e ]
+"2
+[; ;C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic18\realice\__htdata.c: 2: char _IT_DATA;
+[v __IT_DATA `uc ~T0 @X0 1 e ]
+"3
+[; ;C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic18\realice\__htdata.c: 3: char _IT_INT_MASK;
+[v __IT_INT_MASK `uc ~T0 @X0 1 e ]
+"5
+[; ;C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic18\realice\__htdata.c: 5: __persistent volatile char __DCByte;
+[v ___DCByte `VSuc ~T0 @X0 1 e ]
+"6
+[; ;C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic18\realice\__htdata.c: 6: __persistent volatile char __DCDelay;
+[v ___DCDelay `VSuc ~T0 @X0 1 e ]
+"8
+[; ;C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic18\realice\__htdata.c: 8: char _IT_SAVE_BSR;
+[v __IT_SAVE_BSR `uc ~T0 @X0 1 e ]
+"9
+[; ;C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic18\realice\__htdata.c: 9: char _IT_SAVE_WREG;
+[v __IT_SAVE_WREG `uc ~T0 @X0 1 e ]
+"10
+[; ;C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic18\realice\__htdata.c: 10: char _IT_SAVE_STATUS;
+[v __IT_SAVE_STATUS `uc ~T0 @X0 1 e ]

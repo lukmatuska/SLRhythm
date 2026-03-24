@@ -5729,6 +5729,10 @@ __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer suppor
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\errata.h" 1 3
 # 28 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\\pic\\include\\pic18.h" 2 3
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\trace18.h" 1 3
+# 31 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\\pic\\include\\pic18.h" 2 3
 # 156 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\\pic\\include\\pic18.h" 3
 __attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
 __attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
@@ -5979,6 +5983,11 @@ void clearBuffer(void);
 # 12 "main.c" 2
 
 
+struct tile{
+    uint32_t start;
+    uint16_t len;
+};
+
 
 void setInterrupt(void);
 void setPinout(void);
@@ -5990,11 +5999,18 @@ uint8_t switches = 0;
 void hadleSwitches(void);
 void drawUi(void);
 
+struct tile Col1[10];
+struct tile Col2[10];
+struct tile Col3[10];
+struct tile Col4[10];
+
 char* utoa32(uint32_t value, char* buffer);
 
 char DispCtrStr[5] = "asdd";
 int cnt = 0;
 volatile uint32_t millis = 0;
+
+
 
 
 void handleSwitches(void){
@@ -6019,6 +6035,40 @@ void handleSwitches(void){
         switches &= ~(1 << 3);
     }
 }
+
+void checkForActiveTiles(){
+
+}
+# 79 "main.c"
+struct tile* tileInit(uint32_t start, uint16_t len){
+    struct tile* outputTile = malloc(sizeof(struct tile));
+
+    if (outputTile == ((void*)0)) return ((void*)0);
+
+    outputTile->len = len;
+    outputTile->start = start;
+
+    return outputTile;
+}
+
+void drawColl(uint8_t x, struct tile activeCol[]){
+    for(uint8_t i=0; i<10; i++){
+        if(activeCol[i].len){
+            int16_t y = (millis - activeCol[i].start) / 100;
+            uint8_t height = activeCol[i].len / 100;
+
+
+            if (y < 64 && (y + height) > 0){
+                drawRect(x, y, 26, height);
+            }
+
+
+            utoa32(y, DispCtrStr);
+            drawText(i, 0, DispCtrStr);
+        }
+    }
+}
+
 
 void drawUi(){
     if (switches & 0x01){
@@ -6052,9 +6102,17 @@ void drawUi(){
         drawRect(98, 60, 28, 4);
         fillRect(99, 61, 26, 2, 0);
     }
-    utoa32(switches, DispCtrStr);
-    drawText(0,0, DispCtrStr);
+
+    drawColl(3, Col1);
+    drawColl(34, Col2);
+    drawColl(67, Col3);
+    drawColl(99, Col4);
+
+
+
+
 }
+
 
 
 void main()
@@ -6069,15 +6127,19 @@ void main()
 
 
     clearBuffer();
-# 124 "main.c"
+    Col4[0] = *tileInit(1000, 500);
+    Col4[1] = *tileInit(2000, 100);
+    Col4[2] = *tileInit(3000, 700);
+# 189 "main.c"
     while(1)
     {
         if ( (uint32_t) millis%2 == 0){
             handleSwitches();
         }
-        if ( (uint32_t) millis%50 == 0){
+        if ( (uint32_t) millis%100 == 0){
             drawUi();
             updateDisplay();
+            clearBuffer();
 
 
 

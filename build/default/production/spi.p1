@@ -1,130 +1,25 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"14 main.c
-[; ;main.c: 14: struct tile{
-[s S369 `ul 1 `us 1 ]
-[n S369 tile start len ]
-"2459 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 2459:     struct {
-[s S107 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S107 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"2469
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 2469:     struct {
-[s S108 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S108 . INT0 INT1 INT2 . PGM PGC PGD ]
-"2478
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 2478:     struct {
-[s S109 :3 `uc 1 :1 `uc 1 ]
-[n S109 . . CCP2_PA2 ]
-"2458
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 2458: typedef union {
-[u S106 `S107 1 `S108 1 `S109 1 ]
-[n S106 . . . . ]
-"2483
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 2483: extern volatile PORTBbits_t PORTBbits __attribute__((address(0xF81)));
-[v _PORTBbits `VS106 ~T0 @X0 0 e@3969 ]
-"58 C:\Program Files\Microchip\xc8\v2.50\pic\include\c99\stdlib.h
-[; ;C:\Program Files\Microchip\xc8\v2.50\pic\include\c99\stdlib.h: 58: void *malloc (size_t);
-[v _malloc `(*v ~T0 @X0 0 ef1`ui ]
-"33 ./moduleDogm128.h
-[; ;./moduleDogm128.h: 33: void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h);
-[v _drawRect `(v ~T0 @X0 0 ef4`uc`uc`uc`uc ]
-"35 main.c
-[; ;main.c: 35: char* utoa32(uint32_t value, char* buffer);
-[v _utoa32 `(*uc ~T0 @X0 0 ef2`ul`*uc ]
-"29 ./moduleDogm128.h
-[; ;./moduleDogm128.h: 29: void drawText(uint8_t page, uint8_t column, const char* txt);
-[v _drawText `(v ~T0 @X0 0 ef3`uc`uc`*Cuc ]
-"34
-[; ;./moduleDogm128.h: 34: void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t color);
-[v _fillRect `(v ~T0 @X0 0 ef5`uc`uc`uc`uc`uc ]
-[p mainexit ]
-"21 main.c
-[; ;main.c: 21: void setPinout(void);
-[v _setPinout `(v ~T0 @X0 0 ef ]
-"22
-[; ;main.c: 22: void clearLeds(void);
-[v _clearLeds `(v ~T0 @X0 0 ef ]
-"23
-[; ;main.c: 23: void setTimer0(void);
-[v _setTimer0 `(v ~T0 @X0 0 ef ]
-"24
-[; ;main.c: 24: void setTimer2(void);
-[v _setTimer2 `(v ~T0 @X0 0 ef ]
-"23 ./moduleDogm128.h
-[; ;./moduleDogm128.h: 23: void initDisplay(void);
-[v _initDisplay `(v ~T0 @X0 0 ef ]
-"20 main.c
-[; ;main.c: 20: void setInterrupt(void);
-[v _setInterrupt `(v ~T0 @X0 0 ef ]
-"35 ./moduleDogm128.h
-[; ;./moduleDogm128.h: 35: void clearBuffer(void);
-[v _clearBuffer `(v ~T0 @X0 0 ef ]
-"30
-[; ;./moduleDogm128.h: 30: void updateDisplay(void);
-[v _updateDisplay `(v ~T0 @X0 0 ef ]
-[t ~ __interrupt . k ]
-[t T36 __interrupt ]
-"10819 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 10819: extern volatile __bit TMR0IF __attribute__((address(0x7F92)));
-[v _TMR0IF `Vb ~T0 @X0 0 e@32658 ]
-"10816
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 10816: extern volatile __bit TMR0IE __attribute__((address(0x7F95)));
-[v _TMR0IE `Vb ~T0 @X0 0 e@32661 ]
-"10846
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 10846: extern volatile __bit TMR2IF __attribute__((address(0x7CF1)));
-[v _TMR2IF `Vb ~T0 @X0 0 e@31985 ]
-"10843
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 10843: extern volatile __bit TMR2IE __attribute__((address(0x7CE9)));
-[v _TMR2IE `Vb ~T0 @X0 0 e@31977 ]
-"8588
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 8588:     struct {
-[s S360 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S360 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
-"8598
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 8598:     struct {
-[s S361 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S361 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-"8608
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 8608:     struct {
-[s S362 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S362 . . GIEL GIEH ]
-"8587
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 8587: typedef union {
-[u S359 `S360 1 `S361 1 `S362 1 ]
-[n S359 . . . . ]
-"8614
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 8614: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
-[v _INTCONbits `VS359 ~T0 @X0 0 e@4082 ]
-"3427
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 3427: extern volatile unsigned char TRISA __attribute__((address(0xF92)));
-[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
-"3625
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 3625: extern volatile unsigned char TRISB __attribute__((address(0xF93)));
-[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
-"3847
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 3847: extern volatile unsigned char TRISC __attribute__((address(0xF94)));
-[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
-"4001
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 4001: extern volatile unsigned char TRISD __attribute__((address(0xF95)));
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"4223
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 4223: extern volatile unsigned char TRISE __attribute__((address(0xF96)));
-[v _TRISE `Vuc ~T0 @X0 0 e@3990 ]
-"2973
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 2973: extern volatile unsigned char LATA __attribute__((address(0xF89)));
-[v _LATA `Vuc ~T0 @X0 0 e@3977 ]
-"8069
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 8069: extern volatile unsigned char T0CON __attribute__((address(0xFD5)));
-[v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
-"8139
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 8139: extern volatile unsigned short TMR0 __attribute__((address(0xFD6)));
-[v _TMR0 `Vus ~T0 @X0 0 e@4054 ]
-"7200
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 7200: extern volatile unsigned char T2CON __attribute__((address(0xFCA)));
-[v _T2CON `Vuc ~T0 @X0 0 e@4042 ]
-"7298
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 7298: extern volatile unsigned char PR2 __attribute__((address(0xFCB)));
-[v _PR2 `Vuc ~T0 @X0 0 e@4043 ]
+"6938 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 6938: extern volatile unsigned char SSPSTAT __attribute__((address(0xFC7)));
+[v _SSPSTAT `Vuc ~T0 @X0 0 e@4039 ]
+"6868
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 6868: extern volatile unsigned char SSPCON1 __attribute__((address(0xFC6)));
+[v _SSPCON1 `Vuc ~T0 @X0 0 e@4038 ]
+"6874
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 6874:     struct {
+[s S284 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S284 . SSPM CKP SSPEN SSPOV WCOL ]
+"6881
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 6881:     struct {
+[s S285 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S285 . SSPM0 SSPM1 SSPM2 SSPM3 ]
+"6873
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 6873: typedef union {
+[u S283 `S284 1 `S285 1 ]
+[n S283 . . . ]
+"6888
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 6888: extern volatile SSPCON1bits_t SSPCON1bits __attribute__((address(0xFC6)));
+[v _SSPCON1bits `VS283 ~T0 @X0 0 e@4038 ]
 "4474
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 4474:     struct {
 [s S178 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -155,6 +50,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4408
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 4408: extern volatile PIE1bits_t PIE1bits __attribute__((address(0xF9D)));
 [v _PIE1bits `VS174 ~T0 @X0 0 e@3997 ]
+"7193
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 7193: extern volatile unsigned char SSPBUF __attribute__((address(0xFC9)));
+[v _SSPBUF `Vuc ~T0 @X0 0 e@4041 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 54: __asm("SPPDATA equ 0F62h");
 [; <" SPPDATA equ 0F62h ;# ">
@@ -665,780 +563,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8893
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h: 8893: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"18 ./config.h
-[p x PLLDIV  =  4        ]
+"13 spi.c
+[; ;spi.c: 13: void initSpi(void)
+[v _initSpi `(v ~T0 @X0 1 ef ]
+"14
+[; ;spi.c: 14: {
+{
+[e :U _initSpi ]
+[f ]
+"15
+[; ;spi.c: 15:     SSPSTAT = 0x00;
+[e = _SSPSTAT -> -> 0 `i `uc ]
+"16
+[; ;spi.c: 16:     SSPCON1 = 0x10;
+[e = _SSPCON1 -> -> 16 `i `uc ]
+"17
+[; ;spi.c: 17:     SSPCON1bits.SSPEN = 1;
+[e = . . _SSPCON1bits 0 2 -> -> 1 `i `uc ]
+"18
+[; ;spi.c: 18:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
 "19
-[p x CPUDIV  =  OSC1_PLL2 ]
+[; ;spi.c: 19:     PIE1bits.SSPIE = 0;
+[e = . . _PIE1bits 0 3 -> -> 0 `i `uc ]
 "20
-[p x USBDIV  =  1        ]
+[; ;spi.c: 20: }
+[e :UE 367 ]
+}
+"22
+[; ;spi.c: 22: unsigned char sendByteSpi(unsigned char dat)
+[v _sendByteSpi `(uc ~T0 @X0 1 ef1`uc ]
 "23
-[p x FOSC  =  HSPLL_HS   ]
+[; ;spi.c: 23: {
+{
+[e :U _sendByteSpi ]
+"22
+[; ;spi.c: 22: unsigned char sendByteSpi(unsigned char dat)
+[v _dat `uc ~T0 @X0 1 r1 ]
+"23
+[; ;spi.c: 23: {
+[f ]
 "24
-[p x FCMEN  =  OFF       ]
+[; ;spi.c: 24:     SSPBUF = dat;
+[e = _SSPBUF _dat ]
 "25
-[p x IESO  =  OFF        ]
-"28
-[p x PWRT  =  OFF        ]
-"29
-[p x BOR  =  ON          ]
-"30
-[p x BORV  =  3          ]
-"31
-[p x VREGEN  =  OFF      ]
-"34
-[p x WDT  =  OFF         ]
-"35
-[p x WDTPS  =  32768     ]
-"38
-[p x CCP2MX  =  ON       ]
-"39
-[p x PBADEN  =  OFF      ]
-"40
-[p x LPT1OSC  =  OFF     ]
-"41
-[p x MCLRE  =  ON        ]
-"44
-[p x STVREN  =  ON       ]
-"45
-[p x LVP  =  OFF         ]
-"46
-[p x ICPRT  =  OFF       ]
-"47
-[p x XINST  =  OFF       ]
-"50
-[p x CP0  =  OFF         ]
-"51
-[p x CP1  =  OFF         ]
-"52
-[p x CP2  =  OFF         ]
-"53
-[p x CP3  =  OFF         ]
-"56
-[p x CPB  =  OFF         ]
-"57
-[p x CPD  =  OFF         ]
-"60
-[p x WRT0  =  OFF        ]
-"61
-[p x WRT1  =  OFF        ]
-"62
-[p x WRT2  =  OFF        ]
-"63
-[p x WRT3  =  OFF        ]
-"66
-[p x WRTC  =  OFF        ]
-"67
-[p x WRTB  =  OFF        ]
-"68
-[p x WRTD  =  OFF        ]
-"71
-[p x EBTR0  =  OFF       ]
-"72
-[p x EBTR1  =  OFF       ]
-"73
-[p x EBTR2  =  OFF       ]
-"74
-[p x EBTR3  =  OFF       ]
-"77
-[p x EBTRB  =  OFF       ]
-"25 main.c
-[; ;main.c: 25: uint8_t switches = 0;
-[v _switches `uc ~T0 @X0 1 e ]
-[i _switches
--> -> 0 `i `uc
-]
-"30
-[; ;main.c: 30: struct tile Col1[10];
-[v _Col1 `S369 ~T0 @X0 -> 10 `i e ]
-"31
-[; ;main.c: 31: struct tile Col2[10];
-[v _Col2 `S369 ~T0 @X0 -> 10 `i e ]
-"32
-[; ;main.c: 32: struct tile Col3[10];
-[v _Col3 `S369 ~T0 @X0 -> 10 `i e ]
-"33
-[; ;main.c: 33: struct tile Col4[10];
-[v _Col4 `S369 ~T0 @X0 -> 10 `i e ]
-"37
-[; ;main.c: 37: char DispCtrStr[5] = "asdd";
-[v _DispCtrStr `uc ~T0 @X0 -> 5 `i e ]
-[i _DispCtrStr
-:U ..
--> 97 `c
--> 115 `c
--> 100 `c
--> 100 `c
--> 0 `c
-..
-]
-"38
-[; ;main.c: 38: int cnt = 0;
-[v _cnt `i ~T0 @X0 1 e ]
-[i _cnt
--> 0 `i
-]
-"39
-[; ;main.c: 39: volatile uint32_t millis = 0;
-[v _millis `Vul ~T0 @X0 1 e ]
-[i _millis
--> -> -> 0 `i `l `ul
-]
-"44
-[; ;main.c: 44: void handleSwitches(void){
-[v _handleSwitches `(v ~T0 @X0 1 ef ]
-{
-[e :U _handleSwitches ]
-[f ]
-"45
-[; ;main.c: 45:     if (!PORTBbits.RB5){
-[e $ ! ! != -> . . _PORTBbits 0 5 `i -> 0 `i 371  ]
-{
-"46
-[; ;main.c: 46:         switches |= (1 << 0);
-[e =| _switches -> << -> 1 `i -> 0 `i `uc ]
-"47
-[; ;main.c: 47:     } else {
-}
-[e $U 372  ]
+[; ;spi.c: 25:     while(!(PIR1bits.SSPIF));
+[e $U 369  ]
+[e :U 370 ]
+[e :U 369 ]
+[e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 370  ]
 [e :U 371 ]
-{
-"48
-[; ;main.c: 48:         switches &= ~(1 << 0);
-[e =& _switches -> ~ << -> 1 `i -> 0 `i `uc ]
-"49
-[; ;main.c: 49:     }
-}
-[e :U 372 ]
-"50
-[; ;main.c: 50:     if (!PORTBbits.RB4){
-[e $ ! ! != -> . . _PORTBbits 0 4 `i -> 0 `i 373  ]
-{
-"51
-[; ;main.c: 51:         switches |= (1 << 1);
-[e =| _switches -> << -> 1 `i -> 1 `i `uc ]
-"52
-[; ;main.c: 52:     } else {
-}
-[e $U 374  ]
-[e :U 373 ]
-{
-"53
-[; ;main.c: 53:         switches &= ~(1 << 1);
-[e =& _switches -> ~ << -> 1 `i -> 1 `i `uc ]
-"54
-[; ;main.c: 54:     }
-}
-[e :U 374 ]
-"55
-[; ;main.c: 55:     if (!PORTBbits.RB3){
-[e $ ! ! != -> . . _PORTBbits 0 3 `i -> 0 `i 375  ]
-{
-"56
-[; ;main.c: 56:         switches |= (1 << 2);
-[e =| _switches -> << -> 1 `i -> 2 `i `uc ]
-"57
-[; ;main.c: 57:     } else {
-}
-[e $U 376  ]
-[e :U 375 ]
-{
-"58
-[; ;main.c: 58:         switches &= ~(1 << 2);
-[e =& _switches -> ~ << -> 1 `i -> 2 `i `uc ]
-"59
-[; ;main.c: 59:     }
-}
-[e :U 376 ]
-"60
-[; ;main.c: 60:     if (!PORTBbits.RB0){
-[e $ ! ! != -> . . _PORTBbits 0 0 `i -> 0 `i 377  ]
-{
-"61
-[; ;main.c: 61:         switches |= (1 << 3);
-[e =| _switches -> << -> 1 `i -> 3 `i `uc ]
-"62
-[; ;main.c: 62:     } else {
-}
-[e $U 378  ]
-[e :U 377 ]
-{
-"63
-[; ;main.c: 63:         switches &= ~(1 << 3);
-[e =& _switches -> ~ << -> 1 `i -> 3 `i `uc ]
-"64
-[; ;main.c: 64:     }
-}
-[e :U 378 ]
-"65
-[; ;main.c: 65: }
-[e :UE 370 ]
-}
-"67
-[; ;main.c: 67: void checkForActiveTiles(){
-[v _checkForActiveTiles `(v ~T0 @X0 1 ef ]
-{
-[e :U _checkForActiveTiles ]
-[f ]
-"69
-[; ;main.c: 69: }
-[e :UE 379 ]
-}
-"79
-[; ;main.c: 79: struct tile* tileInit(uint32_t start, uint16_t len){
-[v _tileInit `(*S369 ~T0 @X0 1 ef2`ul`us ]
-{
-[e :U _tileInit ]
-[v _start `ul ~T0 @X0 1 r1 ]
-[v _len `us ~T0 @X0 1 r2 ]
-[f ]
-"80
-[; ;main.c: 80:     struct tile* outputTile = malloc(sizeof(struct tile));
-[v _outputTile `*S369 ~T0 @X0 1 a ]
-[e = _outputTile -> ( _malloc (1 -> # `S369 `ui `*S369 ]
-"82
-[; ;main.c: 82:     if (outputTile == ((void*)0)) return ((void*)0);
-[e $ ! == _outputTile -> -> -> 0 `i `*v `*S369 381  ]
-[e ) -> -> -> 0 `i `*v `*S369 ]
-[e $UE 380  ]
-[e :U 381 ]
-"84
-[; ;main.c: 84:     outputTile->len = len;
-[e = . *U _outputTile 1 _len ]
-"85
-[; ;main.c: 85:     outputTile->start = start;
-[e = . *U _outputTile 0 _start ]
-"87
-[; ;main.c: 87:     return outputTile;
-[e ) _outputTile ]
-[e $UE 380  ]
-"88
-[; ;main.c: 88: }
-[e :UE 380 ]
-}
-"90
-[; ;main.c: 90: void drawColl(uint8_t x, struct tile activeCol[]){
-[v _drawColl `(v ~T0 @X0 1 ef2`uc`*S369 ]
-{
-[e :U _drawColl ]
-[v _x `uc ~T0 @X0 1 r1 ]
-[v _activeCol `*S369 ~T0 @X0 1 r2 ]
-[f ]
-"91
-[; ;main.c: 91:     for(uint8_t i=0; i<10; i++){
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 10 `i 383  ]
-[e $U 384  ]
-[e :U 383 ]
-{
-"92
-[; ;main.c: 92:         if(activeCol[i].len){
-[e $ ! != -> . *U + _activeCol * -> _i `ux -> -> # *U _activeCol `ui `ux 1 `ui -> -> 0 `i `ui 386  ]
-{
-"93
-[; ;main.c: 93:             int16_t y = (millis - activeCol[i].start) / 100;
-[v _y `s ~T0 @X0 1 a ]
-[e = _y -> / - _millis . *U + _activeCol * -> _i `ux -> -> # *U _activeCol `ui `ux 0 -> -> -> 100 `i `l `ul `s ]
-"94
-[; ;main.c: 94:             uint8_t height = activeCol[i].len / 100;
-[v _height `uc ~T0 @X0 1 a ]
-[e = _height -> / -> . *U + _activeCol * -> _i `ux -> -> # *U _activeCol `ui `ux 1 `ui -> -> 100 `i `ui `uc ]
-"97
-[; ;main.c: 97:             if (y < 64 && (y + height) > 0){
-[e $ ! && < -> _y `i -> 64 `i > + -> _y `i -> _height `i -> 0 `i 387  ]
-{
-"98
-[; ;main.c: 98:                 drawRect(x, y, 26, height);
-[e ( _drawRect (4 , , , _x -> _y `uc -> -> 26 `i `uc _height ]
-"99
-[; ;main.c: 99:             }
-}
-[e :U 387 ]
-"102
-[; ;main.c: 102:             utoa32(y, DispCtrStr);
-[e ( _utoa32 (2 , -> -> _y `l `ul &U _DispCtrStr ]
-"103
-[; ;main.c: 103:             drawText(i, 0, DispCtrStr);
-[e ( _drawText (3 , , _i -> -> 0 `i `uc -> &U _DispCtrStr `*Cuc ]
-"104
-[; ;main.c: 104:         }
-}
-[e :U 386 ]
-"105
-[; ;main.c: 105:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 10 `i 383  ]
-[e :U 384 ]
-}
-"106
-[; ;main.c: 106: }
-[e :UE 382 ]
-}
-"109
-[; ;main.c: 109: void drawUi(){
-[v _drawUi `(v ~T0 @X0 1 ef ]
-{
-[e :U _drawUi ]
-[f ]
-"110
-[; ;main.c: 110:     if (switches & 0x01){
-[e $ ! != & -> _switches `i -> 1 `i -> 0 `i 389  ]
-{
-"111
-[; ;main.c: 111:         drawRect(2, 60, 28, 4);
-[e ( _drawRect (4 , , , -> -> 2 `i `uc -> -> 60 `i `uc -> -> 28 `i `uc -> -> 4 `i `uc ]
-"112
-[; ;main.c: 112:         fillRect(3, 61, 26, 2, 1);
-[e ( _fillRect (4 , , , , -> -> 3 `i `uc -> -> 61 `i `uc -> -> 26 `i `uc -> -> 2 `i `uc -> -> 1 `i `uc ]
-"113
-[; ;main.c: 113:     } else {
-}
-[e $U 390  ]
-[e :U 389 ]
-{
-"114
-[; ;main.c: 114:         drawRect(2, 60, 28, 4);
-[e ( _drawRect (4 , , , -> -> 2 `i `uc -> -> 60 `i `uc -> -> 28 `i `uc -> -> 4 `i `uc ]
-"115
-[; ;main.c: 115:         fillRect(3, 61, 26, 2, 0);
-[e ( _fillRect (4 , , , , -> -> 3 `i `uc -> -> 61 `i `uc -> -> 26 `i `uc -> -> 2 `i `uc -> -> 0 `i `uc ]
-"116
-[; ;main.c: 116:     }
-}
-[e :U 390 ]
-"118
-[; ;main.c: 118:     if (switches & 0x02){
-[e $ ! != & -> _switches `i -> 2 `i -> 0 `i 391  ]
-{
-"119
-[; ;main.c: 119:         drawRect(34, 60, 28, 4);
-[e ( _drawRect (4 , , , -> -> 34 `i `uc -> -> 60 `i `uc -> -> 28 `i `uc -> -> 4 `i `uc ]
-"120
-[; ;main.c: 120:         fillRect(35, 61, 26, 2, 1);
-[e ( _fillRect (4 , , , , -> -> 35 `i `uc -> -> 61 `i `uc -> -> 26 `i `uc -> -> 2 `i `uc -> -> 1 `i `uc ]
-"121
-[; ;main.c: 121:     } else {
-}
-[e $U 392  ]
-[e :U 391 ]
-{
-"122
-[; ;main.c: 122:         drawRect(34, 60, 28, 4);
-[e ( _drawRect (4 , , , -> -> 34 `i `uc -> -> 60 `i `uc -> -> 28 `i `uc -> -> 4 `i `uc ]
-"123
-[; ;main.c: 123:         fillRect(35, 61, 26, 2, 0);
-[e ( _fillRect (4 , , , , -> -> 35 `i `uc -> -> 61 `i `uc -> -> 26 `i `uc -> -> 2 `i `uc -> -> 0 `i `uc ]
-"124
-[; ;main.c: 124:     }
-}
-[e :U 392 ]
-"126
-[; ;main.c: 126:     if (switches & 0x04){
-[e $ ! != & -> _switches `i -> 4 `i -> 0 `i 393  ]
-{
-"127
-[; ;main.c: 127:         drawRect(66, 60, 28, 4);
-[e ( _drawRect (4 , , , -> -> 66 `i `uc -> -> 60 `i `uc -> -> 28 `i `uc -> -> 4 `i `uc ]
-"128
-[; ;main.c: 128:         fillRect(67, 61, 26, 2, 1);
-[e ( _fillRect (4 , , , , -> -> 67 `i `uc -> -> 61 `i `uc -> -> 26 `i `uc -> -> 2 `i `uc -> -> 1 `i `uc ]
-"129
-[; ;main.c: 129:     } else {
-}
-[e $U 394  ]
-[e :U 393 ]
-{
-"130
-[; ;main.c: 130:         drawRect(66, 60, 28, 4);
-[e ( _drawRect (4 , , , -> -> 66 `i `uc -> -> 60 `i `uc -> -> 28 `i `uc -> -> 4 `i `uc ]
-"131
-[; ;main.c: 131:         fillRect(67, 61, 26, 2, 0);
-[e ( _fillRect (4 , , , , -> -> 67 `i `uc -> -> 61 `i `uc -> -> 26 `i `uc -> -> 2 `i `uc -> -> 0 `i `uc ]
-"132
-[; ;main.c: 132:     }
-}
-[e :U 394 ]
-"134
-[; ;main.c: 134:     if (switches & 0x08){
-[e $ ! != & -> _switches `i -> 8 `i -> 0 `i 395  ]
-{
-"135
-[; ;main.c: 135:         drawRect(98, 60, 28, 4);
-[e ( _drawRect (4 , , , -> -> 98 `i `uc -> -> 60 `i `uc -> -> 28 `i `uc -> -> 4 `i `uc ]
-"136
-[; ;main.c: 136:         fillRect(99, 61, 26, 2, 1);
-[e ( _fillRect (4 , , , , -> -> 99 `i `uc -> -> 61 `i `uc -> -> 26 `i `uc -> -> 2 `i `uc -> -> 1 `i `uc ]
-"137
-[; ;main.c: 137:     } else {
-}
-[e $U 396  ]
-[e :U 395 ]
-{
-"138
-[; ;main.c: 138:         drawRect(98, 60, 28, 4);
-[e ( _drawRect (4 , , , -> -> 98 `i `uc -> -> 60 `i `uc -> -> 28 `i `uc -> -> 4 `i `uc ]
-"139
-[; ;main.c: 139:         fillRect(99, 61, 26, 2, 0);
-[e ( _fillRect (4 , , , , -> -> 99 `i `uc -> -> 61 `i `uc -> -> 26 `i `uc -> -> 2 `i `uc -> -> 0 `i `uc ]
-"140
-[; ;main.c: 140:     }
-}
-[e :U 396 ]
-"142
-[; ;main.c: 142:     drawColl(3, Col1);
-[e ( _drawColl (2 , -> -> 3 `i `uc &U _Col1 ]
-"143
-[; ;main.c: 143:     drawColl(34, Col2);
-[e ( _drawColl (2 , -> -> 34 `i `uc &U _Col2 ]
-"144
-[; ;main.c: 144:     drawColl(67, Col3);
-[e ( _drawColl (2 , -> -> 67 `i `uc &U _Col3 ]
-"145
-[; ;main.c: 145:     drawColl(99, Col4);
-[e ( _drawColl (2 , -> -> 99 `i `uc &U _Col4 ]
-"150
-[; ;main.c: 150: }
-[e :UE 388 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
-"154
-[; ;main.c: 154: void main()
-[v _main `(v ~T0 @X0 1 ef ]
-"155
-[; ;main.c: 155: {
-{
-[e :U _main ]
-[f ]
-"156
-[; ;main.c: 156:     setPinout();
-[e ( _setPinout ..  ]
-"157
-[; ;main.c: 157:     clearLeds();
-[e ( _clearLeds ..  ]
-"158
-[; ;main.c: 158:     setTimer0();
-[e ( _setTimer0 ..  ]
-"159
-[; ;main.c: 159:     setTimer2();
-[e ( _setTimer2 ..  ]
-"161
-[; ;main.c: 161:     initDisplay();
-[e ( _initDisplay ..  ]
-"162
-[; ;main.c: 162:     setInterrupt();
-[e ( _setInterrupt ..  ]
-"165
-[; ;main.c: 165:     clearBuffer();
-[e ( _clearBuffer ..  ]
-"166
-[; ;main.c: 166:     Col4[0] = *tileInit(1000, 500);
-[e = *U + &U _Col4 * -> -> -> 0 `i `ui `ux -> -> # *U &U _Col4 `ui `ux *U ( _tileInit (2 , -> -> -> 1000 `i `l `ul -> -> 500 `i `us ]
-"167
-[; ;main.c: 167:     Col4[1] = *tileInit(2000, 100);
-[e = *U + &U _Col4 * -> -> -> 1 `i `ui `ux -> -> # *U &U _Col4 `ui `ux *U ( _tileInit (2 , -> -> -> 2000 `i `l `ul -> -> 100 `i `us ]
-"168
-[; ;main.c: 168:     Col4[2] = *tileInit(3000, 700);
-[e = *U + &U _Col4 * -> -> -> 2 `i `ui `ux -> -> # *U &U _Col4 `ui `ux *U ( _tileInit (2 , -> -> -> 3000 `i `l `ul -> -> 700 `i `us ]
-"189
-[; ;main.c: 189:     while(1)
-[e :U 399 ]
-"190
-[; ;main.c: 190:     {
-{
-"191
-[; ;main.c: 191:         if ( (uint32_t) millis%2 == 0){
-[e $ ! == % _millis -> -> -> 2 `i `l `ul -> -> -> 0 `i `l `ul 401  ]
-{
-"192
-[; ;main.c: 192:             handleSwitches();
-[e ( _handleSwitches ..  ]
-"193
-[; ;main.c: 193:         }
-}
-[e :U 401 ]
-"194
-[; ;main.c: 194:         if ( (uint32_t) millis%100 == 0){
-[e $ ! == % _millis -> -> -> 100 `i `l `ul -> -> -> 0 `i `l `ul 402  ]
-{
-"195
-[; ;main.c: 195:             drawUi();
-[e ( _drawUi ..  ]
-"196
-[; ;main.c: 196:             updateDisplay();
-[e ( _updateDisplay ..  ]
-"197
-[; ;main.c: 197:             clearBuffer();
-[e ( _clearBuffer ..  ]
-"202
-[; ;main.c: 202:         }
-}
-[e :U 402 ]
-"208
-[; ;main.c: 208:     }
-}
-[e :U 398 ]
-[e $U 399  ]
-[e :U 400 ]
-"209
-[; ;main.c: 209: }
-[e :UE 397 ]
-}
-[v $root$_isr `(v ~T0 @X0 0 e ]
-"213
-[; ;main.c: 213: void __attribute__((picinterrupt(("")))) isr(void)
-[v _isr `(v ~T36 @X0 1 ef ]
-"214
-[; ;main.c: 214: {
-{
-[e :U _isr ]
-[f ]
-"216
-[; ;main.c: 216:     if(TMR0IF && TMR0IE)
-[e $ ! && _TMR0IF _TMR0IE 404  ]
-"217
-[; ;main.c: 217:     {
-{
-"219
-[; ;main.c: 219:         TMR0IF = 0;
-[e = _TMR0IF -> -> 0 `i `b ]
-"220
-[; ;main.c: 220:     }
-}
-[e :U 404 ]
-"222
-[; ;main.c: 222:     if(TMR2IF && TMR2IE)
-[e $ ! && _TMR2IF _TMR2IE 405  ]
-"223
-[; ;main.c: 223:     {
-{
-"225
-[; ;main.c: 225:        (uint32_t) millis++;
-[e ++ _millis -> -> 1 `i `Vul ]
-"226
-[; ;main.c: 226:         TMR2IF = 0;
-[e = _TMR2IF -> -> 0 `i `b ]
-"227
-[; ;main.c: 227:     }
-}
-[e :U 405 ]
-"229
-[; ;main.c: 229: }
-[e :UE 403 ]
-}
-"233
-[; ;main.c: 233: void setInterrupt(void)
-[v _setInterrupt `(v ~T0 @X0 1 ef ]
-"234
-[; ;main.c: 234: {
-{
-[e :U _setInterrupt ]
-[f ]
-"235
-[; ;main.c: 235:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-"236
-[; ;main.c: 236:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-"237
-[; ;main.c: 237: }
-[e :UE 406 ]
-}
-"241
-[; ;main.c: 241: void setPinout(void)
-[v _setPinout `(v ~T0 @X0 1 ef ]
-"242
-[; ;main.c: 242: {
-{
-[e :U _setPinout ]
-[f ]
-"243
-[; ;main.c: 243:     TRISA = 0;
-[e = _TRISA -> -> 0 `i `uc ]
-"244
-[; ;main.c: 244:     TRISB = 0x3D;
-[e = _TRISB -> -> 61 `i `uc ]
-"245
-[; ;main.c: 245:     TRISC = 0;
-[e = _TRISC -> -> 0 `i `uc ]
-"246
-[; ;main.c: 246:     TRISD = 0;
-[e = _TRISD -> -> 0 `i `uc ]
-"247
-[; ;main.c: 247:     TRISE = 0;
-[e = _TRISE -> -> 0 `i `uc ]
-"248
-[; ;main.c: 248: }
-[e :UE 407 ]
-}
-"252
-[; ;main.c: 252: void clearLeds(void)
-[v _clearLeds `(v ~T0 @X0 1 ef ]
-"253
-[; ;main.c: 253: {
-{
-[e :U _clearLeds ]
-[f ]
-"254
-[; ;main.c: 254:     (LATA &= ~(1<<0));
-[e =& _LATA -> ~ << -> 1 `i -> 0 `i `Vuc ]
-"255
-[; ;main.c: 255:     (LATA &= ~(1<<1));
-[e =& _LATA -> ~ << -> 1 `i -> 1 `i `Vuc ]
-"256
-[; ;main.c: 256:     (LATA &= ~(1<<2));
-[e =& _LATA -> ~ << -> 1 `i -> 2 `i `Vuc ]
-"257
-[; ;main.c: 257:     (LATA &= ~(1<<3));
-[e =& _LATA -> ~ << -> 1 `i -> 3 `i `Vuc ]
-"258
-[; ;main.c: 258:     (LATA &= ~(1<<4));
-[e =& _LATA -> ~ << -> 1 `i -> 4 `i `Vuc ]
-"259
-[; ;main.c: 259: }
-[e :UE 408 ]
-}
-"263
-[; ;main.c: 263: void setTimer0(void)
-[v _setTimer0 `(v ~T0 @X0 1 ef ]
-"264
-[; ;main.c: 264: {
-{
-[e :U _setTimer0 ]
-[f ]
-"265
-[; ;main.c: 265:     T0CON = 0xC3;
-[e = _T0CON -> -> 195 `i `uc ]
-"266
-[; ;main.c: 266:     TMR0 = 0;
-[e = _TMR0 -> -> 0 `i `us ]
-"267
-[; ;main.c: 267:     INTCONbits.TMR0IF = 0;
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-"268
-[; ;main.c: 268:     INTCONbits.TMR0IE = 1;
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-"269
-[; ;main.c: 269: }
-[e :UE 409 ]
-}
-"273
-[; ;main.c: 273: void setTimer2(void)
-[v _setTimer2 `(v ~T0 @X0 1 ef ]
-"274
-[; ;main.c: 274: {
-{
-[e :U _setTimer2 ]
-[f ]
-"275
-[; ;main.c: 275:     T2CON = 0x1F;
-[e = _T2CON -> -> 31 `i `uc ]
-"276
-[; ;main.c: 276:     PR2 = 187;
-[e = _PR2 -> -> 187 `i `uc ]
-"277
-[; ;main.c: 277:     PIR1bits.TMR2IF = 0;
-[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-"278
-[; ;main.c: 278:     PIE1bits.TMR2IE = 1;
-[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
-"279
-[; ;main.c: 279: }
-[e :UE 410 ]
-}
-"281
-[; ;main.c: 281: char* utoa32(uint32_t value, char* buffer)
-[v _utoa32 `(*uc ~T0 @X0 1 ef2`ul`*uc ]
-"282
-[; ;main.c: 282: {
-{
-[e :U _utoa32 ]
-"281
-[; ;main.c: 281: char* utoa32(uint32_t value, char* buffer)
-[v _value `ul ~T0 @X0 1 r1 ]
-[v _buffer `*uc ~T0 @X0 1 r2 ]
-"282
-[; ;main.c: 282: {
-[f ]
-"283
-[; ;main.c: 283:     char temp[10];
-[v _temp `uc ~T0 @X0 -> 10 `i a ]
-"284
-[; ;main.c: 284:     int i = 0;
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-"287
-[; ;main.c: 287:     if (value == 0)
-[e $ ! == _value -> -> -> 0 `i `l `ul 412  ]
-"288
-[; ;main.c: 288:     {
-{
-"289
-[; ;main.c: 289:         buffer[0] = '0';
-[e = *U + _buffer * -> -> 0 `i `x -> -> # *U _buffer `i `x -> -> 48 `ui `uc ]
-"290
-[; ;main.c: 290:         buffer[1] = '\0';
-[e = *U + _buffer * -> -> 1 `i `x -> -> # *U _buffer `i `x -> -> 0 `ui `uc ]
-"291
-[; ;main.c: 291:         return buffer;
-[e ) _buffer ]
-[e $UE 411  ]
-"292
-[; ;main.c: 292:     }
-}
-[e :U 412 ]
-"295
-[; ;main.c: 295:     while (value > 0)
-[e $U 413  ]
-[e :U 414 ]
-"296
-[; ;main.c: 296:     {
-{
-"297
-[; ;main.c: 297:         temp[i++] = (value % 10) + '0';
-[e = *U + &U _temp * -> -> ++ _i -> 1 `i `ui `ux -> -> # *U &U _temp `ui `ux -> + % _value -> -> -> 10 `i `l `ul -> -> 48 `ui `ul `uc ]
-"298
-[; ;main.c: 298:         value /= 10;
-[e =/ _value -> -> -> 10 `i `l `ul ]
-"299
-[; ;main.c: 299:     }
-}
-[e :U 413 ]
-"295
-[; ;main.c: 295:     while (value > 0)
-[e $ > _value -> -> -> 0 `i `l `ul 414  ]
-[e :U 415 ]
-"302
-[; ;main.c: 302:     int j = 0;
-[v _j `i ~T0 @X0 1 a ]
-[e = _j -> 0 `i ]
-"303
-[; ;main.c: 303:     while (i > 0)
-[e $U 416  ]
-[e :U 417 ]
-"304
-[; ;main.c: 304:     {
-{
-"305
-[; ;main.c: 305:         buffer[j++] = temp[--i];
-[e = *U + _buffer * -> ++ _j -> 1 `i `x -> -> # *U _buffer `i `x *U + &U _temp * -> -> =- _i -> 1 `i `ui `ux -> -> # *U &U _temp `ui `ux ]
-"306
-[; ;main.c: 306:     }
-}
-[e :U 416 ]
-"303
-[; ;main.c: 303:     while (i > 0)
-[e $ > _i -> 0 `i 417  ]
-[e :U 418 ]
-"308
-[; ;main.c: 308:     buffer[j] = '\0';
-[e = *U + _buffer * -> _j `x -> -> # *U _buffer `i `x -> -> 0 `ui `uc ]
-"310
-[; ;main.c: 310:     return buffer;
-[e ) _buffer ]
-[e $UE 411  ]
-"311
-[; ;main.c: 311: }
-[e :UE 411 ]
+"26
+[; ;spi.c: 26:     PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"27
+[; ;spi.c: 27:     return SSPBUF;
+[e ) _SSPBUF ]
+[e $UE 368  ]
+"28
+[; ;spi.c: 28: }
+[e :UE 368 ]
 }

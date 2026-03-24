@@ -1,4 +1,4 @@
-# 1 "moduleDogm128.c"
+# 1 "main.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,7 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "moduleDogm128.c" 2
+# 1 "main.c" 2
 
 
 
@@ -5729,10 +5729,6 @@ __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer suppor
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\errata.h" 1 3
 # 28 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\\pic\\include\\pic18.h" 2 3
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\trace18.h" 1 3
-# 31 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\\pic\\include\\pic18.h" 2 3
 # 156 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\\pic\\include\\pic18.h" 3
 __attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
 __attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
@@ -5741,7 +5737,229 @@ __attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer suppo
 unsigned char __t1rd16on(void);
 unsigned char __t3rd16on(void);
 # 33 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\xc.h" 2 3
-# 7 "moduleDogm128.c" 2
+# 7 "main.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 12 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 143 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __int24 ssize_t;
+# 255 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 409 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+
+
+
+
+
+int ungetc(int, FILE *);
+int getch(void);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+
+
+
+
+void putch(char);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+__attribute__((__format__(__printf__, 1, 2)))
+int printf(const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int fprintf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 2, 3)))
+int sprintf(char *restrict, const char *restrict, ...);
+__attribute__((__format__(__printf__, 3, 4)))
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+__attribute__((__format__(__printf__, 1, 0)))
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 2, 0)))
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__printf__, 3, 0)))
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+__attribute__((__format__(__scanf__, 1, 2)))
+int scanf(const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int fscanf(FILE *restrict, const char *restrict, ...);
+__attribute__((__format__(__scanf__, 2, 3)))
+int sscanf(const char *restrict, const char *restrict, ...);
+
+__attribute__((__format__(__scanf__, 1, 0)))
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+__attribute__((__format__(__scanf__, 2, 0)))
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 8 "main.c" 2
+
+
+# 1 "./config.h" 1
+# 18 "./config.h"
+#pragma config PLLDIV = 4
+#pragma config CPUDIV = OSC1_PLL2
+#pragma config USBDIV = 1
+
+
+#pragma config FOSC = HSPLL_HS
+#pragma config FCMEN = OFF
+#pragma config IESO = OFF
+
+
+#pragma config PWRT = OFF
+#pragma config BOR = ON
+#pragma config BORV = 3
+#pragma config VREGEN = OFF
+
+
+#pragma config WDT = OFF
+#pragma config WDTPS = 32768
+
+
+#pragma config CCP2MX = ON
+#pragma config PBADEN = OFF
+#pragma config LPT1OSC = OFF
+#pragma config MCLRE = ON
+
+
+#pragma config STVREN = ON
+#pragma config LVP = OFF
+#pragma config ICPRT = OFF
+#pragma config XINST = OFF
+
+
+#pragma config CP0 = OFF
+#pragma config CP1 = OFF
+#pragma config CP2 = OFF
+#pragma config CP3 = OFF
+
+
+#pragma config CPB = OFF
+#pragma config CPD = OFF
+
+
+#pragma config WRT0 = OFF
+#pragma config WRT1 = OFF
+#pragma config WRT2 = OFF
+#pragma config WRT3 = OFF
+
+
+#pragma config WRTC = OFF
+#pragma config WRTB = OFF
+#pragma config WRTD = OFF
+
+
+#pragma config EBTR0 = OFF
+#pragma config EBTR1 = OFF
+#pragma config EBTR2 = OFF
+#pragma config EBTR3 = OFF
+
+
+#pragma config EBTRB = OFF
+# 10 "main.c" 2
+
+# 1 "./mcu.h" 1
+# 11 "main.c" 2
 
 # 1 "./moduleDogm128.h" 1
 # 23 "./moduleDogm128.h"
@@ -5758,391 +5976,277 @@ void drawLine(int x0, int y0, int x1, int y1);
 void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h);
 void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t color);
 void clearBuffer(void);
-# 8 "moduleDogm128.c" 2
+# 12 "main.c" 2
 
-# 1 "./spi.h" 1
-# 23 "./spi.h"
-void initSpi(void);
-unsigned char sendByteSpi(unsigned char dat);
-# 9 "moduleDogm128.c" 2
 
-# 1 "./fontA.h" 1
-# 13 "./fontA.h"
-const unsigned char font5x7[][5] =
-{
- {0x00, 0x00, 0x00, 0x00, 0x00},
- {0x00, 0x00, 0x2f, 0x00, 0x00},
- {0x00, 0x07, 0x00, 0x07, 0x00},
- {0x14, 0x7f, 0x14, 0x7f, 0x14},
- {0x24, 0x2a, 0x7f, 0x2a, 0x12},
- {0x62, 0x64, 0x08, 0x13, 0x23},
- {0x36, 0x49, 0x55, 0x22, 0x50},
- {0x00, 0x05, 0x03, 0x00, 0x00},
- {0x00, 0x1c, 0x22, 0x41, 0x00},
- {0x00, 0x41, 0x22, 0x1c, 0x00},
- {0x14, 0x08, 0x3E, 0x08, 0x14},
- {0x08, 0x08, 0x3E, 0x08, 0x08},
- {0x00, 0x00, 0xA0, 0x60, 0x00},
- {0x08, 0x08, 0x08, 0x08, 0x08},
- {0x00, 0x60, 0x60, 0x00, 0x00},
- {0x20, 0x10, 0x08, 0x04, 0x02},
- {0x3E, 0x51, 0x49, 0x45, 0x3E},
- {0x00, 0x42, 0x7F, 0x40, 0x00},
- {0x42, 0x61, 0x51, 0x49, 0x46},
- {0x21, 0x41, 0x45, 0x4B, 0x31},
- {0x18, 0x14, 0x12, 0x7F, 0x10},
- {0x27, 0x45, 0x45, 0x45, 0x39},
- {0x3C, 0x4A, 0x49, 0x49, 0x30},
- {0x01, 0x71, 0x09, 0x05, 0x03},
- {0x36, 0x49, 0x49, 0x49, 0x36},
- {0x06, 0x49, 0x49, 0x29, 0x1E},
- {0x00, 0x36, 0x36, 0x00, 0x00},
- {0x00, 0x56, 0x36, 0x00, 0x00},
- {0x08, 0x14, 0x22, 0x41, 0x00},
- {0x14, 0x14, 0x14, 0x14, 0x14},
- {0x00, 0x41, 0x22, 0x14, 0x08},
- {0x02, 0x01, 0x51, 0x09, 0x06},
- {0x32, 0x49, 0x59, 0x51, 0x3E},
- {0x7C, 0x12, 0x11, 0x12, 0x7C},
- {0x7F, 0x49, 0x49, 0x49, 0x36},
- {0x3E, 0x41, 0x41, 0x41, 0x22},
- {0x7F, 0x41, 0x41, 0x22, 0x1C},
- {0x7F, 0x49, 0x49, 0x49, 0x41},
- {0x7F, 0x09, 0x09, 0x09, 0x01},
- {0x3E, 0x41, 0x49, 0x49, 0x7A},
- {0x7F, 0x08, 0x08, 0x08, 0x7F},
- {0x00, 0x41, 0x7F, 0x41, 0x00},
- {0x20, 0x40, 0x41, 0x3F, 0x01},
- {0x7F, 0x08, 0x14, 0x22, 0x41},
- {0x7F, 0x40, 0x40, 0x40, 0x40},
- {0x7F, 0x02, 0x0C, 0x02, 0x7F},
- {0x7F, 0x04, 0x08, 0x10, 0x7F},
- {0x3E, 0x41, 0x41, 0x41, 0x3E},
- {0x7F, 0x09, 0x09, 0x09, 0x06},
- {0x3E, 0x41, 0x51, 0x21, 0x5E},
- {0x7F, 0x09, 0x19, 0x29, 0x46},
- {0x46, 0x49, 0x49, 0x49, 0x31},
- {0x01, 0x01, 0x7F, 0x01, 0x01},
- {0x3F, 0x40, 0x40, 0x40, 0x3F},
- {0x1F, 0x20, 0x40, 0x20, 0x1F},
- {0x3F, 0x40, 0x38, 0x40, 0x3F},
- {0x63, 0x14, 0x08, 0x14, 0x63},
- {0x07, 0x08, 0x70, 0x08, 0x07},
- {0x61, 0x51, 0x49, 0x45, 0x43},
- {0x00, 0x7F, 0x41, 0x41, 0x00},
- {0x55, 0x2A, 0x55, 0x2A, 0x55},
- {0x00, 0x41, 0x41, 0x7F, 0x00},
- {0x04, 0x02, 0x01, 0x02, 0x04},
- {0x40, 0x40, 0x40, 0x40, 0x40},
- {0x00, 0x01, 0x02, 0x04, 0x00},
- {0x20, 0x54, 0x54, 0x54, 0x78},
- {0x7F, 0x48, 0x44, 0x44, 0x38},
- {0x38, 0x44, 0x44, 0x44, 0x20},
- {0x38, 0x44, 0x44, 0x48, 0x7F},
- {0x38, 0x54, 0x54, 0x54, 0x18},
- {0x08, 0x7E, 0x09, 0x01, 0x02},
- {0x18, 0xA4, 0xA4, 0xA4, 0x7C},
- {0x7F, 0x08, 0x04, 0x04, 0x78},
- {0x00, 0x44, 0x7D, 0x40, 0x00},
- {0x40, 0x80, 0x84, 0x7D, 0x00},
- {0x7F, 0x10, 0x28, 0x44, 0x00},
- {0x00, 0x41, 0x7F, 0x40, 0x00},
- {0x7C, 0x04, 0x18, 0x04, 0x78},
- {0x7C, 0x08, 0x04, 0x04, 0x78},
- {0x38, 0x44, 0x44, 0x44, 0x38},
- {0xFC, 0x24, 0x24, 0x24, 0x18},
- {0x18, 0x24, 0x24, 0x18, 0xFC},
- {0x7C, 0x08, 0x04, 0x04, 0x08},
- {0x48, 0x54, 0x54, 0x54, 0x20},
- {0x04, 0x3F, 0x44, 0x40, 0x20},
- {0x3C, 0x40, 0x40, 0x20, 0x7C},
- {0x1C, 0x20, 0x40, 0x20, 0x1C},
- {0x3C, 0x40, 0x30, 0x40, 0x3C},
- {0x44, 0x28, 0x10, 0x28, 0x44},
- {0x1C, 0xA0, 0xA0, 0xA0, 0x7C},
- {0x44, 0x64, 0x54, 0x4C, 0x44},
- {0x7F, 0x41, 0x41, 0x41, 0x7F},
+struct tile{
+    uint32_t start;
+    uint16_t len;
 };
-# 10 "moduleDogm128.c" 2
+
+
+void setInterrupt(void);
+void setPinout(void);
+void clearLeds(void);
+void setTimer0(void);
+void setTimer2(void);
+uint8_t switches = 0;
+
+void hadleSwitches(void);
+void drawUi(void);
+
+struct tile Col1[10];
+struct tile Col2[10];
+struct tile Col3[10];
+struct tile Col4[10];
+
+char* utoa32(uint32_t value, char* buffer);
+
+char DispCtrStr[5] = "asdd";
+int cnt = 0;
+volatile uint32_t millis = 0;
 
 
 
-void sendCommandToDisplay(unsigned char comm);
-void sendDataToDisplay(unsigned char dat);
-void setColumnAddress(unsigned char column);
-void setPageAddress(unsigned char page);
 
-
-static uint8_t displayBuffer[8][128];
-
-
-
-
-void initDisplay(void)
-{
-    initSpi();
-    (LATC |= (1<<2));
-    (LATC |= (1<<1));
-
-
-    sendCommandToDisplay(0x40);
-    sendCommandToDisplay(0xA1);
-    sendCommandToDisplay(0xC0);
-    sendCommandToDisplay(0xA6);
-    sendCommandToDisplay(0xA2);
-    sendCommandToDisplay(0x2F);
-    sendCommandToDisplay(0xF8);
-    sendCommandToDisplay(0x00);
-    sendCommandToDisplay(0x27);
-    sendCommandToDisplay(0x81);
-    sendCommandToDisplay(0x16);
-    sendCommandToDisplay(0xAC);
-    sendCommandToDisplay(0x00);
-    sendCommandToDisplay(0xAF);
-
-    clearAllDisplay();
-}
-
-
-
-void clearAllDisplay(void)
-{
-    unsigned char pg;
-    for(pg=0; pg<8; pg++)
-    {
-        clearPageDisplay(pg);
+void handleSwitches(void){
+    if (!PORTBbits.RB5){
+        switches |= (1 << 0);
+    } else {
+        switches &= ~(1 << 0);
+    }
+    if (!PORTBbits.RB4){
+        switches |= (1 << 1);
+    } else {
+        switches &= ~(1 << 1);
+    }
+    if (!PORTBbits.RB3){
+        switches |= (1 << 2);
+    } else {
+        switches &= ~(1 << 2);
+    }
+    if (!PORTBbits.RB0){
+        switches |= (1 << 3);
+    } else {
+        switches &= ~(1 << 3);
     }
 }
 
+void checkForActiveTiles(){
 
+}
+# 79 "main.c"
+struct tile* tileInit(uint32_t start, uint16_t len){
+    struct tile* outputTile = malloc(sizeof(struct tile));
 
-void clearPageDisplay(unsigned char page)
-{
-    int cl;
-    setColumnAddress(0);
-    setPageAddress(page);
-    for(cl=0; cl<128;cl++)
-    {
-        sendDataToDisplay(0x00);
-    }
+    if (outputTile == ((void*)0)) return ((void*)0);
+
+    outputTile->len = len;
+    outputTile->start = start;
+
+    return outputTile;
 }
 
+void drawColl(uint8_t x, struct tile activeCol[]){
+    for(uint8_t i=0; i<10; i++){
+        if(activeCol[i].len){
+            int16_t y = (millis - activeCol[i].start) / 100;
+            uint8_t height = activeCol[i].len / 100;
 
 
-void fillChessBoardDisplay(void)
-{
-    unsigned char cl, pg;
-    for(pg=0; pg<8; pg++)
-    {
-        setColumnAddress(0);
-        setPageAddress(pg);
-        for(cl=0; cl<128;cl++)
-        {
-            sendDataToDisplay(0xAA);
-            sendDataToDisplay(0x55);
-        }
-    }
-}
-
-
-
-
-void writeTextToDisplay(unsigned char page, unsigned char column, char* txt)
-{
-    unsigned char c, i, d, x;
-
-
-    setColumnAddress(column);
-    setPageAddress(page);
-
-    for(c=0; c<21; c++)
-    {
-        if(txt[c] == 0)
-            break;
-
-        x = txt[c]-0x20;
-        for(i=0; i<5; i++)
-        {
-            d = font5x7[x][i];
-            sendDataToDisplay(d);
-        }
-        sendDataToDisplay(0x00);
-    }
-}
-
-
-
-
-
-void sendCommandToDisplay(unsigned char comm)
-{
-    (LATD &= ~(1<<0));
-    (LATC &= ~(1<<0));
-    __nop();
-    sendByteSpi(comm);
-    __nop();
-    (LATC |= (1<<0));
-}
-
-
-
-void sendDataToDisplay(unsigned char dat)
-{
-    (LATD |= (1<<0));
-    (LATC &= ~(1<<0));
-    __nop();
-    sendByteSpi(dat);
-    __nop();
-    (LATC |= (1<<0));
-}
-
-
-
-void setColumnAddress(unsigned char column)
-{
-    unsigned char col;
-    if(column > 127)
-    {
-        column = 127;
-    }
-    col = (column & 0x0F) | 0x00;
-    sendCommandToDisplay(col);
-    col = (column >> 4) | 0x10;
-    sendCommandToDisplay(col);
-}
-
-
-
-void setPageAddress(unsigned char page)
-{
-    if(page > 7)
-    {
-        page = 7;
-    }
-    sendCommandToDisplay(0xB0 | page);
-}
-
-void drawText(uint8_t page, uint8_t column, const char* txt)
-{
-    uint8_t c, i, d, x;
-    uint8_t col = column;
-
-    if (page > 7 || column > 127) return;
-
-    for (c = 0; txt[c] != '\0'; c++)
-    {
-        if (col > 122) break;
-
-        x = txt[c] - 0x20;
-
-
-        for (i = 0; i < 5; i++)
-        {
-            d = font5x7[x][i];
-            displayBuffer[page][col++] = d;
-        }
-
-
-        displayBuffer[page][col++] = 0x00;
-    }
-}
-
-void updateDisplay(void)
-{
-    for (uint8_t pg = 0; pg < 8; pg++)
-    {
-        setColumnAddress(0);
-        setPageAddress(pg);
-
-        for (uint8_t col = 0; col < 128; col++)
-        {
-            sendDataToDisplay(displayBuffer[pg][col]);
-        }
-    }
-}
-
-void drawPixel(uint8_t x, uint8_t y, uint8_t color)
-{
-    if (x >= 128 || y >= 64) return;
-
-    uint8_t page = y >> 3;
-    uint8_t bit = y & 0x07;
-
-    if (color)
-        displayBuffer[page][x] |= (1 << bit);
-    else
-        displayBuffer[page][x] &= ~(1 << bit);
-}
-
-void drawLine(int x0, int y0, int x1, int y1)
-{
-    int dx = abs(x1 - x0);
-    int sx = x0 < x1 ? 1 : -1;
-    int dy = -abs(y1 - y0);
-    int sy = y0 < y1 ? 1 : -1;
-    int err = dx + dy;
-
-    while (1)
-    {
-        drawPixel(x0, y0, 1);
-
-        if (x0 == x1 && y0 == y1) break;
-
-        int e2 = 2 * err;
-
-        if (e2 >= dy)
-        {
-            err += dy;
-            x0 += sx;
-        }
-        if (e2 <= dx)
-        {
-            err += dx;
-            y0 += sy;
-        }
-    }
-}
-
-void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h)
-{
-
-    if(x <=128 && y <= 128 && x)
-    for (uint8_t i = 0; i < w; i++)
-    {
-        drawPixel(x + i, y, 1);
-        drawPixel(x + i, y + h - 1, 1);
-    }
-
-
-    for (uint8_t i = 0; i < h; i++)
-    {
-        drawPixel(x, y + i, 1);
-        drawPixel(x + w - 1, y + i, 1);
-    }
-}
-
-void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t color)
-{
-
-    if(h>=2 && w>=2 ){
-        for (uint8_t i = 0; i < h; i++)
-        {
-            for (uint8_t j = 0; j < w; j++)
-            {
-                drawPixel(x + j, y + i, color);
+            if (y < 64 && (y + height) > 0){
+                drawRect(x, y, 26, height);
             }
+
+
+            utoa32(y, DispCtrStr);
+            drawText(i, 0, DispCtrStr);
         }
+    }
+}
+
+
+void drawUi(){
+    if (switches & 0x01){
+        drawRect(2, 60, 28, 4);
+        fillRect(3, 61, 26, 2, 1);
+    } else {
+        drawRect(2, 60, 28, 4);
+        fillRect(3, 61, 26, 2, 0);
+    }
+
+    if (switches & 0x02){
+        drawRect(34, 60, 28, 4);
+        fillRect(35, 61, 26, 2, 1);
+    } else {
+        drawRect(34, 60, 28, 4);
+        fillRect(35, 61, 26, 2, 0);
+    }
+
+    if (switches & 0x04){
+        drawRect(66, 60, 28, 4);
+        fillRect(67, 61, 26, 2, 1);
+    } else {
+        drawRect(66, 60, 28, 4);
+        fillRect(67, 61, 26, 2, 0);
+    }
+
+    if (switches & 0x08){
+        drawRect(98, 60, 28, 4);
+        fillRect(99, 61, 26, 2, 1);
+    } else {
+        drawRect(98, 60, 28, 4);
+        fillRect(99, 61, 26, 2, 0);
+    }
+
+    drawColl(3, Col1);
+    drawColl(34, Col2);
+    drawColl(67, Col3);
+    drawColl(99, Col4);
+
+
+
+
+}
+
+
+
+void main()
+{
+    setPinout();
+    clearLeds();
+    setTimer0();
+    setTimer2();
+
+    initDisplay();
+    setInterrupt();
+
+
+    clearBuffer();
+    Col4[0] = *tileInit(1000, 500);
+    Col4[1] = *tileInit(2000, 100);
+    Col4[2] = *tileInit(3000, 700);
+# 189 "main.c"
+    while(1)
+    {
+        if ( (uint32_t) millis%2 == 0){
+            handleSwitches();
+        }
+        if ( (uint32_t) millis%100 == 0){
+            drawUi();
+            updateDisplay();
+            clearBuffer();
+
+
+
+
+        }
+
+
+
+
+
+    }
+}
+
+
+
+void __attribute__((picinterrupt(("")))) isr(void)
+{
+
+    if(TMR0IF && TMR0IE)
+    {
+
+        TMR0IF = 0;
+    }
+
+    if(TMR2IF && TMR2IE)
+    {
+
+       (uint32_t) millis++;
+        TMR2IF = 0;
     }
 
 }
 
-void clearBuffer(void)
+
+
+void setInterrupt(void)
 {
-    for (uint8_t pg = 0; pg < 8; pg++)
+    INTCONbits.PEIE = 1;
+    INTCONbits.GIE = 1;
+}
+
+
+
+void setPinout(void)
+{
+    TRISA = 0;
+    TRISB = 0x3D;
+    TRISC = 0;
+    TRISD = 0;
+    TRISE = 0;
+}
+
+
+
+void clearLeds(void)
+{
+    (LATA &= ~(1<<0));
+    (LATA &= ~(1<<1));
+    (LATA &= ~(1<<2));
+    (LATA &= ~(1<<3));
+    (LATA &= ~(1<<4));
+}
+
+
+
+void setTimer0(void)
+{
+    T0CON = 0xC3;
+    TMR0 = 0;
+    INTCONbits.TMR0IF = 0;
+    INTCONbits.TMR0IE = 1;
+}
+
+
+
+void setTimer2(void)
+{
+    T2CON = 0x1F;
+    PR2 = 187;
+    PIR1bits.TMR2IF = 0;
+    PIE1bits.TMR2IE = 1;
+}
+
+char* utoa32(uint32_t value, char* buffer)
+{
+    char temp[10];
+    int i = 0;
+
+
+    if (value == 0)
     {
-        for (uint8_t col = 0; col < 128; col++)
-        {
-            displayBuffer[pg][col] = 0x00;
-        }
+        buffer[0] = '0';
+        buffer[1] = '\0';
+        return buffer;
     }
+
+
+    while (value > 0)
+    {
+        temp[i++] = (value % 10) + '0';
+        value /= 10;
+    }
+
+
+    int j = 0;
+    while (i > 0)
+    {
+        buffer[j++] = temp[--i];
+    }
+
+    buffer[j] = '\0';
+
+    return buffer;
 }
