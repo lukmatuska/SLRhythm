@@ -11,6 +11,11 @@
 #include "mcu.h"
 #include "moduleDogm128.h"
 
+struct tile{
+    uint32_t start; //start time of the individual tile
+    uint16_t len;  //lenth of the tile in time
+};
+
 
 void setInterrupt(void);
 void setPinout(void);
@@ -22,11 +27,18 @@ uint8_t switches = 0;
 void hadleSwitches(void);
 void drawUi(void);
 
+struct tile Col1[10];
+struct tile Col2[10];
+struct tile Col3[10];
+struct tile Col4[10];
+
 char* utoa32(uint32_t value, char* buffer);
 
 char DispCtrStr[5] = "asdd";
 int cnt = 0;
 volatile uint32_t millis = 0;
+
+
 
 
 void handleSwitches(void){
@@ -51,6 +63,38 @@ void handleSwitches(void){
         switches &= ~(1 << 3);
     }
 }
+
+void checkForActiveTiles(){
+    
+}
+/*
+struct tile* tileInit(uint32_t start, uint16_t len, uint8_t col){
+    struct tile outputTile = malloc(sizeof(struct tile));
+    outputTile.col = col;
+    outputTile.len = len;
+    outputTile.start = start;
+    return *outputTile;    
+}*/
+
+struct tile* tileInit(uint32_t start, uint16_t len){
+    struct tile* outputTile = malloc(sizeof(struct tile));
+    
+    if (outputTile == NULL) return NULL; // good practice
+    
+    outputTile->len = len;
+    outputTile->start = start;
+    
+    return outputTile;    
+}
+
+void drawColl(uint8_t x, struct tile activeCol[]){
+    for(uint8_t i=0; i<10; i++){
+        if(activeCol[i].len){
+            drawRect(x, (uint8_t)((activeCol[i].start + millis))/100, 28, (uint8_t)activeCol[i].len/100 );
+        }
+    }
+}
+
 
 void drawUi(){
     if (switches & 0x01){
@@ -84,9 +128,17 @@ void drawUi(){
         drawRect(98, 60, 28, 4);
         fillRect(99, 61, 26, 2, 0);
     }
-    utoa32(switches, DispCtrStr);
-    drawText(0,0, DispCtrStr);
+    
+    drawColl(2, Col1);
+    drawColl(34, Col2);
+    drawColl(66, Col3);
+    drawColl(98, Col4);
+    
+    
+    //utoa32(switches, DispCtrStr);
+    //drawText(2,20, DispCtrStr);
 }
+
 
 
 void main() 
@@ -101,6 +153,7 @@ void main()
     
     
     clearBuffer();
+    Col1[0] = *tileInit(1000, 1000);
     
     //handleSwitches();
 
