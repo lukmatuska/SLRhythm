@@ -32,6 +32,18 @@ struct tile Col2[10];
 struct tile Col3[10];
 struct tile Col4[10];
 
+uint8_t Col1cnt = 0;
+uint8_t Col2cnt = 0;
+uint8_t Col3cnt = 0;
+uint8_t Col4cnt = 0;
+
+uint8_t Col1inc = 0;
+uint8_t Col2inc = 0;
+uint8_t Col3inc = 0;
+uint8_t Col4inc = 0;
+
+uint16_t score = 0;
+
 char* utoa32(uint32_t value, char* buffer);
 
 char DispCtrStr[5] = "asdd";
@@ -42,6 +54,9 @@ volatile uint32_t millis = 0;
 
 
 void handleSwitches(void){
+    if((millis - Col1[0].start - 6300) <=8000 && (millis - Col1[0].start - 6300) <=Col1[0].len) {
+            score++;
+        }
     if (!PORTBbits.RB5){
         switches |= (1 << 0);
     } else {
@@ -65,8 +80,32 @@ void handleSwitches(void){
 }
 
 void checkForActiveTiles(){
-    
+    if(Col1inc){
+        Col1cnt++;
+        for(uint8_t i=0; i<10; i++){
+            //Col1[i] = bigArray[i+Collcnt];
+        }
+    }
+    if(Col2inc){
+        Col1cnt++;
+        for(uint8_t i=0; i<10; i++){
+            //Col2[i] = bigArray[i+Collcnt];
+        }
+    }
+    if(Col3inc){
+        Col1cnt++;
+        for(uint8_t i=0; i<10; i++){
+            //Col3[i] = bigArray[i+Collcnt];
+        }
+    }
+    if(Col4inc){
+        Col1cnt++;
+        for(uint8_t i=0; i<10; i++){
+            //Col4[i] = bigArray[i+Collcnt];
+        }
+    }
 }
+
 /*
 struct tile* tileInit(uint32_t start, uint16_t len, uint8_t col){
     struct tile outputTile = malloc(sizeof(struct tile));
@@ -98,8 +137,8 @@ void drawColl(uint8_t x, struct tile activeCol[]){
                 drawRect(x, y, 26, height);
             }
             // debug text
-            utoa32(y, DispCtrStr);
-            drawText(i, 0, DispCtrStr);
+            //utoa32(y, DispCtrStr);
+            //drawText(i, 0, DispCtrStr);
         }
     }
 }
@@ -144,8 +183,8 @@ void drawUi(){
     drawColl(99, Col4);
     
     
-    //utoa32(switches, DispCtrStr);
-    //drawText(2,20, DispCtrStr);
+    utoa32(score, DispCtrStr);
+    drawText(0,0, DispCtrStr);
 }
 
 

@@ -41,31 +41,31 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"44 C:\NEN\lcrm\SLRhythm\main.c
+"56 C:\NEN\lcrm\SLRhythm\main.c
 [v _handleSwitches handleSwitches `(v  1 e 1 0 ]
 "14
 [s S24 tile 6 `ul 1 start 4 0 `us 1 len 2 4 ]
-"79
+"118
 [v _tileInit tileInit `(*.39S24  1 e 2 0 ]
-"90
+"129
 [v _drawColl drawColl `(v  1 e 1 0 ]
-"109
+"147
 [v _drawUi drawUi `(v  1 e 1 0 ]
-"154
+"192
 [v _main main `(v  1 e 1 0 ]
-"213
+"251
 [v _isr isr `IIH(v  1 e 1 0 ]
-"233
+"271
 [v _setInterrupt setInterrupt `(v  1 e 1 0 ]
-"241
+"279
 [v _setPinout setPinout `(v  1 e 1 0 ]
-"252
+"290
 [v _clearLeds clearLeds `(v  1 e 1 0 ]
-"263
+"301
 [v _setTimer0 setTimer0 `(v  1 e 1 0 ]
-"273
+"311
 [v _setTimer2 setTimer2 `(v  1 e 1 0 ]
-"281
+"319
 [v _utoa32 utoa32 `(*.30uc  1 e 2 0 ]
 "24 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
 [v _initDisplay initDisplay `(v  1 e 1 0 ]
@@ -176,20 +176,20 @@
 [v _PIR1bits PIR1bits `VES217  1 e 1 @3998 ]
 "6868
 [v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
-[s S369 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S384 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "6888
-[s S375 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S390 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S380 . 1 `S369 1 . 1 0 `S375 1 . 1 0 ]
-[v _SSPCON1bits SSPCON1bits `VES380  1 e 1 @4038 ]
+[u S395 . 1 `S384 1 . 1 0 `S390 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES395  1 e 1 @4038 ]
 "6938
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
 "7193
@@ -243,9 +243,9 @@
 "12
 [v _brkp brkp `*.39uc  1 s 2 brkp ]
 "17 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-[u S1033 . 2 `*.39S1035 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S1035 chunk 4 `ui 1 size 2 0 `S1033 1 . 2 2 ]
-[v ___freelist __freelist `*.39S1035  1 e 2 0 ]
+[u S1048 . 2 `*.39S1050 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S1050 chunk 4 `ui 1 size 2 0 `S1048 1 . 2 2 ]
+[v ___freelist __freelist `*.39S1050  1 e 2 0 ]
 "25 C:\NEN\lcrm\SLRhythm\main.c
 [v _switches switches `uc  1 e 1 0 ]
 [s S24 tile 6 `ul 1 start 4 0 `us 1 len 2 4 ]
@@ -257,16 +257,20 @@
 [v _Col3 Col3 `[10]S24  1 e 60 0 ]
 "33
 [v _Col4 Col4 `[10]S24  1 e 60 0 ]
-"37
+"35
+[v _Col1cnt Col1cnt `uc  1 e 1 0 ]
+"45
+[v _score score `us  1 e 2 0 ]
+"49
 [v _DispCtrStr DispCtrStr `[5]uc  1 e 5 0 ]
-"39
+"51
 [v _millis millis `VEul  1 e 4 0 ]
 "19 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
 [v _displayBuffer displayBuffer `[8][128]uc  1 s 1024 displayBuffer ]
-"154 C:\NEN\lcrm\SLRhythm\main.c
+"192 C:\NEN\lcrm\SLRhythm\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"209
+"247
 } 0
 "193 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
 [v _updateDisplay updateDisplay `(v  1 e 1 0 ]
@@ -279,15 +283,15 @@
 } 0
 "14 C:\NEN\lcrm\SLRhythm\main.c
 [s S24 tile 6 `ul 1 start 4 0 `us 1 len 2 4 ]
-"79
+"118
 [v _tileInit tileInit `(*.39S24  1 e 2 0 ]
 {
-"80
+"119
 [v tileInit@outputTile outputTile `*.39S24  1 a 2 38 ]
-"79
+"118
 [v tileInit@start start `ul  1 p 4 32 ]
 [v tileInit@len len `us  1 p 2 36 ]
-"88
+"127
 } 0
 "16 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
 [v _malloc malloc `(*.39v  1 e 2 0 ]
@@ -313,25 +317,25 @@
 [v ___simple_search_fl __simple_search_fl `(*.39v  1 e 2 0 ]
 {
 "50
-[u S1033 . 2 `*.39S1035 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S1035 chunk 4 `ui 1 size 2 0 `S1033 1 . 2 2 ]
-[v ___simple_search_fl@split split `*.39S1035  1 a 2 10 ]
+[u S1048 . 2 `*.39S1050 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S1050 chunk 4 `ui 1 size 2 0 `S1048 1 . 2 2 ]
+[v ___simple_search_fl@split split `*.39S1050  1 a 2 10 ]
 "53
 [v ___simple_search_fl@remaining_size remaining_size `ui  1 a 2 6 ]
 "45
-[u S1033 . 2 `*.39S1035 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S1035 chunk 4 `ui 1 size 2 0 `S1033 1 . 2 2 ]
-[v ___simple_search_fl@next next `*.39S1035  1 a 2 14 ]
+[u S1048 . 2 `*.39S1050 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S1050 chunk 4 `ui 1 size 2 0 `S1048 1 . 2 2 ]
+[v ___simple_search_fl@next next `*.39S1050  1 a 2 14 ]
 "20
-[u S1033 . 2 `*.39S1035 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S1035 chunk 4 `ui 1 size 2 0 `S1033 1 . 2 2 ]
-[v ___simple_search_fl@best best `*.39S1035  1 a 2 18 ]
+[u S1048 . 2 `*.39S1050 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S1050 chunk 4 `ui 1 size 2 0 `S1048 1 . 2 2 ]
+[v ___simple_search_fl@best best `*.39S1050  1 a 2 18 ]
 "23
-[v ___simple_search_fl@c c `*.39S1035  1 a 2 16 ]
+[v ___simple_search_fl@c c `*.39S1050  1 a 2 16 ]
 "22
-[v ___simple_search_fl@last last `*.39S1035  1 a 2 12 ]
+[v ___simple_search_fl@last last `*.39S1050  1 a 2 12 ]
 "21
-[v ___simple_search_fl@best_last best_last `*.39S1035  1 a 2 8 ]
+[v ___simple_search_fl@best_last best_last `*.39S1050  1 a 2 8 ]
 "19
 [v ___simple_search_fl@n n `ui  1 p 2 0 ]
 "65
@@ -347,25 +351,25 @@
 [v ___expand_heap@pn pn `*.30ui  1 p 1 0 ]
 "32
 } 0
-"273 C:\NEN\lcrm\SLRhythm\main.c
+"311 C:\NEN\lcrm\SLRhythm\main.c
 [v _setTimer2 setTimer2 `(v  1 e 1 0 ]
 {
-"279
+"317
 } 0
-"263
+"301
 [v _setTimer0 setTimer0 `(v  1 e 1 0 ]
 {
-"269
+"307
 } 0
-"241
+"279
 [v _setPinout setPinout `(v  1 e 1 0 ]
 {
-"248
+"286
 } 0
-"233
+"271
 [v _setInterrupt setInterrupt `(v  1 e 1 0 ]
 {
-"237
+"275
 } 0
 "24 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
 [v _initDisplay initDisplay `(v  1 e 1 0 ]
@@ -444,15 +448,39 @@
 [v sendByteSpi@dat dat `uc  1 p 1 0 ]
 "28
 } 0
-"44 C:\NEN\lcrm\SLRhythm\main.c
+"56 C:\NEN\lcrm\SLRhythm\main.c
 [v _handleSwitches handleSwitches `(v  1 e 1 0 ]
 {
-"65
+"80
 } 0
-"109
+"147
 [v _drawUi drawUi `(v  1 e 1 0 ]
 {
-"150
+"188
+} 0
+"319
+[v _utoa32 utoa32 `(*.30uc  1 e 2 0 ]
+{
+"321
+[v utoa32@temp temp `[10]uc  1 a 10 18 ]
+"322
+[v utoa32@i i `i  1 a 2 30 ]
+"340
+[v utoa32@j j `i  1 a 2 28 ]
+"319
+[v utoa32@value value `ul  1 p 4 13 ]
+[v utoa32@buffer buffer `*.30uc  1 p 1 17 ]
+"349
+} 0
+"7 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"10
+[v ___llmod@counter counter `uc  1 a 1 8 ]
+"7
+[v ___llmod@dividend dividend `ul  1 p 4 0 ]
+[v ___llmod@divisor divisor `ul  1 p 4 4 ]
+"25
 } 0
 "267 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
 [v _fillRect fillRect `(v  1 e 1 0 ]
@@ -472,60 +500,7 @@
 [v fillRect@x x `uc  1 p 1 14 ]
 "280
 } 0
-"90 C:\NEN\lcrm\SLRhythm\main.c
-[v _drawColl drawColl `(v  1 e 1 0 ]
-{
-[v drawColl@x x `uc  1 p 1 wreg ]
-"93
-[v drawColl@y y `s  1 a 2 42 ]
-"94
-[v drawColl@height height `uc  1 a 1 41 ]
-"91
-[v drawColl@i i `uc  1 a 1 44 ]
-"90
-[v drawColl@x x `uc  1 p 1 wreg ]
-[s S24 tile 6 `ul 1 start 4 0 `us 1 len 2 4 ]
-[v drawColl@activeCol activeCol `*.39S24  1 p 2 32 ]
-[v drawColl@x x `uc  1 p 1 40 ]
-"106
-} 0
-"281
-[v _utoa32 utoa32 `(*.30uc  1 e 2 0 ]
-{
-"283
-[v utoa32@temp temp `[10]uc  1 a 10 18 ]
-"284
-[v utoa32@i i `i  1 a 2 30 ]
-"302
-[v utoa32@j j `i  1 a 2 28 ]
-"281
-[v utoa32@value value `ul  1 p 4 13 ]
-[v utoa32@buffer buffer `*.30uc  1 p 1 17 ]
-"311
-} 0
-"7 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-[v ___llmod __llmod `(ul  1 e 4 0 ]
-{
-"10
-[v ___llmod@counter counter `uc  1 a 1 8 ]
-"7
-[v ___llmod@dividend dividend `ul  1 p 4 0 ]
-[v ___llmod@divisor divisor `ul  1 p 4 4 ]
-"25
-} 0
-"7 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-[v ___lldiv __lldiv `(ul  1 e 4 0 ]
-{
-"10
-[v ___lldiv@quotient quotient `ul  1 a 4 8 ]
-"11
-[v ___lldiv@counter counter `uc  1 a 1 12 ]
-"7
-[v ___lldiv@dividend dividend `ul  1 p 4 0 ]
-[v ___lldiv@divisor divisor `ul  1 p 4 4 ]
-"30
-} 0
-"168 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+"168
 [v _drawText drawText `(v  1 e 1 0 ]
 {
 [v drawText@page page `uc  1 p 1 wreg ]
@@ -544,12 +519,29 @@
 [v drawText@page page `uc  1 p 1 7 ]
 "191
 } 0
-"249
+"129 C:\NEN\lcrm\SLRhythm\main.c
+[v _drawColl drawColl `(v  1 e 1 0 ]
+{
+[v drawColl@x x `uc  1 p 1 wreg ]
+"132
+[v drawColl@y y `s  1 a 2 27 ]
+"133
+[v drawColl@height height `uc  1 a 1 26 ]
+"130
+[v drawColl@i i `uc  1 a 1 29 ]
+"129
+[v drawColl@x x `uc  1 p 1 wreg ]
+[s S24 tile 6 `ul 1 start 4 0 `us 1 len 2 4 ]
+[v drawColl@activeCol activeCol `*.39S24  1 p 2 17 ]
+[v drawColl@x x `uc  1 p 1 25 ]
+"144
+} 0
+"249 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
 [v _drawRect drawRect `(v  1 e 1 0 ]
 {
 [v drawRect@x x `uc  1 p 1 wreg ]
 "260
-[v drawRect@i_552 i `uc  1 a 1 15 ]
+[v drawRect@i_567 i `uc  1 a 1 15 ]
 "253
 [v drawRect@i i `uc  1 a 1 14 ]
 "249
@@ -589,10 +581,22 @@
 [v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
 "30
 } 0
-"252 C:\NEN\lcrm\SLRhythm\main.c
+"7 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 8 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 12 ]
+"7
+[v ___lldiv@dividend dividend `ul  1 p 4 0 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 4 ]
+"30
+} 0
+"290 C:\NEN\lcrm\SLRhythm\main.c
 [v _clearLeds clearLeds `(v  1 e 1 0 ]
 {
-"259
+"297
 } 0
 "282 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
 [v _clearBuffer clearBuffer `(v  1 e 1 0 ]
@@ -603,8 +607,8 @@
 [v clearBuffer@pg pg `uc  1 a 1 2 ]
 "291
 } 0
-"213 C:\NEN\lcrm\SLRhythm\main.c
+"251 C:\NEN\lcrm\SLRhythm\main.c
 [v _isr isr `IIH(v  1 e 1 0 ]
 {
-"229
+"267
 } 0
