@@ -50,6 +50,20 @@ char DispCtrStr[5] = "asdd";
 int cnt = 0;
 volatile uint32_t millis = 0;
 
+const struct tile chart[] = { //store tiles in flash, just one coll
+    {1000, 500},
+    {2000, 100},
+    {3000, 700},
+};
+
+//then do streaming
+
+uint16_t chartIndex = 0;
+
+#define MAX_ACTIVE 4
+struct tile Col1[MAX_ACTIVE];
+uint8_t Col1cnt = 0;
+
 
 
 
@@ -260,7 +274,7 @@ void __interrupt() isr(void)
     if(TMR2IF && TMR2IE)
     {
        
-       (uint32_t) millis++;
+       millis++;
         TMR2IF = 0;
     }
     // other interrupts...    

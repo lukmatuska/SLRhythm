@@ -1,0 +1,4 @@
+{
+    "mplab.clangd.compileCommandsDir": "${workspaceFolder}/_build/SLRhythm/default",
+    "mplab.clangd.path": "/opt/microchip/xc8/v3.10/bin/xc8-clangd"
+}
