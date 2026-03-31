@@ -85,21 +85,23 @@ uint8_t Col4cnt = 0;
 #define MAX_ACTIVE 4
 #define SPAWN_AHEAD 6000  // ms before visible
 #define DESPAWN_TIME 500
-#define HIT_WINDOW 300
-#define MISS_WINDOW 300
+
 struct tile Coll1[MAX_ACTIVE];
 
+#define HIT_WINDOW 150
+#define MISS_WINDOW 300
 
 void checkHit(struct tile col[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
         if(col[i].len > 0){
             int32_t error = millis - col[i].start;
 
-            if (error < MISS_WINDOW && !(error < HIT_WINDOW)){
+            if (error > -MISS_WINDOW && error < MISS_WINDOW && !(error > -HIT_WINDOW && error < HIT_WINDOW)){
                 if(score > 2){
                     score-=2;
                 }
                 col[i].len = 0; // mark as hit
+                continue;
             }
 
             if (error > -HIT_WINDOW && error < HIT_WINDOW){
@@ -159,8 +161,6 @@ void updateTiles(void){
     updateColumn(Col4, &Col4cnt);
 }
 
-<<<<<<< HEAD
-=======
 void resetGame(void)
 {
     // stop interrupts (avoid race conditions)
@@ -202,7 +202,7 @@ void resetGame(void)
     INTCONbits.GIE = 1;
 }
 
->>>>>>> b39ff2facb804279b79e76821641d0ef98ab24ef
+
 void handleSwitches(void){
     /*if((millis - Col1[0].start - 6300) <=8000 && (millis - Col1[0].start - 6300) <=Col1[0].len) {
             score++;
