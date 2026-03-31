@@ -82,6 +82,8 @@ uint8_t Col2cnt = 0;
 uint8_t Col3cnt = 0;
 uint8_t Col4cnt = 0;
 
+#define PIXELS_PER_SECOND 10
+#define SPEED_FP  (PIXELS_PER_SECOND << 8) / 1000
 #define MAX_ACTIVE 4
 #define SPAWN_AHEAD 6000  // ms before visible
 #define DESPAWN_TIME 500
@@ -285,20 +287,24 @@ struct tile* tileInit(uint32_t start, uint16_t len){
     
     return outputTile;    
 }
-
 void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
-        if(activeCol[i].len > 0){
-            int32_t dt = millis - activeCol[i].start;
+        if(activeCol[i].len == 0) continue;
 
-            int16_t y = dt / 100 + 60;
-            uint8_t height = activeCol[i].len / 100;
+        int32_t dt = millis - activeCol[i].start;
 
-            if (y < 64 && (y + height) > 0){
-                drawRect(x, y, 26, height);
-            }
-        }
+        // position in pixels
+        int16_t y = (dt * PIXELS_PER_SECOND) / 1000 + 60;
+        //int16_t y = (dt * SPEED_FP) >> 8;
         
+
+        // scale tile length to pixels
+        uint8_t height = (activeCol[i].len * PIXELS_PER_SECOND) / 1000;
+
+        // draw only if visible
+        if (y < 64 && (y + height) > 0){
+            drawRect(x, y, 26, height);
+        }
     }
 }
 
@@ -333,9 +339,19 @@ void drawButtons(){
     }
 }
 
+void drawBoard(){
+   // drawLine();
+    drawRect(0, 0, 128, 10);
+    drawRect(0, 10, 2, 50);
+    drawRect(32, 10, 2, 50);
+    drawRect(64, 10, 2, 50);
+    drawRect(96, 10, 2, 50);
+    drawRect(126, 10, 2, 50);
+}
+
 void drawUi(){
     
-    //drawButtons();
+    drawButtons();
     
     drawColl(3, Col1, Col1cnt);
     drawColl(34, Col2, Col2cnt);
@@ -390,12 +406,6 @@ void main()
             handleSwitches();
         }
         if ( (uint32_t) millis%100 == 0){
-            drawRect(0, 0, 128, 10);
-            drawRect(0, 10, 2, 50);
-            drawRect(32, 10, 2, 50);
-            drawRect(64, 10, 2, 50);
-            drawRect(96, 10, 2, 50);
-            drawRect(126, 10, 2, 50);
             spawnTiles();   // NEW
             updateTiles();  // NEW
             drawUi();

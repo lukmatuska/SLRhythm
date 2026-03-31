@@ -6039,6 +6039,8 @@ uint8_t Col4cnt = 0;
 
 
 
+
+
 struct tile Coll1[4];
 
 
@@ -6191,7 +6193,7 @@ void handleSwitches(void){
     }
 
 }
-# 278 "main.c"
+# 280 "main.c"
 struct tile* tileInit(uint32_t start, uint16_t len){
     struct tile* outputTile = malloc(sizeof(struct tile));
 
@@ -6202,20 +6204,24 @@ struct tile* tileInit(uint32_t start, uint16_t len){
 
     return outputTile;
 }
-
 void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
-        if(activeCol[i].len > 0){
-            int32_t dt = millis - activeCol[i].start;
+        if(activeCol[i].len == 0) continue;
 
-            int16_t y = dt / 100 + 60;
-            uint8_t height = activeCol[i].len / 100;
+        int32_t dt = millis - activeCol[i].start;
 
-            if (y < 64 && (y + height) > 0){
-                drawRect(x, y, 26, height);
-            }
+
+        int16_t y = (dt * 10) / 1000 + 60;
+
+
+
+
+        uint8_t height = (activeCol[i].len * 10) / 1000;
+
+
+        if (y < 64 && (y + height) > 0){
+            drawRect(x, y, 26, height);
         }
-
     }
 }
 
@@ -6250,9 +6256,19 @@ void drawButtons(){
     }
 }
 
+void drawBoard(){
+
+    drawRect(0, 0, 128, 10);
+    drawRect(0, 10, 2, 50);
+    drawRect(32, 10, 2, 50);
+    drawRect(64, 10, 2, 50);
+    drawRect(96, 10, 2, 50);
+    drawRect(126, 10, 2, 50);
+}
+
 void drawUi(){
 
-
+    drawButtons();
 
     drawColl(3, Col1, Col1cnt);
     drawColl(34, Col2, Col2cnt);
@@ -6281,19 +6297,13 @@ void main()
     Col4[0] = *tileInit(1000, 500);
     Col4[1] = *tileInit(2000, 100);
     Col4[2] = *tileInit(3000, 700);
-# 387 "main.c"
+# 403 "main.c"
     while(1)
     {
         if ( (uint32_t) millis%2 == 0){
             handleSwitches();
         }
         if ( (uint32_t) millis%100 == 0){
-            drawRect(0, 0, 128, 10);
-            drawRect(0, 10, 2, 50);
-            drawRect(32, 10, 2, 50);
-            drawRect(64, 10, 2, 50);
-            drawRect(96, 10, 2, 50);
-            drawRect(126, 10, 2, 50);
             spawnTiles();
             updateTiles();
             drawUi();
