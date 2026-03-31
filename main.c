@@ -119,7 +119,6 @@ void addTile(struct tile col[], uint8_t *cnt, struct tile t){
 }
 
 
-
 void spawnTiles(void){
     while (chartIndex < CHART_SIZE &&
            chart[chartIndex].start <= millis + SPAWN_AHEAD){
@@ -160,6 +159,8 @@ void updateTiles(void){
     updateColumn(Col4, &Col4cnt);
 }
 
+<<<<<<< HEAD
+=======
 void resetGame(void)
 {
     // stop interrupts (avoid race conditions)
@@ -201,6 +202,7 @@ void resetGame(void)
     INTCONbits.GIE = 1;
 }
 
+>>>>>>> b39ff2facb804279b79e76821641d0ef98ab24ef
 void handleSwitches(void){
     /*if((millis - Col1[0].start - 6300) <=8000 && (millis - Col1[0].start - 6300) <=Col1[0].len) {
             score++;
@@ -388,6 +390,12 @@ void main()
             handleSwitches();
         }
         if ( (uint32_t) millis%100 == 0){
+            drawRect(0, 0, 128, 10);
+            drawRect(0, 10, 2, 50);
+            drawRect(32, 10, 2, 50);
+            drawRect(64, 10, 2, 50);
+            drawRect(96, 10, 2, 50);
+            drawRect(126, 10, 2, 50);
             spawnTiles();   // NEW
             updateTiles();  // NEW
             drawUi();
