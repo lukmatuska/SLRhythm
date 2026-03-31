@@ -43,39 +43,43 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"84 C:\NEN\lcrm\SLRhythm\main.c
+"93 C:\NEN\lcrm\SLRhythm\main.c
+[v _checkHit checkHit `(v  1 e 1 0 ]
+"114
 [v _addTile addTile `(v  1 e 1 0 ]
-"93
+"123
 [v _spawnTiles spawnTiles `(v  1 e 1 0 ]
-"112
+"141
 [v _updateColumn updateColumn `(v  1 e 1 0 ]
-"127
+"156
 [v _updateTiles updateTiles `(v  1 e 1 0 ]
-"135
+"163
+[v _resetGame resetGame `(v  1 e 1 0 ]
+"204
 [v _handleSwitches handleSwitches `(v  1 e 1 0 ]
 "15
 [s S24 tile 7 `ul 1 start 4 0 `us 1 len 2 4 `uc 1 col 1 6 ]
-"197
+"276
 [v _tileInit tileInit `(*.39S24  1 e 2 0 ]
-"225
+"287
 [v _drawColl drawColl `(v  1 e 1 0 ]
-"238
+"334
 [v _drawUi drawUi `(v  1 e 1 0 ]
-"283
+"350
 [v _main main `(v  1 e 1 0 ]
-"344
+"411
 [v _isr isr `IIH(v  1 e 1 0 ]
-"364
+"431
 [v _setInterrupt setInterrupt `(v  1 e 1 0 ]
-"372
+"439
 [v _setPinout setPinout `(v  1 e 1 0 ]
-"383
+"450
 [v _clearLeds clearLeds `(v  1 e 1 0 ]
-"394
+"461
 [v _setTimer0 setTimer0 `(v  1 e 1 0 ]
-"404
+"471
 [v _setTimer2 setTimer2 `(v  1 e 1 0 ]
-"412
+"479
 [v _utoa32 utoa32 `(*.30uc  1 e 2 0 ]
 "24 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
 [v _initDisplay initDisplay `(v  1 e 1 0 ]
@@ -109,7 +113,7 @@
 [v _sendByteSpi sendByteSpi `(uc  1 e 1 0 ]
 "13 C:\NEN\lcrm\SLRhythm/fontA.h
 [v _font5x7 font5x7 `C[92][5]uc  1 e 460 0 ]
-[s S28 . 1 `uc 1 RB0 1 0 :1:0 
+[s S119 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
 `uc 1 RB3 1 0 :1:3 
@@ -119,7 +123,7 @@
 `uc 1 RB7 1 0 :1:7 
 ]
 "2483 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\pic\include\proc\pic18f4550.h
-[s S37 . 1 `uc 1 INT0 1 0 :1:0 
+[s S128 . 1 `uc 1 INT0 1 0 :1:0 
 `uc 1 INT1 1 0 :1:1 
 `uc 1 INT2 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -127,11 +131,11 @@
 `uc 1 PGC 1 0 :1:6 
 `uc 1 PGD 1 0 :1:7 
 ]
-[s S45 . 1 `uc 1 . 1 0 :3:0 
+[s S136 . 1 `uc 1 . 1 0 :3:0 
 `uc 1 CCP2_PA2 1 0 :1:3 
 ]
-[u S48 . 1 `S28 1 . 1 0 `S37 1 . 1 0 `S45 1 . 1 0 ]
-[v _PORTBbits PORTBbits `VES48  1 e 1 @3969 ]
+[u S139 . 1 `S119 1 . 1 0 `S128 1 . 1 0 `S136 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES139  1 e 1 @3969 ]
 "2973
 [v _LATA LATA `VEuc  1 e 1 @3977 ]
 "3185
@@ -166,7 +170,7 @@
 ]
 [u S252 . 1 `S237 1 . 1 0 `S246 1 . 1 0 ]
 [v _PIE1bits PIE1bits `VES252  1 e 1 @3997 ]
-[s S203 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S85 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -176,30 +180,30 @@
 `uc 1 SPPIF 1 0 :1:7 
 ]
 "4492
-[s S212 . 1 `uc 1 . 1 0 :4:0 
+[s S94 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 `uc 1 RC1IF 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[u S218 . 1 `S203 1 . 1 0 `S212 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES218  1 e 1 @3998 ]
+[u S100 . 1 `S85 1 . 1 0 `S94 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES100  1 e 1 @3998 ]
 "6868
 [v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
-[s S417 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S436 . 1 `uc 1 SSPM 1 0 :4:0 
 `uc 1 CKP 1 0 :1:4 
 `uc 1 SSPEN 1 0 :1:5 
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
 "6888
-[s S423 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S442 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
 ]
-[u S428 . 1 `S417 1 . 1 0 `S423 1 . 1 0 ]
-[v _SSPCON1bits SSPCON1bits `VES428  1 e 1 @4038 ]
+[u S447 . 1 `S436 1 . 1 0 `S442 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES447  1 e 1 @4038 ]
 "6938
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
 "7193
@@ -212,7 +216,7 @@
 [v _T0CON T0CON `VEuc  1 e 1 @4053 ]
 "8139
 [v _TMR0 TMR0 `VEus  1 e 2 @4054 ]
-[s S144 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S28 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -222,7 +226,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "8614
-[s S153 . 1 `uc 1 . 1 0 :1:0 
+[s S37 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -231,12 +235,12 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S162 . 1 `uc 1 . 1 0 :6:0 
+[s S46 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S166 . 1 `S144 1 . 1 0 `S153 1 . 1 0 `S162 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES166  1 e 1 @4082 ]
+[u S50 . 1 `S28 1 . 1 0 `S37 1 . 1 0 `S46 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES50  1 e 1 @4082 ]
 "10816
 [v _TMR0IE TMR0IE `VEb  1 e 0 @32661 ]
 "10819
@@ -253,21 +257,9 @@
 "12
 [v _brkp brkp `*.39uc  1 s 2 brkp ]
 "17 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-[u S1118 . 2 `*.39S1120 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S1120 chunk 4 `ui 1 size 2 0 `S1118 1 . 2 2 ]
-[v ___freelist __freelist `*.39S1120  1 e 2 0 ]
-"3 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\pic18\realice\__htdata.c
-[v __IT_INT_MASK _IT_INT_MASK `uc  1 e 1 0 ]
-"5
-[v ___DCByte __DCByte `VSSEuc  1 e 1 0 ]
-"6
-[v ___DCDelay __DCDelay `VSSEuc  1 e 1 0 ]
-"8
-[v __IT_SAVE_BSR _IT_SAVE_BSR `uc  1 e 1 0 ]
-"9
-[v __IT_SAVE_WREG _IT_SAVE_WREG `uc  1 e 1 0 ]
-"10
-[v __IT_SAVE_STATUS _IT_SAVE_STATUS `uc  1 e 1 0 ]
+[u S1100 . 2 `*.39S1102 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S1102 chunk 4 `ui 1 size 2 0 `S1100 1 . 2 2 ]
+[v ___freelist __freelist `*.39S1102  1 e 2 0 ]
 "27 C:\NEN\lcrm\SLRhythm\main.c
 [v _switches switches `uc  1 e 1 0 ]
 "47
@@ -278,70 +270,61 @@
 [v _millis millis `VEul  1 e 4 0 ]
 [s S24 tile 7 `ul 1 start 4 0 `us 1 len 2 4 `uc 1 col 1 6 ]
 "55
-[v _chart chart `C[5]S24  1 e 35 0 ]
-"66
-[v _chartIndex chartIndex `us  1 e 2 0 ]
-"70
-[v _Col1 Col1 `[4]S24  1 e 28 0 ]
+[v _chart chart `C[10]S24  1 e 70 0 ]
 "71
-[v _Col2 Col2 `[4]S24  1 e 28 0 ]
-"72
-[v _Col3 Col3 `[4]S24  1 e 28 0 ]
-"73
-[v _Col4 Col4 `[4]S24  1 e 28 0 ]
+[v _chartIndex chartIndex `us  1 e 2 0 ]
 "75
-[v _Col1cnt Col1cnt `uc  1 e 1 0 ]
+[v _Col1 Col1 `[4]S24  1 e 28 0 ]
 "76
-[v _Col2cnt Col2cnt `uc  1 e 1 0 ]
+[v _Col2 Col2 `[4]S24  1 e 28 0 ]
 "77
-[v _Col3cnt Col3cnt `uc  1 e 1 0 ]
+[v _Col3 Col3 `[4]S24  1 e 28 0 ]
 "78
+[v _Col4 Col4 `[4]S24  1 e 28 0 ]
+"80
+[v _Col1cnt Col1cnt `uc  1 e 1 0 ]
+"81
+[v _Col2cnt Col2cnt `uc  1 e 1 0 ]
+"82
+[v _Col3cnt Col3cnt `uc  1 e 1 0 ]
+"83
 [v _Col4cnt Col4cnt `uc  1 e 1 0 ]
 "19 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
 [v _displayBuffer displayBuffer `[8][128]uc  1 s 1024 displayBuffer ]
-"283 C:\NEN\lcrm\SLRhythm\main.c
+"350 C:\NEN\lcrm\SLRhythm\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"340
+"407
 } 0
-"127
+"156
 [v _updateTiles updateTiles `(v  1 e 1 0 ]
 {
-"132
+"161
 } 0
-"112
+"141
 [v _updateColumn updateColumn `(v  1 e 1 0 ]
 {
-"117
+"146
 [v updateColumn@j j `uc  1 a 1 16 ]
-"113
+"142
 [v updateColumn@i i `uc  1 a 1 17 ]
 [s S24 tile 7 `ul 1 start 4 0 `us 1 len 2 4 `uc 1 col 1 6 ]
-"112
+"141
 [v updateColumn@col col `*.30S24  1 p 1 0 ]
 [v updateColumn@cnt cnt `*.30uc  1 p 1 1 ]
-"125
+"154
 } 0
-"193 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-[v _updateDisplay updateDisplay `(v  1 e 1 0 ]
-{
-"200
-[v updateDisplay@col col `uc  1 a 1 6 ]
-"195
-[v updateDisplay@pg pg `uc  1 a 1 7 ]
-"205
-} 0
-"15 C:\NEN\lcrm\SLRhythm\main.c
+"15
 [s S24 tile 7 `ul 1 start 4 0 `us 1 len 2 4 `uc 1 col 1 6 ]
-"197
+"276
 [v _tileInit tileInit `(*.39S24  1 e 2 0 ]
 {
-"198
+"277
 [v tileInit@outputTile outputTile `*.39S24  1 a 2 38 ]
-"197
+"276
 [v tileInit@start start `ul  1 p 4 32 ]
 [v tileInit@len len `us  1 p 2 36 ]
-"206
+"285
 } 0
 "16 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
 [v _malloc malloc `(*.39v  1 e 2 0 ]
@@ -367,25 +350,25 @@
 [v ___simple_search_fl __simple_search_fl `(*.39v  1 e 2 0 ]
 {
 "50
-[u S1118 . 2 `*.39S1120 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S1120 chunk 4 `ui 1 size 2 0 `S1118 1 . 2 2 ]
-[v ___simple_search_fl@split split `*.39S1120  1 a 2 10 ]
+[u S1100 . 2 `*.39S1102 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S1102 chunk 4 `ui 1 size 2 0 `S1100 1 . 2 2 ]
+[v ___simple_search_fl@split split `*.39S1102  1 a 2 10 ]
 "53
 [v ___simple_search_fl@remaining_size remaining_size `ui  1 a 2 6 ]
 "45
-[u S1118 . 2 `*.39S1120 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S1120 chunk 4 `ui 1 size 2 0 `S1118 1 . 2 2 ]
-[v ___simple_search_fl@next next `*.39S1120  1 a 2 14 ]
+[u S1100 . 2 `*.39S1102 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S1102 chunk 4 `ui 1 size 2 0 `S1100 1 . 2 2 ]
+[v ___simple_search_fl@next next `*.39S1102  1 a 2 14 ]
 "20
-[u S1118 . 2 `*.39S1120 1 next 2 0 `[1]uc 1 space 1 0 ]
-[s S1120 chunk 4 `ui 1 size 2 0 `S1118 1 . 2 2 ]
-[v ___simple_search_fl@best best `*.39S1120  1 a 2 18 ]
+[u S1100 . 2 `*.39S1102 1 next 2 0 `[1]uc 1 space 1 0 ]
+[s S1102 chunk 4 `ui 1 size 2 0 `S1100 1 . 2 2 ]
+[v ___simple_search_fl@best best `*.39S1102  1 a 2 18 ]
 "23
-[v ___simple_search_fl@c c `*.39S1120  1 a 2 16 ]
+[v ___simple_search_fl@c c `*.39S1102  1 a 2 16 ]
 "22
-[v ___simple_search_fl@last last `*.39S1120  1 a 2 12 ]
+[v ___simple_search_fl@last last `*.39S1102  1 a 2 12 ]
 "21
-[v ___simple_search_fl@best_last best_last `*.39S1120  1 a 2 8 ]
+[v ___simple_search_fl@best_last best_last `*.39S1102  1 a 2 8 ]
 "19
 [v ___simple_search_fl@n n `ui  1 p 2 0 ]
 "65
@@ -401,42 +384,42 @@
 [v ___expand_heap@pn pn `*.30ui  1 p 1 0 ]
 "32
 } 0
-"93 C:\NEN\lcrm\SLRhythm\main.c
+"123 C:\NEN\lcrm\SLRhythm\main.c
 [v _spawnTiles spawnTiles `(v  1 e 1 0 ]
 {
 [s S24 tile 7 `ul 1 start 4 0 `us 1 len 2 4 `uc 1 col 1 6 ]
-"97
+"127
 [v spawnTiles@t t `S24  1 a 7 16 ]
-"108
+"138
 } 0
-"84
+"114
 [v _addTile addTile `(v  1 e 1 0 ]
 {
 [s S24 tile 7 `ul 1 start 4 0 `us 1 len 2 4 `uc 1 col 1 6 ]
 [v addTile@col col `*.30S24  1 p 1 0 ]
 [v addTile@cnt cnt `*.30uc  1 p 1 1 ]
 [v addTile@t t `S24  1 p 7 2 ]
-"89
+"119
 } 0
-"404
+"471
 [v _setTimer2 setTimer2 `(v  1 e 1 0 ]
 {
-"410
+"477
 } 0
-"394
+"461
 [v _setTimer0 setTimer0 `(v  1 e 1 0 ]
 {
-"400
+"467
 } 0
-"372
+"439
 [v _setPinout setPinout `(v  1 e 1 0 ]
 {
-"379
+"446
 } 0
-"364
+"431
 [v _setInterrupt setInterrupt `(v  1 e 1 0 ]
 {
-"368
+"435
 } 0
 "24 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
 [v _initDisplay initDisplay `(v  1 e 1 0 ]
@@ -466,6 +449,27 @@
 "65
 [v clearPageDisplay@page page `uc  1 p 1 4 ]
 "71
+} 0
+"204 C:\NEN\lcrm\SLRhythm\main.c
+[v _handleSwitches handleSwitches `(v  1 e 1 0 ]
+{
+"238
+} 0
+"163
+[v _resetGame resetGame `(v  1 e 1 0 ]
+{
+"181
+[v resetGame@i i `uc  1 a 1 8 ]
+"202
+} 0
+"193 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+[v _updateDisplay updateDisplay `(v  1 e 1 0 ]
+{
+"200
+[v updateDisplay@col col `uc  1 a 1 6 ]
+"195
+[v updateDisplay@pg pg `uc  1 a 1 7 ]
+"205
 } 0
 "159
 [v _setPageAddress setPageAddress `(v  1 e 1 0 ]
@@ -515,29 +519,46 @@
 [v sendByteSpi@dat dat `uc  1 p 1 0 ]
 "28
 } 0
-"135 C:\NEN\lcrm\SLRhythm\main.c
-[v _handleSwitches handleSwitches `(v  1 e 1 0 ]
+"282 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+[v _clearBuffer clearBuffer `(v  1 e 1 0 ]
 {
-"159
+"286
+[v clearBuffer@col col `uc  1 a 1 3 ]
+"284
+[v clearBuffer@pg pg `uc  1 a 1 2 ]
+"291
 } 0
-"238
+"93 C:\NEN\lcrm\SLRhythm\main.c
+[v _checkHit checkHit `(v  1 e 1 0 ]
+{
+"96
+[v checkHit@error error `l  1 a 4 6 ]
+"94
+[v checkHit@i i `uc  1 a 1 10 ]
+[s S24 tile 7 `ul 1 start 4 0 `us 1 len 2 4 `uc 1 col 1 6 ]
+"93
+[v checkHit@col col `*.30S24  1 p 1 0 ]
+[v checkHit@cnt cnt `uc  1 p 1 1 ]
+"111
+} 0
+"334
 [v _drawUi drawUi `(v  1 e 1 0 ]
 {
-"279
+"346
 } 0
-"412
+"479
 [v _utoa32 utoa32 `(*.30uc  1 e 2 0 ]
 {
-"414
+"481
 [v utoa32@temp temp `[10]uc  1 a 10 18 ]
-"415
+"482
 [v utoa32@i i `i  1 a 2 30 ]
-"433
+"500
 [v utoa32@j j `i  1 a 2 28 ]
-"412
+"479
 [v utoa32@value value `ul  1 p 4 13 ]
 [v utoa32@buffer buffer `*.30uc  1 p 1 17 ]
-"442
+"509
 } 0
 "7 C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
 [v ___llmod __llmod `(ul  1 e 4 0 ]
@@ -561,25 +582,7 @@
 [v ___lldiv@divisor divisor `ul  1 p 4 4 ]
 "30
 } 0
-"267 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-[v _fillRect fillRect `(v  1 e 1 0 ]
-{
-[v fillRect@x x `uc  1 p 1 wreg ]
-"273
-[v fillRect@j j `uc  1 a 1 16 ]
-"271
-[v fillRect@i i `uc  1 a 1 15 ]
-"267
-[v fillRect@x x `uc  1 p 1 wreg ]
-[v fillRect@y y `uc  1 p 1 10 ]
-[v fillRect@w w `uc  1 p 1 11 ]
-[v fillRect@h h `uc  1 p 1 12 ]
-[v fillRect@color color `uc  1 p 1 13 ]
-"270
-[v fillRect@x x `uc  1 p 1 14 ]
-"280
-} 0
-"168
+"168 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
 [v _drawText drawText `(v  1 e 1 0 ]
 {
 [v drawText@page page `uc  1 p 1 wreg ]
@@ -598,32 +601,32 @@
 [v drawText@page page `uc  1 p 1 7 ]
 "191
 } 0
-"225 C:\NEN\lcrm\SLRhythm\main.c
+"287 C:\NEN\lcrm\SLRhythm\main.c
 [v _drawColl drawColl `(v  1 e 1 0 ]
 {
 [v drawColl@x x `uc  1 p 1 wreg ]
-"227
+"290
 [v drawColl@dt dt `l  1 a 4 23 ]
-"229
+"292
 [v drawColl@y y `s  1 a 2 29 ]
-"230
+"293
 [v drawColl@height height `uc  1 a 1 28 ]
-"226
+"288
 [v drawColl@i i `uc  1 a 1 31 ]
-"225
+"287
 [v drawColl@x x `uc  1 p 1 wreg ]
 [s S24 tile 7 `ul 1 start 4 0 `us 1 len 2 4 `uc 1 col 1 6 ]
 [v drawColl@activeCol activeCol `*.30S24  1 p 1 17 ]
 [v drawColl@cnt cnt `uc  1 p 1 18 ]
 [v drawColl@x x `uc  1 p 1 27 ]
-"236
+"301
 } 0
 "249 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
 [v _drawRect drawRect `(v  1 e 1 0 ]
 {
 [v drawRect@x x `uc  1 p 1 wreg ]
 "260
-[v drawRect@i_600 i `uc  1 a 1 15 ]
+[v drawRect@i_619 i `uc  1 a 1 15 ]
 "253
 [v drawRect@i i `uc  1 a 1 14 ]
 "249
@@ -676,22 +679,13 @@
 [v ___aldiv@divisor divisor `l  1 p 4 4 ]
 "41
 } 0
-"383 C:\NEN\lcrm\SLRhythm\main.c
+"450 C:\NEN\lcrm\SLRhythm\main.c
 [v _clearLeds clearLeds `(v  1 e 1 0 ]
 {
-"390
+"457
 } 0
-"282 C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-[v _clearBuffer clearBuffer `(v  1 e 1 0 ]
-{
-"286
-[v clearBuffer@col col `uc  1 a 1 3 ]
-"284
-[v clearBuffer@pg pg `uc  1 a 1 2 ]
-"291
-} 0
-"344 C:\NEN\lcrm\SLRhythm\main.c
+"411
 [v _isr isr `IIH(v  1 e 1 0 ]
 {
-"360
+"427
 } 0

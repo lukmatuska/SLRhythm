@@ -5729,10 +5729,6 @@ __attribute__((__unsupported__("The " "EraseFlash" " routine is no longer suppor
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\errata.h" 1 3
 # 28 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\\pic\\include\\pic18.h" 2 3
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\include\\trace18.h" 1 3
-# 31 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\\pic\\include\\pic18.h" 2 3
 # 156 "C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC18Fxxxx_DFP/1.6.159/xc8\\pic\\include\\pic18.h" 3
 __attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
 __attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
@@ -6015,6 +6011,11 @@ const struct tile chart[] = {
     {2000, 300, 2},
     {2500, 400, 3},
     {3000, 700, 0},
+    {3200, 500, 3},
+    {3400, 200, 1},
+    {4000, 300, 2},
+    {4500, 400, 3},
+    {4800, 700, 0},
 };
 
 
@@ -6035,7 +6036,32 @@ uint8_t Col3cnt = 0;
 uint8_t Col4cnt = 0;
 
 
+
+
+
+
 struct tile Coll1[4];
+
+
+void checkHit(struct tile col[], uint8_t cnt){
+    for(uint8_t i=0; i<cnt; i++){
+        if(col[i].len > 0){
+            int32_t error = millis - col[i].start;
+
+            if (error < 300 && !(error < 300)){
+                if(score > 2){
+                    score-=2;
+                }
+                col[i].len = 0;
+            }
+
+            if (error > -300 && error < 300){
+                score++;
+                col[i].len = 0;
+            }
+        }
+    }
+}
 
 
 void addTile(struct tile col[], uint8_t *cnt, struct tile t){
@@ -6049,7 +6075,7 @@ void addTile(struct tile col[], uint8_t *cnt, struct tile t){
 
 void spawnTiles(void){
     while (chartIndex < (sizeof(chart)/sizeof(chart[0])) &&
-           chart[chartIndex].start <= millis + 2000){
+           chart[chartIndex].start <= millis + 6000){
 
         struct tile t = chart[chartIndex];
 
@@ -6063,7 +6089,6 @@ void spawnTiles(void){
         chartIndex++;
     }
 }
-
 
 
 void updateColumn(struct tile col[], uint8_t *cnt){
@@ -6088,33 +6113,83 @@ void updateTiles(void){
     updateColumn(Col4, &Col4cnt);
 }
 
+void resetGame(void)
+{
+
+    INTCONbits.GIE = 0;
+
+
+    millis = 0;
+
+
+    chartIndex = 0;
+
+
+    Col1cnt = 0;
+    Col2cnt = 0;
+    Col3cnt = 0;
+    Col4cnt = 0;
+
+
+    for(uint8_t i = 0; i < 4; i++){
+        Col1[i].len = 0;
+        Col2[i].len = 0;
+        Col3[i].len = 0;
+        Col4[i].len = 0;
+    }
+
+
+    switches = 0;
+    score = 0;
+
+
+    clearBuffer();
+    updateDisplay();
+
+
+    PIR1bits.TMR2IF = 0;
+    INTCONbits.TMR0IF = 0;
+
+
+    INTCONbits.GIE = 1;
+}
 
 void handleSwitches(void){
-    if((millis - Col1[0].start - 6300) <=8000 && (millis - Col1[0].start - 6300) <=Col1[0].len) {
-            score++;
-        }
+
+
+
+
+    if (!PORTBbits.RB2){
+        resetGame();
+    }
+
     if (!PORTBbits.RB5){
         switches |= (1 << 0);
+        checkHit(Col1, Col1cnt);
     } else {
         switches &= ~(1 << 0);
     }
     if (!PORTBbits.RB4){
         switches |= (1 << 1);
+        checkHit(Col2, Col1cnt);
     } else {
         switches &= ~(1 << 1);
     }
     if (!PORTBbits.RB3){
         switches |= (1 << 2);
+        checkHit(Col3, Col1cnt);
     } else {
         switches &= ~(1 << 2);
     }
     if (!PORTBbits.RB0){
         switches |= (1 << 3);
+        checkHit(Col4, Col1cnt);
     } else {
         switches &= ~(1 << 3);
     }
+
 }
-# 197 "main.c"
+# 276 "main.c"
 struct tile* tileInit(uint32_t start, uint16_t len){
     struct tile* outputTile = malloc(sizeof(struct tile));
 
@@ -6125,21 +6200,24 @@ struct tile* tileInit(uint32_t start, uint16_t len){
 
     return outputTile;
 }
-# 225 "main.c"
+
 void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
-        int32_t dt = millis - activeCol[i].start;
+        if(activeCol[i].len > 0){
+            int32_t dt = millis - activeCol[i].start;
 
-        int16_t y = dt / 100;
-        uint8_t height = activeCol[i].len / 100;
+            int16_t y = dt / 100 + 60;
+            uint8_t height = activeCol[i].len / 100;
 
-        if (y < 64 && (y + height) > 0){
-            drawRect(x, y, 26, height);
+            if (y < 64 && (y + height) > 0){
+                drawRect(x, y, 26, height);
+            }
         }
+
     }
 }
 
-void drawUi(){
+void drawButtons(){
     if (switches & 0x01){
         drawRect(2, 60, 28, 4);
         fillRect(3, 61, 26, 2, 1);
@@ -6147,7 +6225,6 @@ void drawUi(){
         drawRect(2, 60, 28, 4);
         fillRect(3, 61, 26, 2, 0);
     }
-
     if (switches & 0x02){
         drawRect(34, 60, 28, 4);
         fillRect(35, 61, 26, 2, 1);
@@ -6155,7 +6232,6 @@ void drawUi(){
         drawRect(34, 60, 28, 4);
         fillRect(35, 61, 26, 2, 0);
     }
-
     if (switches & 0x04){
         drawRect(66, 60, 28, 4);
         fillRect(67, 61, 26, 2, 1);
@@ -6163,7 +6239,6 @@ void drawUi(){
         drawRect(66, 60, 28, 4);
         fillRect(67, 61, 26, 2, 0);
     }
-
     if (switches & 0x08){
         drawRect(98, 60, 28, 4);
         fillRect(99, 61, 26, 2, 1);
@@ -6171,6 +6246,11 @@ void drawUi(){
         drawRect(98, 60, 28, 4);
         fillRect(99, 61, 26, 2, 0);
     }
+}
+
+void drawUi(){
+
+
 
     drawColl(3, Col1, Col1cnt);
     drawColl(34, Col2, Col2cnt);
@@ -6199,7 +6279,7 @@ void main()
     Col4[0] = *tileInit(1000, 500);
     Col4[1] = *tileInit(2000, 100);
     Col4[2] = *tileInit(3000, 700);
-# 318 "main.c"
+# 385 "main.c"
     while(1)
     {
         if ( (uint32_t) millis%2 == 0){

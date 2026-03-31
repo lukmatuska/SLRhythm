@@ -85,17 +85,27 @@ uint8_t Col4cnt = 0;
 #define MAX_ACTIVE 4
 #define SPAWN_AHEAD 6000  // ms before visible
 #define DESPAWN_TIME 500
-#define HIT_WINDOW 150
+#define HIT_WINDOW 300
+#define MISS_WINDOW 300
 struct tile Coll1[MAX_ACTIVE];
 
 
 void checkHit(struct tile col[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
-        int32_t error = millis - col[i].start;
+        if(col[i].len > 0){
+            int32_t error = millis - col[i].start;
 
-        if (error > -HIT_WINDOW && error < HIT_WINDOW){
-            score++;
-            col[i].len = 0; // mark as hit
+            if (error < MISS_WINDOW && !(error < HIT_WINDOW)){
+                if(score > 2){
+                    score-=2;
+                }
+                col[i].len = 0; // mark as hit
+            }
+
+            if (error > -HIT_WINDOW && error < HIT_WINDOW){
+                score++;
+                col[i].len = 0; // mark as hit
+            }
         }
     }
 }
@@ -167,7 +177,7 @@ void resetGame(void)
     Col3cnt = 0;
     Col4cnt = 0;
 
-    // optional: zero memory (safer for debugging)
+    // zero memory
     for(uint8_t i = 0; i < MAX_ACTIVE; i++){
         Col1[i].len = 0;
         Col2[i].len = 0;
@@ -196,7 +206,9 @@ void handleSwitches(void){
             score++;
         }
     */ //this stupid, we can do better
-    
+    if (!PORTBbits.RB2){
+        resetGame();
+    }   
     
     if (!PORTBbits.RB5){
         switches |= (1 << 0);
@@ -222,9 +234,7 @@ void handleSwitches(void){
     } else {
         switches &= ~(1 << 3);
     }
-    if (!PORTBbits.RB2){
-        resetGame();
-    } 
+    
 }
 
 /* void checkForActiveTiles(){
@@ -274,37 +284,23 @@ struct tile* tileInit(uint32_t start, uint16_t len){
     return outputTile;    
 }
 
-/* void drawColl(uint8_t x, struct tile activeCol[]){
-    for(uint8_t i=0; i<10; i++){
-        if(activeCol[i].len){
-            int16_t y = (millis - activeCol[i].start) / 100;
+void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
+    for(uint8_t i=0; i<cnt; i++){
+        if(activeCol[i].len > 0){
+            int32_t dt = millis - activeCol[i].start;
+
+            int16_t y = dt / 100 + 60;
             uint8_t height = activeCol[i].len / 100;
 
-            // draw only if visible on screen
             if (y < 64 && (y + height) > 0){
                 drawRect(x, y, 26, height);
             }
-            // debug text
-            //utoa32(y, DispCtrStr);
-            //drawText(i, 0, DispCtrStr);
         }
-    }
-}
- */
-void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
-    for(uint8_t i=0; i<cnt; i++){
-        int32_t dt = millis - activeCol[i].start;
-
-        int16_t y = dt / 100 + 60;
-        uint8_t height = activeCol[i].len / 100;
-
-        if (y < 64 && (y + height) > 0){
-            drawRect(x, y, 26, height);
-        }
+        
     }
 }
 
-void drawUi(){
+void drawButtons(){
     if (switches & 0x01){
         drawRect(2, 60, 28, 4);
         fillRect(3, 61, 26, 2, 1);
@@ -312,7 +308,6 @@ void drawUi(){
         drawRect(2, 60, 28, 4);
         fillRect(3, 61, 26, 2, 0);
     }
-    
     if (switches & 0x02){
         drawRect(34, 60, 28, 4);
         fillRect(35, 61, 26, 2, 1);
@@ -320,15 +315,13 @@ void drawUi(){
         drawRect(34, 60, 28, 4);
         fillRect(35, 61, 26, 2, 0);
     }
-    
     if (switches & 0x04){
         drawRect(66, 60, 28, 4);
         fillRect(67, 61, 26, 2, 1);
     } else {
         drawRect(66, 60, 28, 4);
         fillRect(67, 61, 26, 2, 0);
-    }
-    
+    }    
     if (switches & 0x08){
         drawRect(98, 60, 28, 4);
         fillRect(99, 61, 26, 2, 1);
@@ -336,6 +329,11 @@ void drawUi(){
         drawRect(98, 60, 28, 4);
         fillRect(99, 61, 26, 2, 0);
     }
+}
+
+void drawUi(){
+    
+    //drawButtons();
     
     drawColl(3, Col1, Col1cnt);
     drawColl(34, Col2, Col2cnt);

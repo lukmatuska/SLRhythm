@@ -11,63 +11,61 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$dist/default/debug\SLRhythm.debug.o
-cinit CODE 0 13BC 13BC 5A 1 2
-intcode_body CODE 0 146E 146E 4E 1 2
-text0 CODE 0 726 726 11A 1 2
-text1 CODE 0 1586 1586 32 1 2
-text2 CODE 0 840 840 118 1 2
-text3 CODE 0 1416 1416 58 1 2
-text4 CODE 0 12F2 12F2 68 1 2
-text5 CODE 0 46C 46C 15E 1 2
-text6 CODE 0 12 12 276 1 2
-text7 CODE 0 FC8 FC8 AC 1 2
-text8 CODE 0 5CA 5CA 15C 1 2
-text9 CODE 0 1504 1504 44 1 2
-nvCOMRAM COMRAM 1 51 51 2 1 1
-text10 CODE 0 167A 167A E 1 2
-text11 CODE 0 1668 1668 12 1 2
-text12 CODE 0 1688 1688 E 1 2
-text13 CODE 0 16B0 16B0 6 1 2
-text14 CODE 0 135A 135A 62 1 2
-text15 CODE 0 1696 1696 E 1 2
-text16 CODE 0 160A 160A 1C 1 2
-text17 CODE 0 1548 1548 3E 1 2
-text18 CODE 0 15EA 15EA 20 1 2
-text19 CODE 0 15B8 15B8 32 1 2
-text20 CODE 0 1640 1640 14 1 2
-text21 CODE 0 1654 1654 14 1 2
-text22 CODE 0 1626 1626 1A 1 2
-text23 CODE 0 B6A B6A 106 1 2
-text24 CODE 0 288 288 1E4 1 2
-text25 CODE 0 A62 A62 108 1 2
-text26 CODE 0 1118 1118 88 1 2
-text27 CODE 0 1074 1074 A4 1 2
-text28 CODE 0 1288 1288 6A 1 2
-text29 CODE 0 D6A D6A EA 1 2
-text30 CODE 0 C70 C70 FA 1 2
-text31 CODE 0 F14 F14 B4 1 2
-text32 CODE 0 E54 E54 C0 1 2
-text33 CODE 0 1214 1214 74 1 2
-text34 CODE 0 958 958 10A 1 2
-text35 CODE 0 16A4 16A4 C 1 2
-text36 CODE 0 14BC 14BC 48 1 2
-idataCOMRAM CODE 0 16B6 16B6 5 1 1
-cstackCOMRAM COMRAM 1 1 1 28 1 1
-temp COMRAM 1 53 53 1 1 1
-bssBANK0 BANK0 1 60 60 8C 1 1
-intcode CODE 0 8 8 6 1 2
-bssBIGRAM_1 BIGRAM 1 400 400 400 1 1
-dataCOMRAM COMRAM 1 4C 4C 5 1 1
-bssCOMRAM COMRAM 1 29 29 23 1 1
-mediumconst MEDIUMCONST 0 7B4E 7B4E 1F2 1 2
-config CONFIG 4 300000 300000 E 1 1
-$dist/default/debug\__htaintpri.o
-text CODE 0 11A0 11A0 74 1 2
-$C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
+$C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
 heap HEAP 7 EC EC 303 1 1
 init CODE 0 E E 4 1 2
 reset_vec CODE 0 0 0 6 1 2
+config CONFIG 4 300000 300000 E 1 1
+$dist/default/debug\SLRhythm.debug.o
+cinit CODE 0 12E8 12E8 5A 1 2
+intcode_body CODE 0 139A 139A 4E 1 2
+text0 CODE 0 7A8 7A8 11A 1 2
+text1 CODE 0 14B2 14B2 32 1 2
+text2 CODE 0 8C2 8C2 118 1 2
+text3 CODE 0 11C2 11C2 68 1 2
+text4 CODE 0 288 288 15E 1 2
+text5 CODE 0 12 12 276 1 2
+text6 CODE 0 E4A E4A AC 1 2
+text7 CODE 0 3E6 3E6 15C 1 2
+text8 CODE 0 1430 1430 44 1 2
+text9 CODE 0 15A6 15A6 E 1 2
+text10 CODE 0 1594 1594 12 1 2
+text11 CODE 0 15B4 15B4 E 1 2
+text12 CODE 0 15DC 15DC 6 1 2
+text13 CODE 0 122A 122A 62 1 2
+text14 CODE 0 15C2 15C2 E 1 2
+text15 CODE 0 1536 1536 1C 1 2
+text16 CODE 0 1474 1474 3E 1 2
+text17 CODE 0 F9A F9A 9C 1 2
+text18 CODE 0 1036 1036 90 1 2
+text19 CODE 0 1342 1342 58 1 2
+text20 CODE 0 1516 1516 20 1 2
+text21 CODE 0 14E4 14E4 32 1 2
+text22 CODE 0 156C 156C 14 1 2
+text23 CODE 0 1580 1580 14 1 2
+text24 CODE 0 1552 1552 1A 1 2
+text25 CODE 0 13E8 13E8 48 1 2
+text26 CODE 0 542 542 146 1 2
+text27 CODE 0 128C 128C 5C 1 2
+text28 CODE 0 AE4 AE4 108 1 2
+text29 CODE 0 10C6 10C6 88 1 2
+text30 CODE 0 EF6 EF6 A4 1 2
+text31 CODE 0 BEC BEC EA 1 2
+text32 CODE 0 688 688 120 1 2
+text33 CODE 0 D96 D96 B4 1 2
+text34 CODE 0 CD6 CD6 C0 1 2
+text35 CODE 0 114E 114E 74 1 2
+text36 CODE 0 9DA 9DA 10A 1 2
+text37 CODE 0 15D0 15D0 C 1 2
+idataCOMRAM CODE 0 15E2 15E2 5 1 1
+cstackCOMRAM COMRAM 1 1 1 28 1 1
+temp COMRAM 1 4B 4B 1 1 1
+bssBANK0 BANK0 1 60 60 8C 1 1
+intcode CODE 0 8 8 6 1 2
+bssBIGRAM_1 BIGRAM 1 400 400 400 1 1
+dataCOMRAM COMRAM 1 46 46 5 1 1
+bssCOMRAM COMRAM 1 29 29 1D 1 1
+mediumconst MEDIUMCONST 0 7B2C 7B2C 214 1 2
 config CONFIG 4 300000 300000 E 1 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -87,12 +85,12 @@ BANK1 100-1FF 1
 BANK2 200-2FF 1
 BANK3 300-3EE 1
 CONST 6-7 1
-CONST 16BB-7B4D 1
+CONST 15E7-7B2B 1
 IDLOC 200000-200007 1
-SMALLCONST 16BB-7B4D 1
+SMALLCONST 15E7-7B2B 1
 CODE 6-7 1
-CODE 16BB-7B4D 1
-BIGRAM 54-5F 1
+CODE 15E7-7B2B 1
+BIGRAM 4C-5F 1
 BIGRAM EC-3EE 1
 BIGSFR F60-F9B 1
 BIGSFR F9D-FD3 1
@@ -100,9 +98,9 @@ BIGSFR FD5-FDA 1
 BIGSFR FE0-FE2 1
 BIGSFR FE8-FEA 1
 BIGSFR FF0-FFB 1
-COMRAM 54-5F 1
+COMRAM 4C-5F 1
 EEDATA F00000-F000FF 1
-MEDIUMCONST 16BB-7B4D 1
+MEDIUMCONST 15E7-7B2B 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -117,556 +115,515 @@ MEDIUMCONST 16BB-7B4D 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/debug\SLRhythm.debug.o
-8 intcode CODE >9028:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-8 intcode CODE >344:C:\NEN\lcrm\SLRhythm\main.c
-146E intcode_body CODE >344:C:\NEN\lcrm\SLRhythm\main.c
-1470 intcode_body CODE >347:C:\NEN\lcrm\SLRhythm\main.c
-148C intcode_body CODE >350:C:\NEN\lcrm\SLRhythm\main.c
-148E intcode_body CODE >351:C:\NEN\lcrm\SLRhythm\main.c
-148E intcode_body CODE >353:C:\NEN\lcrm\SLRhythm\main.c
-14AA intcode_body CODE >356:C:\NEN\lcrm\SLRhythm\main.c
-14B6 intcode_body CODE >357:C:\NEN\lcrm\SLRhythm\main.c
-14B8 intcode_body CODE >360:C:\NEN\lcrm\SLRhythm\main.c
-14BC text36 CODE >282:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-14BC text36 CODE >284:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-14BE text36 CODE >286:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-14C0 text36 CODE >288:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-14DE text36 CODE >289:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-14F0 text36 CODE >290:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1502 text36 CODE >291:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-16A4 text35 CODE >383:C:\NEN\lcrm\SLRhythm\main.c
-16A4 text35 CODE >385:C:\NEN\lcrm\SLRhythm\main.c
-16A6 text35 CODE >386:C:\NEN\lcrm\SLRhythm\main.c
-16A8 text35 CODE >387:C:\NEN\lcrm\SLRhythm\main.c
-16AA text35 CODE >388:C:\NEN\lcrm\SLRhythm\main.c
-16AC text35 CODE >389:C:\NEN\lcrm\SLRhythm\main.c
-16AE text35 CODE >390:C:\NEN\lcrm\SLRhythm\main.c
-958 text34 CODE >7:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-958 text34 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-95A text34 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-968 text34 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-978 text34 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-97C text34 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-98A text34 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-99A text34 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-99E text34 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-9AE text34 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-9C4 text34 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-9C8 text34 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-9CC text34 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-9D6 text34 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-9D8 text34 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-9E6 text34 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-9F0 text34 CODE >31:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-A0E text34 CODE >32:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-A1E text34 CODE >33:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-A20 text34 CODE >35:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-A2A text34 CODE >36:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-A30 text34 CODE >38:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-A40 text34 CODE >39:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-A50 text34 CODE >40:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-A60 text34 CODE >41:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
-1214 text33 CODE >7:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-1214 text33 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-121C text33 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-122E text33 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-1232 text33 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-1236 text33 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-123C text33 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-123E text33 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-124C text33 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-1252 text33 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-1268 text33 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-1270 text33 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-1272 text33 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-1278 text33 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-127E text33 CODE >28:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-127E text33 CODE >29:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-1286 text33 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
-E54 text32 CODE >207:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-E56 text32 CODE >209:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-E7A text32 CODE >211:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-E82 text32 CODE >212:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-E88 text32 CODE >214:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-E98 text32 CODE >215:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-ED4 text32 CODE >217:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-F12 text32 CODE >218:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-F14 text31 CODE >249:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-F16 text31 CODE >252:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-F46 text31 CODE >253:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-F4C text31 CODE >255:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-F5C text31 CODE >256:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-F72 text31 CODE >257:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-F86 text31 CODE >260:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-F8C text31 CODE >262:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-F9C text31 CODE >263:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-FB2 text31 CODE >264:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-FC6 text31 CODE >265:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-C70 text30 CODE >225:C:\NEN\lcrm\SLRhythm\main.c
-C72 text30 CODE >226:C:\NEN\lcrm\SLRhythm\main.c
-C78 text30 CODE >227:C:\NEN\lcrm\SLRhythm\main.c
-CAC text30 CODE >229:C:\NEN\lcrm\SLRhythm\main.c
-CD8 text30 CODE >230:C:\NEN\lcrm\SLRhythm\main.c
-D00 text30 CODE >232:C:\NEN\lcrm\SLRhythm\main.c
-D42 text30 CODE >233:C:\NEN\lcrm\SLRhythm\main.c
-D54 text30 CODE >235:C:\NEN\lcrm\SLRhythm\main.c
-D68 text30 CODE >236:C:\NEN\lcrm\SLRhythm\main.c
-D6A text29 CODE >168:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-D6C text29 CODE >171:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-D70 text29 CODE >173:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-D94 text29 CODE >175:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-D9A text29 CODE >177:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-DAE text29 CODE >179:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-DBC text29 CODE >182:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-DBE text29 CODE >184:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-DE4 text29 CODE >185:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-E06 text29 CODE >186:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-E18 text29 CODE >189:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-E38 text29 CODE >190:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-E52 text29 CODE >191:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1288 text28 CODE >267:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-128A text28 CODE >270:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-12AA text28 CODE >271:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-12B0 text28 CODE >273:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-12B6 text28 CODE >275:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-12C8 text28 CODE >276:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-12DC text28 CODE >277:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-12F0 text28 CODE >280:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1074 text27 CODE >7:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-1074 text27 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-1084 text27 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-109A text27 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-109E text27 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-10A2 text27 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-10AC text27 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-10AE text27 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-10BC text27 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-10C6 text27 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-10E4 text27 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-10F4 text27 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-10F6 text27 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-1100 text27 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-1106 text27 CODE >28:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-1106 text27 CODE >29:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-1116 text27 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
-1118 text26 CODE >7:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-1118 text26 CODE >12:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-112E text26 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-1132 text26 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-1136 text26 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-1140 text26 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-1142 text26 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-1150 text26 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-116E text26 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-117E text26 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-1188 text26 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-118E text26 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-118E text26 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-119E text26 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
-A62 text25 CODE >412:C:\NEN\lcrm\SLRhythm\main.c
-A62 text25 CODE >415:C:\NEN\lcrm\SLRhythm\main.c
-A6A text25 CODE >418:C:\NEN\lcrm\SLRhythm\main.c
-A80 text25 CODE >420:C:\NEN\lcrm\SLRhythm\main.c
-A8A text25 CODE >421:C:\NEN\lcrm\SLRhythm\main.c
-A9A text25 CODE >428:C:\NEN\lcrm\SLRhythm\main.c
-AD0 text25 CODE >429:C:\NEN\lcrm\SLRhythm\main.c
-B04 text25 CODE >426:C:\NEN\lcrm\SLRhythm\main.c
-B1A text25 CODE >433:C:\NEN\lcrm\SLRhythm\main.c
-B22 text25 CODE >434:C:\NEN\lcrm\SLRhythm\main.c
-B26 text25 CODE >436:C:\NEN\lcrm\SLRhythm\main.c
-B44 text25 CODE >434:C:\NEN\lcrm\SLRhythm\main.c
-B5E text25 CODE >439:C:\NEN\lcrm\SLRhythm\main.c
-B68 text25 CODE >442:C:\NEN\lcrm\SLRhythm\main.c
-288 text24 CODE >238:C:\NEN\lcrm\SLRhythm\main.c
-288 text24 CODE >239:C:\NEN\lcrm\SLRhythm\main.c
-296 text24 CODE >240:C:\NEN\lcrm\SLRhythm\main.c
-2A8 text24 CODE >241:C:\NEN\lcrm\SLRhythm\main.c
-2BE text24 CODE >242:C:\NEN\lcrm\SLRhythm\main.c
-2C2 text24 CODE >243:C:\NEN\lcrm\SLRhythm\main.c
-2D4 text24 CODE >244:C:\NEN\lcrm\SLRhythm\main.c
-2EA text24 CODE >247:C:\NEN\lcrm\SLRhythm\main.c
-2F8 text24 CODE >248:C:\NEN\lcrm\SLRhythm\main.c
-30A text24 CODE >249:C:\NEN\lcrm\SLRhythm\main.c
-320 text24 CODE >250:C:\NEN\lcrm\SLRhythm\main.c
-324 text24 CODE >251:C:\NEN\lcrm\SLRhythm\main.c
-336 text24 CODE >252:C:\NEN\lcrm\SLRhythm\main.c
-34C text24 CODE >255:C:\NEN\lcrm\SLRhythm\main.c
-35A text24 CODE >256:C:\NEN\lcrm\SLRhythm\main.c
-36C text24 CODE >257:C:\NEN\lcrm\SLRhythm\main.c
-382 text24 CODE >258:C:\NEN\lcrm\SLRhythm\main.c
-386 text24 CODE >259:C:\NEN\lcrm\SLRhythm\main.c
-398 text24 CODE >260:C:\NEN\lcrm\SLRhythm\main.c
-3AE text24 CODE >263:C:\NEN\lcrm\SLRhythm\main.c
-3BC text24 CODE >264:C:\NEN\lcrm\SLRhythm\main.c
-3CE text24 CODE >265:C:\NEN\lcrm\SLRhythm\main.c
-3E4 text24 CODE >266:C:\NEN\lcrm\SLRhythm\main.c
-3E8 text24 CODE >267:C:\NEN\lcrm\SLRhythm\main.c
-3FA text24 CODE >268:C:\NEN\lcrm\SLRhythm\main.c
-410 text24 CODE >269:C:\NEN\lcrm\SLRhythm\main.c
-410 text24 CODE >271:C:\NEN\lcrm\SLRhythm\main.c
-41E text24 CODE >272:C:\NEN\lcrm\SLRhythm\main.c
-42C text24 CODE >273:C:\NEN\lcrm\SLRhythm\main.c
-43A text24 CODE >274:C:\NEN\lcrm\SLRhythm\main.c
-448 text24 CODE >277:C:\NEN\lcrm\SLRhythm\main.c
-45C text24 CODE >278:C:\NEN\lcrm\SLRhythm\main.c
-46A text24 CODE >279:C:\NEN\lcrm\SLRhythm\main.c
-B6A text23 CODE >135:C:\NEN\lcrm\SLRhythm\main.c
-B6A text23 CODE >136:C:\NEN\lcrm\SLRhythm\main.c
-C12 text23 CODE >137:C:\NEN\lcrm\SLRhythm\main.c
-C16 text23 CODE >139:C:\NEN\lcrm\SLRhythm\main.c
-C24 text23 CODE >140:C:\NEN\lcrm\SLRhythm\main.c
-C26 text23 CODE >141:C:\NEN\lcrm\SLRhythm\main.c
-C2A text23 CODE >142:C:\NEN\lcrm\SLRhythm\main.c
-C2C text23 CODE >144:C:\NEN\lcrm\SLRhythm\main.c
-C3A text23 CODE >145:C:\NEN\lcrm\SLRhythm\main.c
-C3C text23 CODE >146:C:\NEN\lcrm\SLRhythm\main.c
-C40 text23 CODE >147:C:\NEN\lcrm\SLRhythm\main.c
-C42 text23 CODE >149:C:\NEN\lcrm\SLRhythm\main.c
-C50 text23 CODE >150:C:\NEN\lcrm\SLRhythm\main.c
-C52 text23 CODE >151:C:\NEN\lcrm\SLRhythm\main.c
-C56 text23 CODE >152:C:\NEN\lcrm\SLRhythm\main.c
-C58 text23 CODE >154:C:\NEN\lcrm\SLRhythm\main.c
-C66 text23 CODE >155:C:\NEN\lcrm\SLRhythm\main.c
-C68 text23 CODE >156:C:\NEN\lcrm\SLRhythm\main.c
-C6C text23 CODE >157:C:\NEN\lcrm\SLRhythm\main.c
-C6E text23 CODE >159:C:\NEN\lcrm\SLRhythm\main.c
-1626 text22 CODE >22:C:\NEN\lcrm\SLRhythm\spi.c
-1628 text22 CODE >24:C:\NEN\lcrm\SLRhythm\spi.c
-162C text22 CODE >25:C:\NEN\lcrm\SLRhythm\spi.c
-163A text22 CODE >26:C:\NEN\lcrm\SLRhythm\spi.c
-163C text22 CODE >27:C:\NEN\lcrm\SLRhythm\spi.c
-163E text22 CODE >28:C:\NEN\lcrm\SLRhythm\spi.c
-1654 text21 CODE >132:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1656 text21 CODE >134:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1658 text21 CODE >135:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-165A text21 CODE >136:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-165C text21 CODE >137:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1662 text21 CODE >138:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1664 text21 CODE >139:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1666 text21 CODE >140:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1640 text20 CODE >120:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1642 text20 CODE >122:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1644 text20 CODE >123:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1646 text20 CODE >124:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1648 text20 CODE >125:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-164E text20 CODE >126:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1650 text20 CODE >127:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1652 text20 CODE >128:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-15B8 text19 CODE >144:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-15BA text19 CODE >147:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-15CA text19 CODE >149:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-15CE text19 CODE >151:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-15D4 text19 CODE >152:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-15DA text19 CODE >153:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-15E2 text19 CODE >154:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-15E8 text19 CODE >155:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-15EA text18 CODE >159:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-15EC text18 CODE >161:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-15FC text18 CODE >163:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1600 text18 CODE >165:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1608 text18 CODE >166:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1548 text17 CODE >62:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-154A text17 CODE >65:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1550 text17 CODE >66:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1556 text17 CODE >67:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-155E text17 CODE >69:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1564 text17 CODE >70:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1584 text17 CODE >71:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-160A text16 CODE >51:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-160A text16 CODE >54:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-160C text16 CODE >56:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1612 text16 CODE >57:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1624 text16 CODE >58:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1696 text15 CODE >13:C:\NEN\lcrm\SLRhythm\spi.c
-1696 text15 CODE >15:C:\NEN\lcrm\SLRhythm\spi.c
-1698 text15 CODE >16:C:\NEN\lcrm\SLRhythm\spi.c
-169C text15 CODE >17:C:\NEN\lcrm\SLRhythm\spi.c
-169E text15 CODE >18:C:\NEN\lcrm\SLRhythm\spi.c
-16A0 text15 CODE >19:C:\NEN\lcrm\SLRhythm\spi.c
-16A2 text15 CODE >20:C:\NEN\lcrm\SLRhythm\spi.c
-135A text14 CODE >24:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-135A text14 CODE >26:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-135E text14 CODE >27:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1360 text14 CODE >28:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1362 text14 CODE >31:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1368 text14 CODE >32:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-136E text14 CODE >33:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1374 text14 CODE >34:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-137A text14 CODE >35:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1380 text14 CODE >36:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1386 text14 CODE >37:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-138C text14 CODE >38:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1392 text14 CODE >39:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1398 text14 CODE >40:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-139E text14 CODE >41:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-13A4 text14 CODE >42:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-13AA text14 CODE >43:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-13B0 text14 CODE >44:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-13B6 text14 CODE >46:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-13BA text14 CODE >47:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-16B0 text13 CODE >364:C:\NEN\lcrm\SLRhythm\main.c
-16B0 text13 CODE >366:C:\NEN\lcrm\SLRhythm\main.c
-16B2 text13 CODE >367:C:\NEN\lcrm\SLRhythm\main.c
-16B4 text13 CODE >368:C:\NEN\lcrm\SLRhythm\main.c
-1688 text12 CODE >372:C:\NEN\lcrm\SLRhythm\main.c
-1688 text12 CODE >374:C:\NEN\lcrm\SLRhythm\main.c
-168A text12 CODE >375:C:\NEN\lcrm\SLRhythm\main.c
-168E text12 CODE >376:C:\NEN\lcrm\SLRhythm\main.c
-1690 text12 CODE >377:C:\NEN\lcrm\SLRhythm\main.c
-1692 text12 CODE >378:C:\NEN\lcrm\SLRhythm\main.c
-1694 text12 CODE >379:C:\NEN\lcrm\SLRhythm\main.c
-1668 text11 CODE >394:C:\NEN\lcrm\SLRhythm\main.c
-1668 text11 CODE >396:C:\NEN\lcrm\SLRhythm\main.c
-166C text11 CODE >397:C:\NEN\lcrm\SLRhythm\main.c
-1674 text11 CODE >398:C:\NEN\lcrm\SLRhythm\main.c
-1676 text11 CODE >399:C:\NEN\lcrm\SLRhythm\main.c
-1678 text11 CODE >400:C:\NEN\lcrm\SLRhythm\main.c
-167A text10 CODE >404:C:\NEN\lcrm\SLRhythm\main.c
-167A text10 CODE >406:C:\NEN\lcrm\SLRhythm\main.c
-167E text10 CODE >407:C:\NEN\lcrm\SLRhythm\main.c
-1682 text10 CODE >408:C:\NEN\lcrm\SLRhythm\main.c
-1684 text10 CODE >409:C:\NEN\lcrm\SLRhythm\main.c
-1686 text10 CODE >410:C:\NEN\lcrm\SLRhythm\main.c
-1504 text9 CODE >84:C:\NEN\lcrm\SLRhythm\main.c
-1504 text9 CODE >85:C:\NEN\lcrm\SLRhythm\main.c
-151E text9 CODE >87:C:\NEN\lcrm\SLRhythm\main.c
-153E text9 CODE >88:C:\NEN\lcrm\SLRhythm\main.c
-1546 text9 CODE >89:C:\NEN\lcrm\SLRhythm\main.c
-5CA text8 CODE >93:C:\NEN\lcrm\SLRhythm\main.c
-5CA text8 CODE >94:C:\NEN\lcrm\SLRhythm\main.c
-5CE text8 CODE >97:C:\NEN\lcrm\SLRhythm\main.c
-5FC text8 CODE >99:C:\NEN\lcrm\SLRhythm\main.c
-600 text8 CODE >100:C:\NEN\lcrm\SLRhythm\main.c
-622 text8 CODE >101:C:\NEN\lcrm\SLRhythm\main.c
-644 text8 CODE >102:C:\NEN\lcrm\SLRhythm\main.c
-666 text8 CODE >103:C:\NEN\lcrm\SLRhythm\main.c
-688 text8 CODE >104:C:\NEN\lcrm\SLRhythm\main.c
-68C text8 CODE >104:C:\NEN\lcrm\SLRhythm\main.c
-694 text8 CODE >104:C:\NEN\lcrm\SLRhythm\main.c
-69C text8 CODE >104:C:\NEN\lcrm\SLRhythm\main.c
-6A4 text8 CODE >104:C:\NEN\lcrm\SLRhythm\main.c
-6AE text8 CODE >106:C:\NEN\lcrm\SLRhythm\main.c
-6B2 text8 CODE >94:C:\NEN\lcrm\SLRhythm\main.c
-724 text8 CODE >108:C:\NEN\lcrm\SLRhythm\main.c
-FC8 text7 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-FC8 text7 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-FD6 text7 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-FE8 text7 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-FF0 text7 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-FF0 text7 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-1006 text7 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-100E text7 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-101A text7 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-104E text7 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-1056 text7 CODE >28:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-1062 text7 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-106A text7 CODE >31:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-1072 text7 CODE >32:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
-12 text6 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-12 text6 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-1A text6 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-22 text6 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-2A text6 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-48 text6 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-54 text6 CODE >28:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-74 text6 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-86 text6 CODE >31:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-A6 text6 CODE >32:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-AA text6 CODE >33:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-BE text6 CODE >35:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-CE text6 CODE >37:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-EC text6 CODE >38:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-128 text6 CODE >39:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-130 text6 CODE >40:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-138 text6 CODE >42:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-166 text6 CODE >44:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-178 text6 CODE >46:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-18C text6 CODE >49:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-1BA text6 CODE >53:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-1DE text6 CODE >54:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-1EE text6 CODE >55:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-216 text6 CODE >56:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-226 text6 CODE >57:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-23A text6 CODE >58:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-242 text6 CODE >59:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-242 text6 CODE >60:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-266 text6 CODE >61:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-27A text6 CODE >62:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-286 text6 CODE >65:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
-46C text5 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-46C text5 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-46C text5 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-46C text5 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-47E text5 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-482 text5 CODE >29:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-498 text5 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-4A0 text5 CODE >31:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-4A4 text5 CODE >32:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-4C2 text5 CODE >33:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-4CA text5 CODE >34:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-4D6 text5 CODE >36:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-4D6 text5 CODE >37:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-4EA text5 CODE >39:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-4FC text5 CODE >40:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-51E text5 CODE >41:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-52A text5 CODE >42:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-53A text5 CODE >43:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-550 text5 CODE >47:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-568 text5 CODE >48:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-570 text5 CODE >49:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-570 text5 CODE >50:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-57C text5 CODE >51:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-57C text5 CODE >52:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-584 text5 CODE >54:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-58C text5 CODE >55:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-5A4 text5 CODE >56:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-5AC text5 CODE >58:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-5C0 text5 CODE >62:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-5C8 text5 CODE >63:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
-12F2 text4 CODE >197:C:\NEN\lcrm\SLRhythm\main.c
-12F2 text4 CODE >198:C:\NEN\lcrm\SLRhythm\main.c
-1306 text4 CODE >200:C:\NEN\lcrm\SLRhythm\main.c
-1324 text4 CODE >202:C:\NEN\lcrm\SLRhythm\main.c
-1338 text4 CODE >203:C:\NEN\lcrm\SLRhythm\main.c
-1350 text4 CODE >205:C:\NEN\lcrm\SLRhythm\main.c
-1358 text4 CODE >206:C:\NEN\lcrm\SLRhythm\main.c
-1416 text3 CODE >193:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1416 text3 CODE >195:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1418 text3 CODE >197:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-141E text3 CODE >198:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1424 text3 CODE >200:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1426 text3 CODE >202:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-1448 text3 CODE >203:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-145A text3 CODE >204:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-146C text3 CODE >205:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
-840 text2 CODE >112:C:\NEN\lcrm\SLRhythm\main.c
-840 text2 CODE >113:C:\NEN\lcrm\SLRhythm\main.c
-846 text2 CODE >114:C:\NEN\lcrm\SLRhythm\main.c
-8C8 text2 CODE >117:C:\NEN\lcrm\SLRhythm\main.c
-8D0 text2 CODE >118:C:\NEN\lcrm\SLRhythm\main.c
-8F6 text2 CODE >119:C:\NEN\lcrm\SLRhythm\main.c
-932 text2 CODE >121:C:\NEN\lcrm\SLRhythm\main.c
-93A text2 CODE >122:C:\NEN\lcrm\SLRhythm\main.c
-93C text2 CODE >124:C:\NEN\lcrm\SLRhythm\main.c
-956 text2 CODE >125:C:\NEN\lcrm\SLRhythm\main.c
-1586 text1 CODE >127:C:\NEN\lcrm\SLRhythm\main.c
-1586 text1 CODE >128:C:\NEN\lcrm\SLRhythm\main.c
-1592 text1 CODE >129:C:\NEN\lcrm\SLRhythm\main.c
-159E text1 CODE >130:C:\NEN\lcrm\SLRhythm\main.c
-15AA text1 CODE >131:C:\NEN\lcrm\SLRhythm\main.c
-15B6 text1 CODE >132:C:\NEN\lcrm\SLRhythm\main.c
-726 text0 CODE >283:C:\NEN\lcrm\SLRhythm\main.c
-726 text0 CODE >285:C:\NEN\lcrm\SLRhythm\main.c
-72A text0 CODE >286:C:\NEN\lcrm\SLRhythm\main.c
-72E text0 CODE >287:C:\NEN\lcrm\SLRhythm\main.c
-732 text0 CODE >288:C:\NEN\lcrm\SLRhythm\main.c
-736 text0 CODE >290:C:\NEN\lcrm\SLRhythm\main.c
-73A text0 CODE >291:C:\NEN\lcrm\SLRhythm\main.c
-73E text0 CODE >294:C:\NEN\lcrm\SLRhythm\main.c
-742 text0 CODE >295:C:\NEN\lcrm\SLRhythm\main.c
-774 text0 CODE >296:C:\NEN\lcrm\SLRhythm\main.c
-7A6 text0 CODE >297:C:\NEN\lcrm\SLRhythm\main.c
-7D8 text0 CODE >320:C:\NEN\lcrm\SLRhythm\main.c
-7E6 text0 CODE >321:C:\NEN\lcrm\SLRhythm\main.c
-7EA text0 CODE >322:C:\NEN\lcrm\SLRhythm\main.c
-7EA text0 CODE >323:C:\NEN\lcrm\SLRhythm\main.c
-824 text0 CODE >324:C:\NEN\lcrm\SLRhythm\main.c
-828 text0 CODE >325:C:\NEN\lcrm\SLRhythm\main.c
-82C text0 CODE >326:C:\NEN\lcrm\SLRhythm\main.c
-830 text0 CODE >327:C:\NEN\lcrm\SLRhythm\main.c
-834 text0 CODE >328:C:\NEN\lcrm\SLRhythm\main.c
-13BC cinit CODE >2162:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13BC cinit CODE >2164:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13BC cinit CODE >2167:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13BC cinit CODE >2275:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13BE cinit CODE >2276:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13C0 cinit CODE >2277:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13C2 cinit CODE >2278:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13C4 cinit CODE >2279:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13C6 cinit CODE >2280:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13C8 cinit CODE >2281:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13CC cinit CODE >2282:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13D0 cinit CODE >2283:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13D0 cinit CODE >2284:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13D2 cinit CODE >2285:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13D6 cinit CODE >2286:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13D8 cinit CODE >2287:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13DA cinit CODE >2288:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13DC cinit CODE >2292:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13E0 cinit CODE >2293:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13E4 cinit CODE >2294:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13E4 cinit CODE >2295:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13E6 cinit CODE >2296:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13E8 cinit CODE >2297:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13EA cinit CODE >2298:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13EC cinit CODE >2299:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13EE cinit CODE >2300:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13F0 cinit CODE >2303:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13F4 cinit CODE >2304:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13F6 cinit CODE >2305:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13F6 cinit CODE >2306:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13F8 cinit CODE >2307:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13FA cinit CODE >2308:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-13FC cinit CODE >2311:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-1400 cinit CODE >2312:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-1402 cinit CODE >2313:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-1402 cinit CODE >2314:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-1404 cinit CODE >2315:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-1406 cinit CODE >2316:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-1408 cinit CODE >2322:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-1408 cinit CODE >2324:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-140A cinit CODE >2325:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-140C cinit CODE >2327:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-140E cinit CODE >2328:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-1410 cinit CODE >2329:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-1412 cinit CODE >2330:C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_1.s
-$dist/default/debug\__htaintpri.o
-11A0 text CODE >23:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11A2 text CODE >24:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11A4 text CODE >26:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11A6 text CODE >27:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11A8 text CODE >30:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11AC text CODE >31:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11AE text CODE >32:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11B0 text CODE >35:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11B2 text CODE >36:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11B4 text CODE >37:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11B6 text CODE >40:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11BA text CODE >41:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11BC text CODE >42:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11BE text CODE >45:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11C0 text CODE >46:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11C4 text CODE >47:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11C6 text CODE >48:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11C8 text CODE >51:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11CA text CODE >52:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11CE text CODE >53:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11D0 text CODE >56:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11D4 text CODE >57:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11D8 text CODE >59:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11DA text CODE >60:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11DC text CODE >61:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11DE text CODE >69:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11E2 text CODE >70:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11E6 text CODE >72:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11E8 text CODE >73:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11EA text CODE >74:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11EC text CODE >76:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11EE text CODE >77:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11F0 text CODE >80:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11F4 text CODE >81:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11F6 text CODE >84:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11F8 text CODE >85:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11FA text CODE >88:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-11FE text CODE >89:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-1200 text CODE >90:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-1202 text CODE >93:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-1206 text CODE >94:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-1208 text CODE >95:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-120A text CODE >98:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-120E text CODE >99:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-1210 text CODE >100:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
-1212 text CODE >101:C:\\Program Files\\Microchip\\xc8\\v2.50\\pic\\sources\\c99\\pic18\\realice\\__htaintpri.as
+8 intcode CODE >8683:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+8 intcode CODE >411:C:\NEN\lcrm\SLRhythm\main.c
+139A intcode_body CODE >411:C:\NEN\lcrm\SLRhythm\main.c
+139C intcode_body CODE >414:C:\NEN\lcrm\SLRhythm\main.c
+13B8 intcode_body CODE >417:C:\NEN\lcrm\SLRhythm\main.c
+13BA intcode_body CODE >418:C:\NEN\lcrm\SLRhythm\main.c
+13BA intcode_body CODE >420:C:\NEN\lcrm\SLRhythm\main.c
+13D6 intcode_body CODE >423:C:\NEN\lcrm\SLRhythm\main.c
+13E2 intcode_body CODE >424:C:\NEN\lcrm\SLRhythm\main.c
+13E4 intcode_body CODE >427:C:\NEN\lcrm\SLRhythm\main.c
+15D0 text37 CODE >450:C:\NEN\lcrm\SLRhythm\main.c
+15D0 text37 CODE >452:C:\NEN\lcrm\SLRhythm\main.c
+15D2 text37 CODE >453:C:\NEN\lcrm\SLRhythm\main.c
+15D4 text37 CODE >454:C:\NEN\lcrm\SLRhythm\main.c
+15D6 text37 CODE >455:C:\NEN\lcrm\SLRhythm\main.c
+15D8 text37 CODE >456:C:\NEN\lcrm\SLRhythm\main.c
+15DA text37 CODE >457:C:\NEN\lcrm\SLRhythm\main.c
+9DA text36 CODE >7:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+9DA text36 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+9DC text36 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+9EA text36 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+9FA text36 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+9FE text36 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+A0C text36 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+A1C text36 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+A20 text36 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+A30 text36 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+A46 text36 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+A4A text36 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+A4E text36 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+A58 text36 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+A5A text36 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+A68 text36 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+A72 text36 CODE >31:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+A90 text36 CODE >32:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+AA0 text36 CODE >33:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+AA2 text36 CODE >35:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+AAC text36 CODE >36:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+AB2 text36 CODE >38:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+AC2 text36 CODE >39:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+AD2 text36 CODE >40:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+AE2 text36 CODE >41:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\aldiv.c
+114E text35 CODE >7:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+114E text35 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+1156 text35 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+1168 text35 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+116C text35 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+1170 text35 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+1176 text35 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+1178 text35 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+1186 text35 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+118C text35 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+11A2 text35 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+11AA text35 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+11AC text35 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+11B2 text35 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+11B8 text35 CODE >28:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+11B8 text35 CODE >29:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+11C0 text35 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lwdiv.c
+CD6 text34 CODE >207:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+CD8 text34 CODE >209:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+CFC text34 CODE >211:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+D04 text34 CODE >212:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+D0A text34 CODE >214:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+D1A text34 CODE >215:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+D56 text34 CODE >217:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+D94 text34 CODE >218:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+D96 text33 CODE >249:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+D98 text33 CODE >252:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+DC8 text33 CODE >253:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+DCE text33 CODE >255:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+DDE text33 CODE >256:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+DF4 text33 CODE >257:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+E08 text33 CODE >260:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+E0E text33 CODE >262:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+E1E text33 CODE >263:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+E34 text33 CODE >264:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+E48 text33 CODE >265:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+688 text32 CODE >287:C:\NEN\lcrm\SLRhythm\main.c
+68A text32 CODE >288:C:\NEN\lcrm\SLRhythm\main.c
+690 text32 CODE >289:C:\NEN\lcrm\SLRhythm\main.c
+6B2 text32 CODE >290:C:\NEN\lcrm\SLRhythm\main.c
+6E6 text32 CODE >292:C:\NEN\lcrm\SLRhythm\main.c
+716 text32 CODE >293:C:\NEN\lcrm\SLRhythm\main.c
+73E text32 CODE >295:C:\NEN\lcrm\SLRhythm\main.c
+780 text32 CODE >296:C:\NEN\lcrm\SLRhythm\main.c
+792 text32 CODE >300:C:\NEN\lcrm\SLRhythm\main.c
+7A6 text32 CODE >301:C:\NEN\lcrm\SLRhythm\main.c
+BEC text31 CODE >168:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+BEE text31 CODE >171:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+BF2 text31 CODE >173:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+C16 text31 CODE >175:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+C1C text31 CODE >177:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+C30 text31 CODE >179:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+C3E text31 CODE >182:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+C40 text31 CODE >184:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+C66 text31 CODE >185:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+C88 text31 CODE >186:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+C9A text31 CODE >189:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+CBA text31 CODE >190:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+CD4 text31 CODE >191:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+EF6 text30 CODE >7:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+EF6 text30 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F06 text30 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F1C text30 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F20 text30 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F24 text30 CODE >17:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F2E text30 CODE >18:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F30 text30 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F3E text30 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F48 text30 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F66 text30 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F76 text30 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F78 text30 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F82 text30 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F88 text30 CODE >28:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F88 text30 CODE >29:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+F98 text30 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\__lldiv.c
+10C6 text29 CODE >7:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+10C6 text29 CODE >12:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+10DC text29 CODE >13:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+10E0 text29 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+10E4 text29 CODE >15:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+10EE text29 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+10F0 text29 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+10FE text29 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+111C text29 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+112C text29 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+1136 text29 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+113C text29 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+113C text29 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+114C text29 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\llmod.c
+AE4 text28 CODE >479:C:\NEN\lcrm\SLRhythm\main.c
+AE4 text28 CODE >482:C:\NEN\lcrm\SLRhythm\main.c
+AEC text28 CODE >485:C:\NEN\lcrm\SLRhythm\main.c
+B02 text28 CODE >487:C:\NEN\lcrm\SLRhythm\main.c
+B0C text28 CODE >488:C:\NEN\lcrm\SLRhythm\main.c
+B1C text28 CODE >495:C:\NEN\lcrm\SLRhythm\main.c
+B52 text28 CODE >496:C:\NEN\lcrm\SLRhythm\main.c
+B86 text28 CODE >493:C:\NEN\lcrm\SLRhythm\main.c
+B9C text28 CODE >500:C:\NEN\lcrm\SLRhythm\main.c
+BA4 text28 CODE >501:C:\NEN\lcrm\SLRhythm\main.c
+BA8 text28 CODE >503:C:\NEN\lcrm\SLRhythm\main.c
+BC6 text28 CODE >501:C:\NEN\lcrm\SLRhythm\main.c
+BE0 text28 CODE >506:C:\NEN\lcrm\SLRhythm\main.c
+BEA text28 CODE >509:C:\NEN\lcrm\SLRhythm\main.c
+128C text27 CODE >334:C:\NEN\lcrm\SLRhythm\main.c
+128C text27 CODE >338:C:\NEN\lcrm\SLRhythm\main.c
+129A text27 CODE >339:C:\NEN\lcrm\SLRhythm\main.c
+12A8 text27 CODE >340:C:\NEN\lcrm\SLRhythm\main.c
+12B6 text27 CODE >341:C:\NEN\lcrm\SLRhythm\main.c
+12C4 text27 CODE >344:C:\NEN\lcrm\SLRhythm\main.c
+12D8 text27 CODE >345:C:\NEN\lcrm\SLRhythm\main.c
+12E6 text27 CODE >346:C:\NEN\lcrm\SLRhythm\main.c
+542 text26 CODE >93:C:\NEN\lcrm\SLRhythm\main.c
+542 text26 CODE >94:C:\NEN\lcrm\SLRhythm\main.c
+548 text26 CODE >95:C:\NEN\lcrm\SLRhythm\main.c
+56A text26 CODE >96:C:\NEN\lcrm\SLRhythm\main.c
+59E text26 CODE >98:C:\NEN\lcrm\SLRhythm\main.c
+5E2 text26 CODE >99:C:\NEN\lcrm\SLRhythm\main.c
+5F8 text26 CODE >100:C:\NEN\lcrm\SLRhythm\main.c
+600 text26 CODE >102:C:\NEN\lcrm\SLRhythm\main.c
+614 text26 CODE >105:C:\NEN\lcrm\SLRhythm\main.c
+65A text26 CODE >106:C:\NEN\lcrm\SLRhythm\main.c
+65E text26 CODE >107:C:\NEN\lcrm\SLRhythm\main.c
+672 text26 CODE >110:C:\NEN\lcrm\SLRhythm\main.c
+686 text26 CODE >111:C:\NEN\lcrm\SLRhythm\main.c
+13E8 text25 CODE >282:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+13E8 text25 CODE >284:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+13EA text25 CODE >286:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+13EC text25 CODE >288:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+140A text25 CODE >289:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+141C text25 CODE >290:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+142E text25 CODE >291:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1552 text24 CODE >22:C:\NEN\lcrm\SLRhythm\spi.c
+1554 text24 CODE >24:C:\NEN\lcrm\SLRhythm\spi.c
+1558 text24 CODE >25:C:\NEN\lcrm\SLRhythm\spi.c
+1566 text24 CODE >26:C:\NEN\lcrm\SLRhythm\spi.c
+1568 text24 CODE >27:C:\NEN\lcrm\SLRhythm\spi.c
+156A text24 CODE >28:C:\NEN\lcrm\SLRhythm\spi.c
+1580 text23 CODE >132:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1582 text23 CODE >134:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1584 text23 CODE >135:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1586 text23 CODE >136:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1588 text23 CODE >137:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+158E text23 CODE >138:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1590 text23 CODE >139:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1592 text23 CODE >140:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+156C text22 CODE >120:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+156E text22 CODE >122:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1570 text22 CODE >123:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1572 text22 CODE >124:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1574 text22 CODE >125:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+157A text22 CODE >126:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+157C text22 CODE >127:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+157E text22 CODE >128:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+14E4 text21 CODE >144:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+14E6 text21 CODE >147:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+14F6 text21 CODE >149:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+14FA text21 CODE >151:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1500 text21 CODE >152:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1506 text21 CODE >153:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+150E text21 CODE >154:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1514 text21 CODE >155:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1516 text20 CODE >159:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1518 text20 CODE >161:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1528 text20 CODE >163:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+152C text20 CODE >165:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1534 text20 CODE >166:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1342 text19 CODE >193:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1342 text19 CODE >195:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1344 text19 CODE >197:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+134A text19 CODE >198:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1350 text19 CODE >200:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1352 text19 CODE >202:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1374 text19 CODE >203:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1386 text19 CODE >204:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1398 text19 CODE >205:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1036 text18 CODE >163:C:\NEN\lcrm\SLRhythm\main.c
+1036 text18 CODE >166:C:\NEN\lcrm\SLRhythm\main.c
+1038 text18 CODE >169:C:\NEN\lcrm\SLRhythm\main.c
+1048 text18 CODE >172:C:\NEN\lcrm\SLRhythm\main.c
+1050 text18 CODE >175:C:\NEN\lcrm\SLRhythm\main.c
+1052 text18 CODE >176:C:\NEN\lcrm\SLRhythm\main.c
+1054 text18 CODE >177:C:\NEN\lcrm\SLRhythm\main.c
+1056 text18 CODE >178:C:\NEN\lcrm\SLRhythm\main.c
+1058 text18 CODE >181:C:\NEN\lcrm\SLRhythm\main.c
+105A text18 CODE >182:C:\NEN\lcrm\SLRhythm\main.c
+106A text18 CODE >183:C:\NEN\lcrm\SLRhythm\main.c
+107A text18 CODE >184:C:\NEN\lcrm\SLRhythm\main.c
+108A text18 CODE >185:C:\NEN\lcrm\SLRhythm\main.c
+109A text18 CODE >186:C:\NEN\lcrm\SLRhythm\main.c
+10AC text18 CODE >189:C:\NEN\lcrm\SLRhythm\main.c
+10AE text18 CODE >190:C:\NEN\lcrm\SLRhythm\main.c
+10B6 text18 CODE >193:C:\NEN\lcrm\SLRhythm\main.c
+10BA text18 CODE >194:C:\NEN\lcrm\SLRhythm\main.c
+10BE text18 CODE >197:C:\NEN\lcrm\SLRhythm\main.c
+10C0 text18 CODE >198:C:\NEN\lcrm\SLRhythm\main.c
+10C2 text18 CODE >201:C:\NEN\lcrm\SLRhythm\main.c
+10C4 text18 CODE >202:C:\NEN\lcrm\SLRhythm\main.c
+F9A text17 CODE >204:C:\NEN\lcrm\SLRhythm\main.c
+F9A text17 CODE >209:C:\NEN\lcrm\SLRhythm\main.c
+FA8 text17 CODE >210:C:\NEN\lcrm\SLRhythm\main.c
+FAC text17 CODE >213:C:\NEN\lcrm\SLRhythm\main.c
+FBA text17 CODE >214:C:\NEN\lcrm\SLRhythm\main.c
+FBC text17 CODE >215:C:\NEN\lcrm\SLRhythm\main.c
+FC8 text17 CODE >216:C:\NEN\lcrm\SLRhythm\main.c
+FCC text17 CODE >217:C:\NEN\lcrm\SLRhythm\main.c
+FCE text17 CODE >219:C:\NEN\lcrm\SLRhythm\main.c
+FDC text17 CODE >220:C:\NEN\lcrm\SLRhythm\main.c
+FDE text17 CODE >221:C:\NEN\lcrm\SLRhythm\main.c
+FEA text17 CODE >222:C:\NEN\lcrm\SLRhythm\main.c
+FEE text17 CODE >223:C:\NEN\lcrm\SLRhythm\main.c
+FF0 text17 CODE >225:C:\NEN\lcrm\SLRhythm\main.c
+FFE text17 CODE >226:C:\NEN\lcrm\SLRhythm\main.c
+1000 text17 CODE >227:C:\NEN\lcrm\SLRhythm\main.c
+100C text17 CODE >228:C:\NEN\lcrm\SLRhythm\main.c
+1010 text17 CODE >229:C:\NEN\lcrm\SLRhythm\main.c
+1012 text17 CODE >231:C:\NEN\lcrm\SLRhythm\main.c
+1020 text17 CODE >232:C:\NEN\lcrm\SLRhythm\main.c
+1022 text17 CODE >233:C:\NEN\lcrm\SLRhythm\main.c
+102E text17 CODE >234:C:\NEN\lcrm\SLRhythm\main.c
+1032 text17 CODE >235:C:\NEN\lcrm\SLRhythm\main.c
+1034 text17 CODE >238:C:\NEN\lcrm\SLRhythm\main.c
+1474 text16 CODE >62:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1476 text16 CODE >65:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+147C text16 CODE >66:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1482 text16 CODE >67:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+148A text16 CODE >69:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1490 text16 CODE >70:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+14B0 text16 CODE >71:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1536 text15 CODE >51:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1536 text15 CODE >54:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1538 text15 CODE >56:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+153E text15 CODE >57:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1550 text15 CODE >58:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+15C2 text14 CODE >13:C:\NEN\lcrm\SLRhythm\spi.c
+15C2 text14 CODE >15:C:\NEN\lcrm\SLRhythm\spi.c
+15C4 text14 CODE >16:C:\NEN\lcrm\SLRhythm\spi.c
+15C8 text14 CODE >17:C:\NEN\lcrm\SLRhythm\spi.c
+15CA text14 CODE >18:C:\NEN\lcrm\SLRhythm\spi.c
+15CC text14 CODE >19:C:\NEN\lcrm\SLRhythm\spi.c
+15CE text14 CODE >20:C:\NEN\lcrm\SLRhythm\spi.c
+122A text13 CODE >24:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+122A text13 CODE >26:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+122E text13 CODE >27:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1230 text13 CODE >28:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1232 text13 CODE >31:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1238 text13 CODE >32:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+123E text13 CODE >33:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1244 text13 CODE >34:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+124A text13 CODE >35:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1250 text13 CODE >36:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1256 text13 CODE >37:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+125C text13 CODE >38:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1262 text13 CODE >39:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1268 text13 CODE >40:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+126E text13 CODE >41:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1274 text13 CODE >42:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+127A text13 CODE >43:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1280 text13 CODE >44:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+1286 text13 CODE >46:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+128A text13 CODE >47:C:\NEN\lcrm\SLRhythm\moduleDogm128.c
+15DC text12 CODE >431:C:\NEN\lcrm\SLRhythm\main.c
+15DC text12 CODE >433:C:\NEN\lcrm\SLRhythm\main.c
+15DE text12 CODE >434:C:\NEN\lcrm\SLRhythm\main.c
+15E0 text12 CODE >435:C:\NEN\lcrm\SLRhythm\main.c
+15B4 text11 CODE >439:C:\NEN\lcrm\SLRhythm\main.c
+15B4 text11 CODE >441:C:\NEN\lcrm\SLRhythm\main.c
+15B6 text11 CODE >442:C:\NEN\lcrm\SLRhythm\main.c
+15BA text11 CODE >443:C:\NEN\lcrm\SLRhythm\main.c
+15BC text11 CODE >444:C:\NEN\lcrm\SLRhythm\main.c
+15BE text11 CODE >445:C:\NEN\lcrm\SLRhythm\main.c
+15C0 text11 CODE >446:C:\NEN\lcrm\SLRhythm\main.c
+1594 text10 CODE >461:C:\NEN\lcrm\SLRhythm\main.c
+1594 text10 CODE >463:C:\NEN\lcrm\SLRhythm\main.c
+1598 text10 CODE >464:C:\NEN\lcrm\SLRhythm\main.c
+15A0 text10 CODE >465:C:\NEN\lcrm\SLRhythm\main.c
+15A2 text10 CODE >466:C:\NEN\lcrm\SLRhythm\main.c
+15A4 text10 CODE >467:C:\NEN\lcrm\SLRhythm\main.c
+15A6 text9 CODE >471:C:\NEN\lcrm\SLRhythm\main.c
+15A6 text9 CODE >473:C:\NEN\lcrm\SLRhythm\main.c
+15AA text9 CODE >474:C:\NEN\lcrm\SLRhythm\main.c
+15AE text9 CODE >475:C:\NEN\lcrm\SLRhythm\main.c
+15B0 text9 CODE >476:C:\NEN\lcrm\SLRhythm\main.c
+15B2 text9 CODE >477:C:\NEN\lcrm\SLRhythm\main.c
+1430 text8 CODE >114:C:\NEN\lcrm\SLRhythm\main.c
+1430 text8 CODE >115:C:\NEN\lcrm\SLRhythm\main.c
+144A text8 CODE >117:C:\NEN\lcrm\SLRhythm\main.c
+146A text8 CODE >118:C:\NEN\lcrm\SLRhythm\main.c
+1472 text8 CODE >119:C:\NEN\lcrm\SLRhythm\main.c
+3E6 text7 CODE >123:C:\NEN\lcrm\SLRhythm\main.c
+3E6 text7 CODE >124:C:\NEN\lcrm\SLRhythm\main.c
+3EA text7 CODE >127:C:\NEN\lcrm\SLRhythm\main.c
+418 text7 CODE >129:C:\NEN\lcrm\SLRhythm\main.c
+41C text7 CODE >130:C:\NEN\lcrm\SLRhythm\main.c
+43E text7 CODE >131:C:\NEN\lcrm\SLRhythm\main.c
+460 text7 CODE >132:C:\NEN\lcrm\SLRhythm\main.c
+482 text7 CODE >133:C:\NEN\lcrm\SLRhythm\main.c
+4A4 text7 CODE >134:C:\NEN\lcrm\SLRhythm\main.c
+4A8 text7 CODE >134:C:\NEN\lcrm\SLRhythm\main.c
+4B0 text7 CODE >134:C:\NEN\lcrm\SLRhythm\main.c
+4B8 text7 CODE >134:C:\NEN\lcrm\SLRhythm\main.c
+4C0 text7 CODE >134:C:\NEN\lcrm\SLRhythm\main.c
+4CA text7 CODE >136:C:\NEN\lcrm\SLRhythm\main.c
+4CE text7 CODE >124:C:\NEN\lcrm\SLRhythm\main.c
+540 text7 CODE >138:C:\NEN\lcrm\SLRhythm\main.c
+E4A text6 CODE >14:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+E4A text6 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+E58 text6 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+E6A text6 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+E72 text6 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+E72 text6 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+E88 text6 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+E90 text6 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+E9C text6 CODE >26:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+ED0 text6 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+ED8 text6 CODE >28:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+EE4 text6 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+EEC text6 CODE >31:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+EF4 text6 CODE >32:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\expand_heap.c
+12 text5 CODE >19:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+12 text5 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+1A text5 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+22 text5 CODE >22:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+2A text5 CODE >25:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+48 text5 CODE >27:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+54 text5 CODE >28:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+74 text5 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+86 text5 CODE >31:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+A6 text5 CODE >32:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+AA text5 CODE >33:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+BE text5 CODE >35:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+CE text5 CODE >37:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+EC text5 CODE >38:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+128 text5 CODE >39:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+130 text5 CODE >40:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+138 text5 CODE >42:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+166 text5 CODE >44:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+178 text5 CODE >46:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+18C text5 CODE >49:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+1BA text5 CODE >53:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+1DE text5 CODE >54:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+1EE text5 CODE >55:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+216 text5 CODE >56:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+226 text5 CODE >57:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+23A text5 CODE >58:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+242 text5 CODE >59:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+242 text5 CODE >60:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+266 text5 CODE >61:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+27A text5 CODE >62:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+286 text5 CODE >65:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_free.c
+288 text4 CODE >16:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+288 text4 CODE >20:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+288 text4 CODE >21:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+288 text4 CODE >23:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+29A text4 CODE >24:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+29E text4 CODE >29:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+2B4 text4 CODE >30:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+2BC text4 CODE >31:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+2C0 text4 CODE >32:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+2DE text4 CODE >33:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+2E6 text4 CODE >34:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+2F2 text4 CODE >36:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+2F2 text4 CODE >37:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+306 text4 CODE >39:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+318 text4 CODE >40:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+33A text4 CODE >41:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+346 text4 CODE >42:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+356 text4 CODE >43:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+36C text4 CODE >47:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+384 text4 CODE >48:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+38C text4 CODE >49:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+38C text4 CODE >50:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+398 text4 CODE >51:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+398 text4 CODE >52:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+3A0 text4 CODE >54:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+3A8 text4 CODE >55:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+3C0 text4 CODE >56:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+3C8 text4 CODE >58:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+3DC text4 CODE >62:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+3E4 text4 CODE >63:C:\Program Files\Microchip\xc8\v2.50\pic\sources\c99\common\lite_malloc.c
+11C2 text3 CODE >276:C:\NEN\lcrm\SLRhythm\main.c
+11C2 text3 CODE >277:C:\NEN\lcrm\SLRhythm\main.c
+11D6 text3 CODE >279:C:\NEN\lcrm\SLRhythm\main.c
+11F4 text3 CODE >281:C:\NEN\lcrm\SLRhythm\main.c
+1208 text3 CODE >282:C:\NEN\lcrm\SLRhythm\main.c
+1220 text3 CODE >284:C:\NEN\lcrm\SLRhythm\main.c
+1228 text3 CODE >285:C:\NEN\lcrm\SLRhythm\main.c
+8C2 text2 CODE >141:C:\NEN\lcrm\SLRhythm\main.c
+8C2 text2 CODE >142:C:\NEN\lcrm\SLRhythm\main.c
+8C8 text2 CODE >143:C:\NEN\lcrm\SLRhythm\main.c
+94A text2 CODE >146:C:\NEN\lcrm\SLRhythm\main.c
+952 text2 CODE >147:C:\NEN\lcrm\SLRhythm\main.c
+978 text2 CODE >148:C:\NEN\lcrm\SLRhythm\main.c
+9B4 text2 CODE >150:C:\NEN\lcrm\SLRhythm\main.c
+9BC text2 CODE >151:C:\NEN\lcrm\SLRhythm\main.c
+9BE text2 CODE >153:C:\NEN\lcrm\SLRhythm\main.c
+9D8 text2 CODE >154:C:\NEN\lcrm\SLRhythm\main.c
+14B2 text1 CODE >156:C:\NEN\lcrm\SLRhythm\main.c
+14B2 text1 CODE >157:C:\NEN\lcrm\SLRhythm\main.c
+14BE text1 CODE >158:C:\NEN\lcrm\SLRhythm\main.c
+14CA text1 CODE >159:C:\NEN\lcrm\SLRhythm\main.c
+14D6 text1 CODE >160:C:\NEN\lcrm\SLRhythm\main.c
+14E2 text1 CODE >161:C:\NEN\lcrm\SLRhythm\main.c
+7A8 text0 CODE >350:C:\NEN\lcrm\SLRhythm\main.c
+7A8 text0 CODE >352:C:\NEN\lcrm\SLRhythm\main.c
+7AC text0 CODE >353:C:\NEN\lcrm\SLRhythm\main.c
+7B0 text0 CODE >354:C:\NEN\lcrm\SLRhythm\main.c
+7B4 text0 CODE >355:C:\NEN\lcrm\SLRhythm\main.c
+7B8 text0 CODE >357:C:\NEN\lcrm\SLRhythm\main.c
+7BC text0 CODE >358:C:\NEN\lcrm\SLRhythm\main.c
+7C0 text0 CODE >361:C:\NEN\lcrm\SLRhythm\main.c
+7C4 text0 CODE >362:C:\NEN\lcrm\SLRhythm\main.c
+7F6 text0 CODE >363:C:\NEN\lcrm\SLRhythm\main.c
+828 text0 CODE >364:C:\NEN\lcrm\SLRhythm\main.c
+85A text0 CODE >387:C:\NEN\lcrm\SLRhythm\main.c
+868 text0 CODE >388:C:\NEN\lcrm\SLRhythm\main.c
+86C text0 CODE >390:C:\NEN\lcrm\SLRhythm\main.c
+8A6 text0 CODE >391:C:\NEN\lcrm\SLRhythm\main.c
+8AA text0 CODE >392:C:\NEN\lcrm\SLRhythm\main.c
+8AE text0 CODE >393:C:\NEN\lcrm\SLRhythm\main.c
+8B2 text0 CODE >394:C:\NEN\lcrm\SLRhythm\main.c
+8B6 text0 CODE >395:C:\NEN\lcrm\SLRhythm\main.c
+12E8 cinit CODE >1828:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12E8 cinit CODE >1830:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12E8 cinit CODE >1833:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12E8 cinit CODE >1917:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12EA cinit CODE >1918:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12EC cinit CODE >1919:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12EE cinit CODE >1920:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12F0 cinit CODE >1921:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12F2 cinit CODE >1922:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12F4 cinit CODE >1923:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12F8 cinit CODE >1924:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12FC cinit CODE >1925:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12FC cinit CODE >1926:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+12FE cinit CODE >1927:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1302 cinit CODE >1928:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1304 cinit CODE >1929:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1306 cinit CODE >1930:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1308 cinit CODE >1934:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+130C cinit CODE >1935:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1310 cinit CODE >1936:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1310 cinit CODE >1937:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1312 cinit CODE >1938:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1314 cinit CODE >1939:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1316 cinit CODE >1940:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1318 cinit CODE >1941:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+131A cinit CODE >1942:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+131C cinit CODE >1945:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1320 cinit CODE >1946:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1322 cinit CODE >1947:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1322 cinit CODE >1948:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1324 cinit CODE >1949:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1326 cinit CODE >1950:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1328 cinit CODE >1953:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+132C cinit CODE >1954:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+132E cinit CODE >1955:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+132E cinit CODE >1956:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1330 cinit CODE >1957:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1332 cinit CODE >1958:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1334 cinit CODE >1964:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1334 cinit CODE >1966:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1336 cinit CODE >1967:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+1338 cinit CODE >1969:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+133A cinit CODE >1970:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+133C cinit CODE >1971:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
+133E cinit CODE >1972:C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -679,27 +636,17 @@ $dist/default/debug\__htaintpri.o
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-__Lmediumconst 7B4E 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
+__Lmediumconst 7B2C 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
 __Hspace_0 7D40 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __Hspace_1 800 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __Hspace_2 0 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-__Hspace_3 0 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __Hspace_4 60000E 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 clearBuffer@col 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\SLRhythm.debug.o
-__mediumconst 7B4E 0 MEDIUMCONST 0 mediumconst C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
+__mediumconst 7B2C 0 MEDIUMCONST 0 mediumconst C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\SLRhythm.debug.o
-__Hudata_bank0 0 0 ABS 0 udata_bank0 dist/default/debug\SLRhythm.debug.o
-__Hudata_bank1 0 0 ABS 0 udata_bank1 dist/default/debug\SLRhythm.debug.o
-__Hudata_bank2 0 0 ABS 0 udata_bank2 dist/default/debug\SLRhythm.debug.o
-__Hudata_bank3 0 0 ABS 0 udata_bank3 dist/default/debug\SLRhythm.debug.o
-__Hudata_bank4 0 0 ABS 0 udata_bank4 dist/default/debug\SLRhythm.debug.o
-__Hudata_bank5 0 0 ABS 0 udata_bank5 dist/default/debug\SLRhythm.debug.o
-__Hudata_bank6 0 0 ABS 0 udata_bank6 dist/default/debug\SLRhythm.debug.o
-__Hudata_bank7 0 0 ABS 0 udata_bank7 dist/default/debug\SLRhythm.debug.o
-__end_of_setInterrupt 16B6 0 CODE 0 text13 dist/default/debug\SLRhythm.debug.o
+__end_of_setInterrupt 15E2 0 CODE 0 text12 dist/default/debug\SLRhythm.debug.o
 __L__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug\SLRhythm.debug.o
-___DCByte 52 0 COMRAM 1 nvCOMRAM dist/default/debug\SLRhythm.debug.o
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\SLRhythm.debug.o
 _Col1 D0 0 BANK0 1 bssBANK0 dist/default/debug\SLRhythm.debug.o
 _Col2 B4 0 BANK0 1 bssBANK0 dist/default/debug\SLRhythm.debug.o
@@ -709,102 +656,99 @@ _LATA F89 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 _LATC F8B 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 _LATD F8C 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 _TMR0 FD6 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-___IT 101 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-___sp 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
+___sp 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
 _brkp 33 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-_main 726 0 CODE 0 text0 dist/default/debug\SLRhythm.debug.o
+_main 7A8 0 CODE 0 text0 dist/default/debug\SLRhythm.debug.o
 ___simple_search_fl@best 13 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 ___simple_search_fl@last D 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 ___simple_search_fl@next F 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-btemp 53 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
-__end_of_updateDisplay 146E 0 CODE 0 text3 dist/default/debug\SLRhythm.debug.o
-___stack_hi 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-___stack_lo 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-start E 0 CODE 0 init C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
+btemp 4B 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
+__end_of_updateDisplay 139A 0 CODE 0 text19 dist/default/debug\SLRhythm.debug.o
+___stack_hi 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+___stack_lo 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+start E 0 CODE 0 init C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+checkHit@i B 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 ?_tileInit 21 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-_setPageAddress 15EA 0 CODE 0 text18 dist/default/debug\SLRhythm.debug.o
+_setPageAddress 1516 0 CODE 0 text20 dist/default/debug\SLRhythm.debug.o
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-_switches 47 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-_updateTiles 1586 0 CODE 0 text1 dist/default/debug\SLRhythm.debug.o
-__IT_SAVE_ASM_INTPRI 11A0 0 CODE 0 text dist/default/debug\__htaintpri.o
+_switches 41 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
+_updateTiles 14B2 0 CODE 0 text1 dist/default/debug\SLRhythm.debug.o
 __Hpowerup E 0 CODE 0 powerup dist/default/debug\SLRhythm.debug.o
-ttemp5 54 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
-ttemp6 57 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
-ttemp7 5B 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
-__LnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/debug\SLRhythm.debug.o
+ttemp5 4C 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
+ttemp6 4F 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
+ttemp7 53 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
 spawnTiles@t 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\SLRhythm.debug.o
 setColumnAddress@col 3 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-__accesstop 60 0 ABS 0 - C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-intlevel0 0 0 CODE 0 text C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-intlevel1 0 0 CODE 0 text C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-intlevel2 0 0 CODE 0 text C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-intlevel3 0 0 CODE 0 text C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
+__accesstop 60 0 ABS 0 - C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+intlevel0 0 0 CODE 0 text C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+intlevel1 0 0 CODE 0 text C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+intlevel2 0 0 CODE 0 text C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+intlevel3 0 0 CODE 0 text C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-_sendCommandToDisplay 1640 0 CODE 0 text20 dist/default/debug\SLRhythm.debug.o
+_sendCommandToDisplay 156C 0 CODE 0 text22 dist/default/debug\SLRhythm.debug.o
 ___aldiv@divisor 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\SLRhythm.debug.o
-wtemp8 54 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
+wtemp8 4C 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
 ___llmod@divisor 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __Hifardata 0 0 CODE 0 ifardata dist/default/debug\SLRhythm.debug.o
 ___aldiv@sign A 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __Hclrtext 0 0 ABS 0 clrtext dist/default/debug\SLRhythm.debug.o
 _chartIndex 3B 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-__pidataCOMRAM 16B6 0 CODE 0 idataCOMRAM dist/default/debug\SLRhythm.debug.o
-_clearBuffer 14BC 0 CODE 0 text36 dist/default/debug\SLRhythm.debug.o
-drawRect@i_600 10 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-__end_of_setPageAddress 160A 0 CODE 0 text18 dist/default/debug\SLRhythm.debug.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
+__pidataCOMRAM 15E2 0 CODE 0 idataCOMRAM dist/default/debug\SLRhythm.debug.o
+_clearBuffer 13E8 0 CODE 0 text25 dist/default/debug\SLRhythm.debug.o
+drawRect@i_619 10 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
+__end_of_setPageAddress 1536 0 CODE 0 text20 dist/default/debug\SLRhythm.debug.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
 clearAllDisplay@pg 8 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\SLRhythm.debug.o
 ?_malloc 15 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 updateColumn@cnt 2 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 updateColumn@col 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-_initDisplay 135A 0 CODE 0 text14 dist/default/debug\SLRhythm.debug.o
+_initDisplay 122A 0 CODE 0 text13 dist/default/debug\SLRhythm.debug.o
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/debug\SLRhythm.debug.o
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\SLRhythm.debug.o
 drawText@page 8 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-fillRect@color E 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 addTile@t 3 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 drawPixel@page 8 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __Hmediumconst 7D40 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
-__IT_INT_MASK 44 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
 __Hintcodelo E 0 CODE 0 intcodelo dist/default/debug\SLRhythm.debug.o
 malloc@cur 37 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
 malloc@end 35 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
 malloc@new 1F 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-__end_of___aldiv A62 0 CODE 0 text34 dist/default/debug\SLRhythm.debug.o
-__end_of___lldiv 1118 0 CODE 0 text27 dist/default/debug\SLRhythm.debug.o
-__end_of___llmod 11A0 0 CODE 0 text26 dist/default/debug\SLRhythm.debug.o
-__end_of___lwdiv 1288 0 CODE 0 text33 dist/default/debug\SLRhythm.debug.o
+__end_of___aldiv AE4 0 CODE 0 text36 dist/default/debug\SLRhythm.debug.o
+__end_of___lldiv F9A 0 CODE 0 text30 dist/default/debug\SLRhythm.debug.o
+__end_of___llmod 114E 0 CODE 0 text29 dist/default/debug\SLRhythm.debug.o
+__end_of___lwdiv 11C2 0 CODE 0 text35 dist/default/debug\SLRhythm.debug.o
 malloc@m 19 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 malloc@n 15 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 malloc@p 1D 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-_addTile 1504 0 CODE 0 text9 dist/default/debug\SLRhythm.debug.o
-__end_of_drawUi 46C 0 CODE 0 text24 dist/default/debug\SLRhythm.debug.o
+_addTile 1430 0 CODE 0 text8 dist/default/debug\SLRhythm.debug.o
+__end_of_resetGame 10C6 0 CODE 0 text18 dist/default/debug\SLRhythm.debug.o
+__end_of_drawUi 12E8 0 CODE 0 text27 dist/default/debug\SLRhythm.debug.o
 drawColl@height 1D 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 ___lwdiv@quotient 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug\SLRhythm.debug.o
-__HnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/debug\SLRhythm.debug.o
 ___lldiv@counter D 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __Lintcodelo E 0 CODE 0 intcodelo dist/default/debug\SLRhythm.debug.o
 ?___simple_search_fl 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-__end_of_sendDataToDisplay 1668 0 CODE 0 text21 dist/default/debug\SLRhythm.debug.o
-start_initialization 13BC 0 CODE 0 cinit dist/default/debug\SLRhythm.debug.o
+__end_of_sendDataToDisplay 1594 0 CODE 0 text23 dist/default/debug\SLRhythm.debug.o
+start_initialization 12E8 0 CODE 0 cinit dist/default/debug\SLRhythm.debug.o
 tileInit@start 21 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 tileInit@len 25 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
+_resetGame 1036 0 CODE 0 text18 dist/default/debug\SLRhythm.debug.o
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\SLRhythm.debug.o
 ___aldiv@quotient B 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 ___lldiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-_sendByteSpi 1626 0 CODE 0 text22 dist/default/debug\SLRhythm.debug.o
+_sendByteSpi 1552 0 CODE 0 text24 dist/default/debug\SLRhythm.debug.o
 ___rparam_used 1 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-_Col1cnt 4B 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-_Col2cnt 4A 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-_Col3cnt 49 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-_Col4cnt 48 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
+_Col1cnt 45 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
+_Col2cnt 44 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
+_Col3cnt 43 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
+_Col4cnt 42 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
 malloc@lock 29 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-__end_of_malloc 5CA 0 CODE 0 text5 dist/default/debug\SLRhythm.debug.o
+__end_of_malloc 3E6 0 CODE 0 text4 dist/default/debug\SLRhythm.debug.o
 _SSPBUF FC9 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 ___expand_heap@new_brkp 7 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 _TMR0IE 7F95 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
@@ -813,11 +757,10 @@ _TMR2IE 7CE9 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 _TMR2IF 7CF1 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 utoa32@i 1F 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 utoa32@j 1D 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-_updateColumn 840 0 CODE 0 text2 dist/default/debug\SLRhythm.debug.o
-isa$xinst 0 0 ABS 0 - C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-__IT_SAVE_STATUS 41 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
+_updateColumn 8C2 0 CODE 0 text2 dist/default/debug\SLRhythm.debug.o
+isa$xinst 0 0 ABS 0 - C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
 ?___expand_heap 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-__end_of_initSpi 16A4 0 CODE 0 text15 dist/default/debug\SLRhythm.debug.o
+__end_of_initSpi 15D0 0 CODE 0 text14 dist/default/debug\SLRhythm.debug.o
 __Hbank0 0 0 ABS 0 bank0 dist/default/debug\SLRhythm.debug.o
 __Hbank1 0 0 ABS 0 bank1 dist/default/debug\SLRhythm.debug.o
 __Hbank2 0 0 ABS 0 bank2 dist/default/debug\SLRhythm.debug.o
@@ -828,7 +771,6 @@ __Hbank6 0 0 ABS 0 bank6 dist/default/debug\SLRhythm.debug.o
 __Hbank7 0 0 ABS 0 bank7 dist/default/debug\SLRhythm.debug.o
 __Hcinit 0 0 ABS 0 cinit dist/default/debug\SLRhythm.debug.o
 __Hconst 0 0 CONST 0 const dist/default/debug\SLRhythm.debug.o
-__Hedata 0 0 ABS 0 edata dist/default/debug\SLRhythm.debug.o
 __Hidata 0 0 CODE 0 idata dist/default/debug\SLRhythm.debug.o
 __Hidloc 0 0 ABS 0 idloc dist/default/debug\SLRhythm.debug.o
 __Hnvbit 0 0 COMRAM 1 nvbit dist/default/debug\SLRhythm.debug.o
@@ -845,14 +787,13 @@ __Htext6 0 0 ABS 0 text6 dist/default/debug\SLRhythm.debug.o
 __Htext7 0 0 ABS 0 text7 dist/default/debug\SLRhythm.debug.o
 __Htext8 0 0 ABS 0 text8 dist/default/debug\SLRhythm.debug.o
 __Htext9 0 0 ABS 0 text9 dist/default/debug\SLRhythm.debug.o
-__Hudata 0 0 ABS 0 udata dist/default/debug\SLRhythm.debug.o
 ___lwdiv@counter 7 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-_setColumnAddress 15B8 0 CODE 0 text19 dist/default/debug\SLRhythm.debug.o
+_setColumnAddress 14E4 0 CODE 0 text21 dist/default/debug\SLRhythm.debug.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\SLRhythm.debug.o
 __Hbigram 0 0 ABS 0 bigram dist/default/debug\SLRhythm.debug.o
 __Hbigsfr 0 0 ABS 0 bigsfr dist/default/debug\SLRhythm.debug.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-__end_of_utoa32 B6A 0 CODE 0 text25 dist/default/debug\SLRhythm.debug.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+__end_of_utoa32 BEC 0 CODE 0 text28 dist/default/debug\SLRhythm.debug.o
 __Hcomram 0 0 ABS 0 comram dist/default/debug\SLRhythm.debug.o
 __Hconfig 30000E 0 CONFIG 4 config dist/default/debug\SLRhythm.debug.o
 updateDisplay@pg 8 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
@@ -866,7 +807,6 @@ __Lbank6 0 0 ABS 0 bank6 dist/default/debug\SLRhythm.debug.o
 __Lbank7 0 0 ABS 0 bank7 dist/default/debug\SLRhythm.debug.o
 __Lcinit 0 0 ABS 0 cinit dist/default/debug\SLRhythm.debug.o
 __Lconst 0 0 CONST 0 const dist/default/debug\SLRhythm.debug.o
-__Ledata 0 0 ABS 0 edata dist/default/debug\SLRhythm.debug.o
 __Lidata 0 0 CODE 0 idata dist/default/debug\SLRhythm.debug.o
 __Lidloc 0 0 ABS 0 idloc dist/default/debug\SLRhythm.debug.o
 __Lnvbit 0 0 COMRAM 1 nvbit dist/default/debug\SLRhythm.debug.o
@@ -883,72 +823,62 @@ __Ltext6 0 0 ABS 0 text6 dist/default/debug\SLRhythm.debug.o
 __Ltext7 0 0 ABS 0 text7 dist/default/debug\SLRhythm.debug.o
 __Ltext8 0 0 ABS 0 text8 dist/default/debug\SLRhythm.debug.o
 __Ltext9 0 0 ABS 0 text9 dist/default/debug\SLRhythm.debug.o
-__Ludata 0 0 ABS 0 udata dist/default/debug\SLRhythm.debug.o
 __Hfarbss 0 0 FARRAM 0 farbss dist/default/debug\SLRhythm.debug.o
 __Lintcode_body 0 0 ABS 0 intcode_body dist/default/debug\SLRhythm.debug.o
 _PORTBbits F81 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 _INTCONbits FF2 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __Habs1 0 0 ABS 0 abs1 dist/default/debug\SLRhythm.debug.o
-__Hcode 0 0 ABS 0 code dist/default/debug\SLRhythm.debug.o
 __Hdata 0 0 ABS 0 data dist/default/debug\SLRhythm.debug.o
 __Hheap 3EF 0 HEAP 7 heap dist/default/debug\SLRhythm.debug.o
 __Hinit 12 0 CODE 0 init dist/default/debug\SLRhythm.debug.o
 __Hrbit 0 0 COMRAM 1 rbit dist/default/debug\SLRhythm.debug.o
 __Hrbss 0 0 COMRAM 1 rbss dist/default/debug\SLRhythm.debug.o
-__Htemp 54 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
+__Htemp 4C 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
 __Htext 0 0 ABS 0 text dist/default/debug\SLRhythm.debug.o
-__IT_ID 46 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
 __Labs1 0 0 ABS 0 abs1 dist/default/debug\SLRhythm.debug.o
-__Lcode 0 0 ABS 0 code dist/default/debug\SLRhythm.debug.o
 __Ldata 0 0 ABS 0 data dist/default/debug\SLRhythm.debug.o
 __Lheap EC 0 HEAP 7 heap dist/default/debug\SLRhythm.debug.o
 __Linit E 0 CODE 0 init dist/default/debug\SLRhythm.debug.o
 __Lrbit 0 0 COMRAM 1 rbit dist/default/debug\SLRhythm.debug.o
 __Lrbss 0 0 COMRAM 1 rbss dist/default/debug\SLRhythm.debug.o
-__Ltemp 53 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
+__Ltemp 4B 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
 __Ltext 0 0 ABS 0 text dist/default/debug\SLRhythm.debug.o
 _displayBuffer 400 0 BIGRAM 1 bssBIGRAM_1 dist/default/debug\SLRhythm.debug.o
-__end_of_updateTiles 15B8 0 CODE 0 text1 dist/default/debug\SLRhythm.debug.o
-int$flags 53 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
+__end_of_updateTiles 14E4 0 CODE 0 text1 dist/default/debug\SLRhythm.debug.o
+int$flags 4B 0 COMRAM 1 temp dist/default/debug\SLRhythm.debug.o
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
+checkHit@cnt 2 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
+checkHit@col 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __Hintret 0 0 ABS 0 intret dist/default/debug\SLRhythm.debug.o
 __Hirdata 0 0 CODE 0 irdata dist/default/debug\SLRhythm.debug.o
 _PR2 FCB 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __S0 7D40 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __S1 800 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-__S3 0 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __S4 0 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __S5 0 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __S7 3EF 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 _cnt 3D 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
 _isr 8 0 CODE 0 intcode dist/default/debug\SLRhythm.debug.o
-_handleSwitches B6A 0 CODE 0 text23 dist/default/debug\SLRhythm.debug.o
+_handleSwitches F9A 0 CODE 0 text17 dist/default/debug\SLRhythm.debug.o
 ___freelist 31 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
 clearPageDisplay@page 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-_sendDataToDisplay 1654 0 CODE 0 text21 dist/default/debug\SLRhythm.debug.o
-__pnvCOMRAM 51 0 COMRAM 1 nvCOMRAM dist/default/debug\SLRhythm.debug.o
-__end_of_font5x7 7D1B 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
+_sendDataToDisplay 1580 0 CODE 0 text23 dist/default/debug\SLRhythm.debug.o
+__end_of_font5x7 7CF9 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
 drawColl@activeCol 12 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-_spawnTiles 5CA 0 CODE 0 text8 dist/default/debug\SLRhythm.debug.o
-fillRect@h D 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-fillRect@i 10 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-fillRect@j 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-fillRect@w C 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-fillRect@x F 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-fillRect@y B 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
+_spawnTiles 3E6 0 CODE 0 text7 dist/default/debug\SLRhythm.debug.o
 updateColumn@i 12 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 updateColumn@j 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-_drawUi 288 0 CODE 0 text24 dist/default/debug\SLRhythm.debug.o
+_drawUi 128C 0 CODE 0 text27 dist/default/debug\SLRhythm.debug.o
 __HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug\SLRhythm.debug.o
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\SLRhythm.debug.o
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug\SLRhythm.debug.o
 ___simple_search_fl@remaining_size 7 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-_clearPageDisplay 1548 0 CODE 0 text17 dist/default/debug\SLRhythm.debug.o
+_clearPageDisplay 1474 0 CODE 0 text16 dist/default/debug\SLRhythm.debug.o
 utoa32@temp 13 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-__end_of___simple_search_fl 288 0 CODE 0 text6 dist/default/debug\SLRhythm.debug.o
-__end_of_updateColumn 958 0 CODE 0 text2 dist/default/debug\SLRhythm.debug.o
-__end_of_isr 14BC 0 CODE 0 intcode_body dist/default/debug\SLRhythm.debug.o
-int_func 146E 0 CODE 0 intcode_body dist/default/debug\SLRhythm.debug.o
+__end_of___simple_search_fl 288 0 CODE 0 text5 dist/default/debug\SLRhythm.debug.o
+__end_of_updateColumn 9DA 0 CODE 0 text2 dist/default/debug\SLRhythm.debug.o
+__end_of_isr 13E8 0 CODE 0 intcode_body dist/default/debug\SLRhythm.debug.o
+int_func 139A 0 CODE 0 intcode_body dist/default/debug\SLRhythm.debug.o
 drawText@col A 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 drawText@txt 2 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 malloc@sz 1B 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
@@ -957,9 +887,8 @@ ___lldiv@divisor 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __Hramtop 800 0 RAM 0 ramtop dist/default/debug\SLRhythm.debug.o
 __Hrparam 0 0 COMRAM 1 rparam dist/default/debug\SLRhythm.debug.o
 __activetblptr 2 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-__IT_SAVE_BSR 43 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
 __Hstruct 0 0 COMRAM 1 struct dist/default/debug\SLRhythm.debug.o
-__end_of_clearBuffer 1504 0 CODE 0 text36 dist/default/debug\SLRhythm.debug.o
+__end_of_clearBuffer 1430 0 CODE 0 text25 dist/default/debug\SLRhythm.debug.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/debug\SLRhythm.debug.o
 __Htext10 0 0 ABS 0 text10 dist/default/debug\SLRhythm.debug.o
 __Htext11 0 0 ABS 0 text11 dist/default/debug\SLRhythm.debug.o
@@ -988,105 +917,103 @@ __Htext33 0 0 ABS 0 text33 dist/default/debug\SLRhythm.debug.o
 __Htext34 0 0 ABS 0 text34 dist/default/debug\SLRhythm.debug.o
 __Htext35 0 0 ABS 0 text35 dist/default/debug\SLRhythm.debug.o
 __Htext36 0 0 ABS 0 text36 dist/default/debug\SLRhythm.debug.o
-__IT_DATA 45 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-__end_of_setColumnAddress 15EA 0 CODE 0 text19 dist/default/debug\SLRhythm.debug.o
+__Htext37 0 0 ABS 0 text37 dist/default/debug\SLRhythm.debug.o
+__end_of_setColumnAddress 1516 0 CODE 0 text21 dist/default/debug\SLRhythm.debug.o
 updateDisplay@col 7 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 _PIE1bits F9D 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-_malloc 46C 0 CODE 0 text5 dist/default/debug\SLRhythm.debug.o
+_malloc 288 0 CODE 0 text4 dist/default/debug\SLRhythm.debug.o
 _millis 2D 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
 drawColl@i 20 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 drawColl@x 1C 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 drawColl@y 1E 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-__ptext10 167A 0 CODE 0 text10 dist/default/debug\SLRhythm.debug.o
-__ptext11 1668 0 CODE 0 text11 dist/default/debug\SLRhythm.debug.o
-__ptext12 1688 0 CODE 0 text12 dist/default/debug\SLRhythm.debug.o
-__ptext13 16B0 0 CODE 0 text13 dist/default/debug\SLRhythm.debug.o
-__ptext14 135A 0 CODE 0 text14 dist/default/debug\SLRhythm.debug.o
-__ptext15 1696 0 CODE 0 text15 dist/default/debug\SLRhythm.debug.o
-__ptext16 160A 0 CODE 0 text16 dist/default/debug\SLRhythm.debug.o
-__ptext17 1548 0 CODE 0 text17 dist/default/debug\SLRhythm.debug.o
-__ptext18 15EA 0 CODE 0 text18 dist/default/debug\SLRhythm.debug.o
-__ptext19 15B8 0 CODE 0 text19 dist/default/debug\SLRhythm.debug.o
-__ptext20 1640 0 CODE 0 text20 dist/default/debug\SLRhythm.debug.o
-__ptext21 1654 0 CODE 0 text21 dist/default/debug\SLRhythm.debug.o
-__ptext22 1626 0 CODE 0 text22 dist/default/debug\SLRhythm.debug.o
-__ptext23 B6A 0 CODE 0 text23 dist/default/debug\SLRhythm.debug.o
-__ptext24 288 0 CODE 0 text24 dist/default/debug\SLRhythm.debug.o
-__ptext25 A62 0 CODE 0 text25 dist/default/debug\SLRhythm.debug.o
-__ptext26 1118 0 CODE 0 text26 dist/default/debug\SLRhythm.debug.o
-__ptext27 1074 0 CODE 0 text27 dist/default/debug\SLRhythm.debug.o
-__ptext28 1288 0 CODE 0 text28 dist/default/debug\SLRhythm.debug.o
-__ptext29 D6A 0 CODE 0 text29 dist/default/debug\SLRhythm.debug.o
-__ptext30 C70 0 CODE 0 text30 dist/default/debug\SLRhythm.debug.o
-__ptext31 F14 0 CODE 0 text31 dist/default/debug\SLRhythm.debug.o
-__ptext32 E54 0 CODE 0 text32 dist/default/debug\SLRhythm.debug.o
-__ptext33 1214 0 CODE 0 text33 dist/default/debug\SLRhythm.debug.o
-__ptext34 958 0 CODE 0 text34 dist/default/debug\SLRhythm.debug.o
-__ptext35 16A4 0 CODE 0 text35 dist/default/debug\SLRhythm.debug.o
-__ptext36 14BC 0 CODE 0 text36 dist/default/debug\SLRhythm.debug.o
-__end_of_handleSwitches C70 0 CODE 0 text23 dist/default/debug\SLRhythm.debug.o
-__end_of_initDisplay 13BC 0 CODE 0 text14 dist/default/debug\SLRhythm.debug.o
-___aldiv 958 0 CODE 0 text34 dist/default/debug\SLRhythm.debug.o
-__pintcode_body 146E 0 CODE 0 intcode_body dist/default/debug\SLRhythm.debug.o
-___lldiv 1074 0 CODE 0 text27 dist/default/debug\SLRhythm.debug.o
-___llmod 1118 0 CODE 0 text26 dist/default/debug\SLRhythm.debug.o
-___lwdiv 1214 0 CODE 0 text33 dist/default/debug\SLRhythm.debug.o
+__ptext10 1594 0 CODE 0 text10 dist/default/debug\SLRhythm.debug.o
+__ptext11 15B4 0 CODE 0 text11 dist/default/debug\SLRhythm.debug.o
+__ptext12 15DC 0 CODE 0 text12 dist/default/debug\SLRhythm.debug.o
+__ptext13 122A 0 CODE 0 text13 dist/default/debug\SLRhythm.debug.o
+__ptext14 15C2 0 CODE 0 text14 dist/default/debug\SLRhythm.debug.o
+__ptext15 1536 0 CODE 0 text15 dist/default/debug\SLRhythm.debug.o
+__ptext16 1474 0 CODE 0 text16 dist/default/debug\SLRhythm.debug.o
+__ptext17 F9A 0 CODE 0 text17 dist/default/debug\SLRhythm.debug.o
+__ptext18 1036 0 CODE 0 text18 dist/default/debug\SLRhythm.debug.o
+__ptext19 1342 0 CODE 0 text19 dist/default/debug\SLRhythm.debug.o
+__ptext20 1516 0 CODE 0 text20 dist/default/debug\SLRhythm.debug.o
+__ptext21 14E4 0 CODE 0 text21 dist/default/debug\SLRhythm.debug.o
+__ptext22 156C 0 CODE 0 text22 dist/default/debug\SLRhythm.debug.o
+__ptext23 1580 0 CODE 0 text23 dist/default/debug\SLRhythm.debug.o
+__ptext24 1552 0 CODE 0 text24 dist/default/debug\SLRhythm.debug.o
+__ptext25 13E8 0 CODE 0 text25 dist/default/debug\SLRhythm.debug.o
+__ptext26 542 0 CODE 0 text26 dist/default/debug\SLRhythm.debug.o
+__ptext27 128C 0 CODE 0 text27 dist/default/debug\SLRhythm.debug.o
+__ptext28 AE4 0 CODE 0 text28 dist/default/debug\SLRhythm.debug.o
+__ptext29 10C6 0 CODE 0 text29 dist/default/debug\SLRhythm.debug.o
+__ptext30 EF6 0 CODE 0 text30 dist/default/debug\SLRhythm.debug.o
+__ptext31 BEC 0 CODE 0 text31 dist/default/debug\SLRhythm.debug.o
+__ptext32 688 0 CODE 0 text32 dist/default/debug\SLRhythm.debug.o
+__ptext33 D96 0 CODE 0 text33 dist/default/debug\SLRhythm.debug.o
+__ptext34 CD6 0 CODE 0 text34 dist/default/debug\SLRhythm.debug.o
+__ptext35 114E 0 CODE 0 text35 dist/default/debug\SLRhythm.debug.o
+__ptext36 9DA 0 CODE 0 text36 dist/default/debug\SLRhythm.debug.o
+__ptext37 15D0 0 CODE 0 text37 dist/default/debug\SLRhythm.debug.o
+__end_of_handleSwitches 1036 0 CODE 0 text17 dist/default/debug\SLRhythm.debug.o
+__end_of_initDisplay 128C 0 CODE 0 text13 dist/default/debug\SLRhythm.debug.o
+___aldiv 9DA 0 CODE 0 text36 dist/default/debug\SLRhythm.debug.o
+__pintcode_body 139A 0 CODE 0 intcode_body dist/default/debug\SLRhythm.debug.o
+___lldiv EF6 0 CODE 0 text30 dist/default/debug\SLRhythm.debug.o
+___llmod 10C6 0 CODE 0 text29 dist/default/debug\SLRhythm.debug.o
+___lwdiv 114E 0 CODE 0 text35 dist/default/debug\SLRhythm.debug.o
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\SLRhythm.debug.o
 __Lbigram 0 0 ABS 0 bigram dist/default/debug\SLRhythm.debug.o
 __Lbigsfr 0 0 ABS 0 bigsfr dist/default/debug\SLRhythm.debug.o
-___simple_search_fl 12 0 CODE 0 text6 dist/default/debug\SLRhythm.debug.o
+___simple_search_fl 12 0 CODE 0 text5 dist/default/debug\SLRhythm.debug.o
 __pbssBIGRAM_1 400 0 BIGRAM 1 bssBIGRAM_1 dist/default/debug\SLRhythm.debug.o
 __Lcomram 0 0 ABS 0 comram dist/default/debug\SLRhythm.debug.o
 __Lconfig 0 0 CONFIG 4 config dist/default/debug\SLRhythm.debug.o
-__end_of_drawPixel F14 0 CODE 0 text32 dist/default/debug\SLRhythm.debug.o
+__end_of_drawPixel D96 0 CODE 0 text34 dist/default/debug\SLRhythm.debug.o
 addTile@cnt 2 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 addTile@col 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __Lsivt_hi 0 0 ABS 0 sivt_hi dist/default/debug\SLRhythm.debug.o
 __Lsivt_lo 0 0 ABS 0 sivt_lo dist/default/debug\SLRhythm.debug.o
-__end_of_spawnTiles 726 0 CODE 0 text8 dist/default/debug\SLRhythm.debug.o
-__IT_RESTORE_ASM_INTPRI 11DE 0 CODE 0 text dist/default/debug\__htaintpri.o
+__end_of_spawnTiles 542 0 CODE 0 text7 dist/default/debug\SLRhythm.debug.o
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\SLRhythm.debug.o
-__end_of_clearLeds 16B0 0 CODE 0 text35 dist/default/debug\SLRhythm.debug.o
-_drawColl C70 0 CODE 0 text30 dist/default/debug\SLRhythm.debug.o
-_drawRect F14 0 CODE 0 text31 dist/default/debug\SLRhythm.debug.o
-_drawText D6A 0 CODE 0 text29 dist/default/debug\SLRhythm.debug.o
-___inthi_stack_hi 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-___inthi_stack_lo 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
+__end_of_clearLeds 15DC 0 CODE 0 text37 dist/default/debug\SLRhythm.debug.o
+_drawColl 688 0 CODE 0 text32 dist/default/debug\SLRhythm.debug.o
+_drawRect D96 0 CODE 0 text33 dist/default/debug\SLRhythm.debug.o
+_drawText BEC 0 CODE 0 text31 dist/default/debug\SLRhythm.debug.o
+___inthi_stack_hi 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+___inthi_stack_lo 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
 ___lwdiv@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-___expand_heap FC8 0 CODE 0 text7 dist/default/debug\SLRhythm.debug.o
+___expand_heap E4A 0 CODE 0 text6 dist/default/debug\SLRhythm.debug.o
 __Lfardata 0 0 FARRAM 0 fardata dist/default/debug\SLRhythm.debug.o
-isa$std 1 0 ABS 0 - C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
+isa$std 1 0 ABS 0 - C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
 ___simple_search_fl@best_last 9 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 tileInit@outputTile 27 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-stackhi 0 0 ABS 0 - C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-stacklo 0 0 ABS 0 - C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-_utoa32 A62 0 CODE 0 text25 dist/default/debug\SLRhythm.debug.o
+stackhi 0 0 ABS 0 - C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+stacklo 0 0 ABS 0 - C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+_utoa32 AE4 0 CODE 0 text28 dist/default/debug\SLRhythm.debug.o
 __Lintcode 8 0 CODE 0 intcode dist/default/debug\SLRhythm.debug.o
-__end_of_drawColl D6A 0 CODE 0 text30 dist/default/debug\SLRhythm.debug.o
-__end_of_drawRect FC8 0 CODE 0 text31 dist/default/debug\SLRhythm.debug.o
-__end_of_drawText E54 0 CODE 0 text29 dist/default/debug\SLRhythm.debug.o
+__end_of_drawColl 7A8 0 CODE 0 text32 dist/default/debug\SLRhythm.debug.o
+__end_of_drawRect E4A 0 CODE 0 text33 dist/default/debug\SLRhythm.debug.o
+__end_of_drawText CD6 0 CODE 0 text31 dist/default/debug\SLRhythm.debug.o
 __Lintret 0 0 ABS 0 intret dist/default/debug\SLRhythm.debug.o
-___DCDelay 51 0 COMRAM 1 nvCOMRAM dist/default/debug\SLRhythm.debug.o
 __Lirdata 0 0 CODE 0 irdata dist/default/debug\SLRhythm.debug.o
-_drawPixel E54 0 CODE 0 text32 dist/default/debug\SLRhythm.debug.o
+_drawPixel CD6 0 CODE 0 text34 dist/default/debug\SLRhythm.debug.o
 __Lspace_0 0 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __Lspace_1 0 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __Lspace_2 0 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-__Lspace_3 0 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __Lspace_4 0 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __pbssCOMRAM 29 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-__end_of_clearPageDisplay 1586 0 CODE 0 text17 dist/default/debug\SLRhythm.debug.o
-_DispCtrStr 4C 0 COMRAM 1 dataCOMRAM dist/default/debug\SLRhythm.debug.o
-_clearLeds 16A4 0 CODE 0 text35 dist/default/debug\SLRhythm.debug.o
+__end_of_clearPageDisplay 14B2 0 CODE 0 text16 dist/default/debug\SLRhythm.debug.o
+_DispCtrStr 46 0 COMRAM 1 dataCOMRAM dist/default/debug\SLRhythm.debug.o
+_clearLeds 15D0 0 CODE 0 text37 dist/default/debug\SLRhythm.debug.o
 _PIR1bits F9E 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-__end_of_sendCommandToDisplay 1654 0 CODE 0 text20 dist/default/debug\SLRhythm.debug.o
+__end_of_sendCommandToDisplay 1580 0 CODE 0 text22 dist/default/debug\SLRhythm.debug.o
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 ___simple_search_fl@c 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 ___simple_search_fl@n 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 clearBuffer@pg 3 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-end_of_initialization 1408 0 CODE 0 cinit dist/default/debug\SLRhythm.debug.o
+end_of_initialization 1334 0 CODE 0 cinit dist/default/debug\SLRhythm.debug.o
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug\SLRhythm.debug.o
-__end_of_sendByteSpi 1640 0 CODE 0 text22 dist/default/debug\SLRhythm.debug.o
+__end_of_sendByteSpi 156C 0 CODE 0 text24 dist/default/debug\SLRhythm.debug.o
 __Hintentry 0 0 ABS 0 intentry dist/default/debug\SLRhythm.debug.o
 drawRect@h D 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 drawRect@i F 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
@@ -1107,26 +1034,27 @@ drawText@d 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 drawText@i 9 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 drawText@x 6 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 utoa32@buffer 12 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
+_checkHit 542 0 CODE 0 text26 dist/default/debug\SLRhythm.debug.o
 drawColl@cnt 13 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/debug\SLRhythm.debug.o
-_initSpi 1696 0 CODE 0 text15 dist/default/debug\SLRhythm.debug.o
+_initSpi 15C2 0 CODE 0 text14 dist/default/debug\SLRhythm.debug.o
 __Lramtop 800 0 RAM 0 ramtop dist/default/debug\SLRhythm.debug.o
 __Lrparam 0 0 COMRAM 1 rparam dist/default/debug\SLRhythm.debug.o
-__pcinit 13BC 0 CODE 0 cinit dist/default/debug\SLRhythm.debug.o
+__pcinit 12E8 0 CODE 0 cinit dist/default/debug\SLRhythm.debug.o
 _SSPCON1bits FC6 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-__ptext0 726 0 CODE 0 text0 dist/default/debug\SLRhythm.debug.o
-__ptext1 1586 0 CODE 0 text1 dist/default/debug\SLRhythm.debug.o
-__ptext2 840 0 CODE 0 text2 dist/default/debug\SLRhythm.debug.o
-__ptext3 1416 0 CODE 0 text3 dist/default/debug\SLRhythm.debug.o
-__ptext4 12F2 0 CODE 0 text4 dist/default/debug\SLRhythm.debug.o
-__ptext5 46C 0 CODE 0 text5 dist/default/debug\SLRhythm.debug.o
-__ptext6 12 0 CODE 0 text6 dist/default/debug\SLRhythm.debug.o
-__ptext7 FC8 0 CODE 0 text7 dist/default/debug\SLRhythm.debug.o
-__ptext8 5CA 0 CODE 0 text8 dist/default/debug\SLRhythm.debug.o
-__ptext9 1504 0 CODE 0 text9 dist/default/debug\SLRhythm.debug.o
+__ptext0 7A8 0 CODE 0 text0 dist/default/debug\SLRhythm.debug.o
+__ptext1 14B2 0 CODE 0 text1 dist/default/debug\SLRhythm.debug.o
+__ptext2 8C2 0 CODE 0 text2 dist/default/debug\SLRhythm.debug.o
+__ptext3 11C2 0 CODE 0 text3 dist/default/debug\SLRhythm.debug.o
+__ptext4 288 0 CODE 0 text4 dist/default/debug\SLRhythm.debug.o
+__ptext5 12 0 CODE 0 text5 dist/default/debug\SLRhythm.debug.o
+__ptext6 E4A 0 CODE 0 text6 dist/default/debug\SLRhythm.debug.o
+__ptext7 3E6 0 CODE 0 text7 dist/default/debug\SLRhythm.debug.o
+__ptext8 1430 0 CODE 0 text8 dist/default/debug\SLRhythm.debug.o
+__ptext9 15A6 0 CODE 0 text9 dist/default/debug\SLRhythm.debug.o
 __Lstruct 0 0 COMRAM 1 struct dist/default/debug\SLRhythm.debug.o
 drawText@column 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-_updateDisplay 1416 0 CODE 0 text3 dist/default/debug\SLRhythm.debug.o
+_updateDisplay 1342 0 CODE 0 text19 dist/default/debug\SLRhythm.debug.o
 __Ltext10 0 0 ABS 0 text10 dist/default/debug\SLRhythm.debug.o
 __Ltext11 0 0 ABS 0 text11 dist/default/debug\SLRhythm.debug.o
 __Ltext12 0 0 ABS 0 text12 dist/default/debug\SLRhythm.debug.o
@@ -1154,63 +1082,55 @@ __Ltext33 0 0 ABS 0 text33 dist/default/debug\SLRhythm.debug.o
 __Ltext34 0 0 ABS 0 text34 dist/default/debug\SLRhythm.debug.o
 __Ltext35 0 0 ABS 0 text35 dist/default/debug\SLRhythm.debug.o
 __Ltext36 0 0 ABS 0 text36 dist/default/debug\SLRhythm.debug.o
-__ramtop 800 0 RAM 0 ramtop C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
+__Ltext37 0 0 ABS 0 text37 dist/default/debug\SLRhythm.debug.o
+__end_of_checkHit 688 0 CODE 0 text26 dist/default/debug\SLRhythm.debug.o
+__ramtop 800 0 RAM 0 ramtop C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
 ___aldiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 setPageAddress@page 3 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __Lpowerup E 0 CODE 0 powerup dist/default/debug\SLRhythm.debug.o
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\SLRhythm.debug.o
-__Ludata_bank0 0 0 ABS 0 udata_bank0 dist/default/debug\SLRhythm.debug.o
-__Ludata_bank1 0 0 ABS 0 udata_bank1 dist/default/debug\SLRhythm.debug.o
-__Ludata_bank2 0 0 ABS 0 udata_bank2 dist/default/debug\SLRhythm.debug.o
-__Ludata_bank3 0 0 ABS 0 udata_bank3 dist/default/debug\SLRhythm.debug.o
-__Ludata_bank4 0 0 ABS 0 udata_bank4 dist/default/debug\SLRhythm.debug.o
-__Ludata_bank5 0 0 ABS 0 udata_bank5 dist/default/debug\SLRhythm.debug.o
-__Ludata_bank6 0 0 ABS 0 udata_bank6 dist/default/debug\SLRhythm.debug.o
-__Ludata_bank7 0 0 ABS 0 udata_bank7 dist/default/debug\SLRhythm.debug.o
 __H__absolute__ 0 0 ABS 0 __absolute__ dist/default/debug\SLRhythm.debug.o
-_tileInit 12F2 0 CODE 0 text4 dist/default/debug\SLRhythm.debug.o
+_tileInit 11C2 0 CODE 0 text3 dist/default/debug\SLRhythm.debug.o
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug\SLRhythm.debug.o
 drawPixel@x A 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 drawPixel@y 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-__end_of_clearAllDisplay 1626 0 CODE 0 text16 dist/default/debug\SLRhythm.debug.o
+__end_of_clearAllDisplay 1552 0 CODE 0 text15 dist/default/debug\SLRhythm.debug.o
 sendDataToDisplay@dat 2 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 drawPixel@color 2 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-___heap_hi 3EF 0 HEAP 7 heap C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-___heap_lo EC 0 HEAP 7 heap C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-__end_of_setPinout 1696 0 CODE 0 text12 dist/default/debug\SLRhythm.debug.o
+___heap_hi 3EF 0 HEAP 7 heap C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+___heap_lo EC 0 HEAP 7 heap C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+__end_of_setPinout 15C2 0 CODE 0 text11 dist/default/debug\SLRhythm.debug.o
 ___param_bank 0 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-___intlo_stack_hi 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
-___intlo_stack_lo 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAsapc.\driver_tmp_17.o
+___intlo_stack_hi 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
+___intlo_stack_lo 0 0 STACK 2 stack C:\Users\247042\AppData\Local\Temp\xcAslkc.\driver_tmp_9.o
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\SLRhythm.debug.o
-__end_of__initialization 1408 0 CODE 0 cinit dist/default/debug\SLRhythm.debug.o
-__end_of_tileInit 135A 0 CODE 0 text4 dist/default/debug\SLRhythm.debug.o
+__end_of__initialization 1334 0 CODE 0 cinit dist/default/debug\SLRhythm.debug.o
+__end_of_tileInit 122A 0 CODE 0 text3 dist/default/debug\SLRhythm.debug.o
 sendByteSpi@dat 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __Libigdata 0 0 CODE 0 ibigdata dist/default/debug\SLRhythm.debug.o
 __Lclrtext 0 0 ABS 0 clrtext dist/default/debug\SLRhythm.debug.o
-__end_of_setTimer0 167A 0 CODE 0 text11 dist/default/debug\SLRhythm.debug.o
-__end_of_setTimer2 1688 0 CODE 0 text10 dist/default/debug\SLRhythm.debug.o
-_font5x7 7B4F 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
+__end_of_setTimer0 15A6 0 CODE 0 text10 dist/default/debug\SLRhythm.debug.o
+__end_of_setTimer2 15B4 0 CODE 0 text9 dist/default/debug\SLRhythm.debug.o
+_font5x7 7B2D 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
 ___expand_heap@n 5 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 ___lldiv@quotient 9 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 clearPageDisplay@cl 6 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-_setInterrupt 16B0 0 CODE 0 text13 dist/default/debug\SLRhythm.debug.o
-_setPinout 1688 0 CODE 0 text12 dist/default/debug\SLRhythm.debug.o
-__pmediumconst 7B4E 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
+_setInterrupt 15DC 0 CODE 0 text12 dist/default/debug\SLRhythm.debug.o
+_setPinout 15B4 0 CODE 0 text11 dist/default/debug\SLRhythm.debug.o
+__pmediumconst 7B2C 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
 _SSPCON1 FC6 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 _SSPSTAT FC7 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-_fillRect 1288 0 CODE 0 text28 dist/default/debug\SLRhythm.debug.o
 ___llmod@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 ___aldiv@counter 9 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 sendCommandToDisplay@comm 2 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-__end_of_addTile 1548 0 CODE 0 text9 dist/default/debug\SLRhythm.debug.o
+__end_of_addTile 1474 0 CODE 0 text8 dist/default/debug\SLRhythm.debug.o
 ___llmod@counter 9 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-__end_of_main 840 0 CODE 0 text0 dist/default/debug\SLRhythm.debug.o
+__end_of_main 8C2 0 CODE 0 text0 dist/default/debug\SLRhythm.debug.o
 __pintcode 8 0 CODE 0 intcode dist/default/debug\SLRhythm.debug.o
-__Hudata_acs 0 0 ABS 0 udata_acs dist/default/debug\SLRhythm.debug.o
 setColumnAddress@column 4 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 _Coll1 60 0 BANK0 1 bssBANK0 dist/default/debug\SLRhythm.debug.o
-__end_of_chart 7D3E 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
+__end_of_chart 7D3F 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
 _T0CON FD5 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 _T2CON FCA 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 _TRISA F92 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
@@ -1218,7 +1138,6 @@ _TRISB F93 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 _TRISC F94 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 _TRISD F95 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 _TRISE F96 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
-__end_of_fillRect 12F2 0 CODE 0 text28 dist/default/debug\SLRhythm.debug.o
 __HRAM 0 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __Hbss 0 0 RAM 1 bss dist/default/debug\SLRhythm.debug.o
 __Hram 0 0 ABS 0 ram dist/default/debug\SLRhythm.debug.o
@@ -1227,29 +1146,29 @@ __LRAM 1 0 ABS 0 - dist/default/debug\SLRhythm.debug.o
 __Lbss 0 0 RAM 1 bss dist/default/debug\SLRhythm.debug.o
 __Lram 0 0 ABS 0 ram dist/default/debug\SLRhythm.debug.o
 __Lsfr 0 0 ABS 0 sfr dist/default/debug\SLRhythm.debug.o
-_setTimer0 1668 0 CODE 0 text11 dist/default/debug\SLRhythm.debug.o
-_setTimer2 167A 0 CODE 0 text10 dist/default/debug\SLRhythm.debug.o
-_chart 7D1B 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
+_setTimer0 1594 0 CODE 0 text10 dist/default/debug\SLRhythm.debug.o
+_setTimer2 15A6 0 CODE 0 text9 dist/default/debug\SLRhythm.debug.o
+_chart 7CF9 0 MEDIUMCONST 0 mediumconst dist/default/debug\SLRhythm.debug.o
 _errno 39 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
 _score 3F 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-_clearAllDisplay 160A 0 CODE 0 text16 dist/default/debug\SLRhythm.debug.o
-__end_of___expand_heap 1074 0 CODE 0 text7 dist/default/debug\SLRhythm.debug.o
+_clearAllDisplay 1536 0 CODE 0 text15 dist/default/debug\SLRhythm.debug.o
+__end_of___expand_heap EF6 0 CODE 0 text6 dist/default/debug\SLRhythm.debug.o
+checkHit@error 7 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 ___simple_search_fl@split B 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __Hsivt_hi 0 0 ABS 0 sivt_hi dist/default/debug\SLRhythm.debug.o
 __Hsivt_lo 0 0 ABS 0 sivt_lo dist/default/debug\SLRhythm.debug.o
-__initialization 13BC 0 CODE 0 cinit dist/default/debug\SLRhythm.debug.o
+__initialization 12E8 0 CODE 0 cinit dist/default/debug\SLRhythm.debug.o
 __pbssBANK0 60 0 BANK0 1 bssBANK0 dist/default/debug\SLRhythm.debug.o
-__pdataCOMRAM 4C 0 COMRAM 1 dataCOMRAM dist/default/debug\SLRhythm.debug.o
+__pdataCOMRAM 46 0 COMRAM 1 dataCOMRAM dist/default/debug\SLRhythm.debug.o
 drawColl@dt 18 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 __Hfardata 0 0 FARRAM 0 fardata dist/default/debug\SLRhythm.debug.o
 __Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\SLRhythm.debug.o
 drawPixel@bit 9 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
-__IT_SAVE_WREG 42 0 COMRAM 1 bssCOMRAM dist/default/debug\SLRhythm.debug.o
-__Ludata_acs 0 0 ABS 0 udata_acs dist/default/debug\SLRhythm.debug.o
 __Lifardata 0 0 CODE 0 ifardata dist/default/debug\SLRhythm.debug.o
 __HbssBIGRAM_1 0 0 ABS 0 bssBIGRAM_1 dist/default/debug\SLRhythm.debug.o
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\SLRhythm.debug.o
 __Hintcode E 0 CODE 0 intcode dist/default/debug\SLRhythm.debug.o
+resetGame@i 9 0 COMRAM 1 cstackCOMRAM dist/default/debug\SLRhythm.debug.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -1274,13 +1193,13 @@ __Hintcode E 0 CODE 0 intcode dist/default/debug\SLRhythm.debug.o
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cstackCOMRAM 1 1 1 53 1
+cstackCOMRAM 1 1 1 4B 1
 heap 7 EC EC 303 1
 reset_vec 0 0 0 6 1
 bssBANK0 1 60 60 8C 1
-intcode 0 8 8 16B3 1
+intcode 0 8 8 15DF 1
 bssBIGRAM_1 1 400 400 400 1
-mediumconst 0 7B4E 7B4E 1F2 1
+mediumconst 0 7B2C 7B2C 214 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal
