@@ -85,7 +85,20 @@ uint8_t Col4cnt = 0;
 #define MAX_ACTIVE 4
 #define SPAWN_AHEAD 6000  // ms before visible
 #define DESPAWN_TIME 500
+#define HIT_WINDOW 150
 struct tile Coll1[MAX_ACTIVE];
+
+
+void checkHit(struct tile col[], uint8_t cnt){
+    for(uint8_t i=0; i<cnt; i++){
+        int32_t error = millis - col[i].start;
+
+        if (error > -HIT_WINDOW && error < HIT_WINDOW){
+            score++;
+            col[i].len = 0; // mark as hit
+        }
+    }
+}
 
 
 void addTile(struct tile col[], uint8_t *cnt, struct tile t){
@@ -137,31 +150,81 @@ void updateTiles(void){
     updateColumn(Col4, &Col4cnt);
 }
 
+void resetGame(void)
+{
+    // stop interrupts (avoid race conditions)
+    INTCONbits.GIE = 0;
+
+    // reset time
+    millis = 0;
+
+    // reset chart
+    chartIndex = 0;
+
+    // clear tile buffers
+    Col1cnt = 0;
+    Col2cnt = 0;
+    Col3cnt = 0;
+    Col4cnt = 0;
+
+    // optional: zero memory (safer for debugging)
+    for(uint8_t i = 0; i < MAX_ACTIVE; i++){
+        Col1[i].len = 0;
+        Col2[i].len = 0;
+        Col3[i].len = 0;
+        Col4[i].len = 0;
+    }
+
+    // reset input + score
+    switches = 0;
+    score = 0;
+
+    // clear display
+    clearBuffer();
+    updateDisplay();
+
+    // clear timer flags (important on PIC)
+    PIR1bits.TMR2IF = 0;
+    INTCONbits.TMR0IF = 0;
+
+    // re-enable interrupts
+    INTCONbits.GIE = 1;
+}
 
 void handleSwitches(void){
-    if((millis - Col1[0].start - 6300) <=8000 && (millis - Col1[0].start - 6300) <=Col1[0].len) {
+    /*if((millis - Col1[0].start - 6300) <=8000 && (millis - Col1[0].start - 6300) <=Col1[0].len) {
             score++;
         }
+    */ //this stupid, we can do better
+    
+    
     if (!PORTBbits.RB5){
         switches |= (1 << 0);
+        checkHit(Col1, Col1cnt);
     } else {
         switches &= ~(1 << 0);
     }
     if (!PORTBbits.RB4){
         switches |= (1 << 1);
+        checkHit(Col2, Col1cnt);
     } else {
         switches &= ~(1 << 1);
     }
     if (!PORTBbits.RB3){
         switches |= (1 << 2);
+        checkHit(Col3, Col1cnt);
     } else {
         switches &= ~(1 << 2);
     }
     if (!PORTBbits.RB0){
         switches |= (1 << 3);
+        checkHit(Col4, Col1cnt);
     } else {
         switches &= ~(1 << 3);
     }
+    if (!PORTBbits.RB2){
+        resetGame();
+    } 
 }
 
 /* void checkForActiveTiles(){
@@ -280,8 +343,8 @@ void drawUi(){
     drawColl(99, Col4, Col4cnt);
     
     
-    //utoa32(score, DispCtrStr);
-    //drawText(0,0, DispCtrStr);
+    utoa32(score, DispCtrStr);
+    drawText(0,0, DispCtrStr);
 }
 
 

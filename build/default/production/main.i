@@ -6038,7 +6038,20 @@ uint8_t Col4cnt = 0;
 
 
 
+
 struct tile Coll1[4];
+
+
+void checkHit(struct tile col[], uint8_t cnt){
+    for(uint8_t i=0; i<cnt; i++){
+        int32_t error = millis - col[i].start;
+
+        if (error > -150 && error < 150){
+            score++;
+            col[i].len = 0;
+        }
+    }
+}
 
 
 void addTile(struct tile col[], uint8_t *cnt, struct tile t){
@@ -6090,33 +6103,83 @@ void updateTiles(void){
     updateColumn(Col4, &Col4cnt);
 }
 
+void resetGame(void)
+{
+
+    INTCONbits.GIE = 0;
+
+
+    millis = 0;
+
+
+    chartIndex = 0;
+
+
+    Col1cnt = 0;
+    Col2cnt = 0;
+    Col3cnt = 0;
+    Col4cnt = 0;
+
+
+    for(uint8_t i = 0; i < 4; i++){
+        Col1[i].len = 0;
+        Col2[i].len = 0;
+        Col3[i].len = 0;
+        Col4[i].len = 0;
+    }
+
+
+    switches = 0;
+    score = 0;
+
+
+    clearBuffer();
+    updateDisplay();
+
+
+    PIR1bits.TMR2IF = 0;
+    INTCONbits.TMR0IF = 0;
+
+
+    INTCONbits.GIE = 1;
+}
 
 void handleSwitches(void){
-    if((millis - Col1[0].start - 6300) <=8000 && (millis - Col1[0].start - 6300) <=Col1[0].len) {
-            score++;
-        }
+
+
+
+
+
+
     if (!PORTBbits.RB5){
         switches |= (1 << 0);
+        checkHit(Col1, Col1cnt);
     } else {
         switches &= ~(1 << 0);
     }
     if (!PORTBbits.RB4){
         switches |= (1 << 1);
+        checkHit(Col2, Col1cnt);
     } else {
         switches &= ~(1 << 1);
     }
     if (!PORTBbits.RB3){
         switches |= (1 << 2);
+        checkHit(Col3, Col1cnt);
     } else {
         switches &= ~(1 << 2);
     }
     if (!PORTBbits.RB0){
         switches |= (1 << 3);
+        checkHit(Col4, Col1cnt);
     } else {
         switches &= ~(1 << 3);
     }
+    if (!PORTBbits.RB2){
+        resetGame();
+    }
 }
-# 203 "main.c"
+# 266 "main.c"
 struct tile* tileInit(uint32_t start, uint16_t len){
     struct tile* outputTile = malloc(sizeof(struct tile));
 
@@ -6127,7 +6190,7 @@ struct tile* tileInit(uint32_t start, uint16_t len){
 
     return outputTile;
 }
-# 231 "main.c"
+# 294 "main.c"
 void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
         int32_t dt = millis - activeCol[i].start;
@@ -6180,8 +6243,8 @@ void drawUi(){
     drawColl(99, Col4, Col4cnt);
 
 
-
-
+    utoa32(score, DispCtrStr);
+    drawText(0,0, DispCtrStr);
 }
 
 
@@ -6201,7 +6264,7 @@ void main()
     Col4[0] = *tileInit(1000, 500);
     Col4[1] = *tileInit(2000, 100);
     Col4[2] = *tileInit(3000, 700);
-# 324 "main.c"
+# 387 "main.c"
     while(1)
     {
         if ( (uint32_t) millis%2 == 0){
