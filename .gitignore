@@ -63,3 +63,6 @@ _build/
 cmake/**/.generated/*
 cmake/**/CMake*
 out/
+"build/default"
+"dist/default"
+_build
