@@ -1831,37 +1831,37 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 414 ]
 }
 "220
-[; ;moduleDogm128.c: 220: void drawLine(int x0, int y0, int x1, int y1)
-[v _drawLine `(v ~T0 @X0 1 ef4`i`i`i`i ]
+[; ;moduleDogm128.c: 220: void drawLine(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
+[v _drawLine `(v ~T0 @X0 1 ef4`uc`uc`uc`uc ]
 "221
 [; ;moduleDogm128.c: 221: {
 {
 [e :U _drawLine ]
 "220
-[; ;moduleDogm128.c: 220: void drawLine(int x0, int y0, int x1, int y1)
-[v _x0 `i ~T0 @X0 1 r1 ]
-[v _y0 `i ~T0 @X0 1 r2 ]
-[v _x1 `i ~T0 @X0 1 r3 ]
-[v _y1 `i ~T0 @X0 1 r4 ]
+[; ;moduleDogm128.c: 220: void drawLine(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
+[v _x0 `uc ~T0 @X0 1 r1 ]
+[v _y0 `uc ~T0 @X0 1 r2 ]
+[v _x1 `uc ~T0 @X0 1 r3 ]
+[v _y1 `uc ~T0 @X0 1 r4 ]
 "221
 [; ;moduleDogm128.c: 221: {
 [f ]
 "222
 [; ;moduleDogm128.c: 222:     int dx = abs(x1 - x0);
 [v _dx `i ~T0 @X0 1 a ]
-[e = _dx ( _abs (1 - _x1 _x0 ]
+[e = _dx ( _abs (1 - -> _x1 `i -> _x0 `i ]
 "223
 [; ;moduleDogm128.c: 223:     int sx = x0 < x1 ? 1 : -1;
 [v _sx `i ~T0 @X0 1 a ]
-[e = _sx ? < _x0 _x1 : -> 1 `i -U -> 1 `i ]
+[e = _sx ? < -> _x0 `i -> _x1 `i : -> 1 `i -U -> 1 `i ]
 "224
 [; ;moduleDogm128.c: 224:     int dy = -abs(y1 - y0);
 [v _dy `i ~T0 @X0 1 a ]
-[e = _dy -U ( _abs (1 - _y1 _y0 ]
+[e = _dy -U ( _abs (1 - -> _y1 `i -> _y0 `i ]
 "225
 [; ;moduleDogm128.c: 225:     int sy = y0 < y1 ? 1 : -1;
 [v _sy `i ~T0 @X0 1 a ]
-[e = _sy ? < _y0 _y1 : -> 1 `i -U -> 1 `i ]
+[e = _sy ? < -> _y0 `i -> _y1 `i : -> 1 `i -U -> 1 `i ]
 "226
 [; ;moduleDogm128.c: 226:     int err = dx + dy;
 [v _err `i ~T0 @X0 1 a ]
@@ -1874,10 +1874,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 "230
 [; ;moduleDogm128.c: 230:         drawPixel(x0, y0, 1);
-[e ( _drawPixel (3 , , -> _x0 `uc -> _y0 `uc -> -> 1 `i `uc ]
+[e ( _drawPixel (3 , , _x0 _y0 -> -> 1 `i `uc ]
 "232
 [; ;moduleDogm128.c: 232:         if (x0 == x1 && y0 == y1) break;
-[e $ ! && == _x0 _x1 == _y0 _y1 422  ]
+[e $ ! && == -> _x0 `i -> _x1 `i == -> _y0 `i -> _y1 `i 422  ]
 [e $U 421  ]
 [e :U 422 ]
 "234
@@ -1895,7 +1895,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =+ _err _dy ]
 "239
 [; ;moduleDogm128.c: 239:             x0 += sx;
-[e =+ _x0 _sx ]
+[e =+ _x0 -> _sx `uc ]
 "240
 [; ;moduleDogm128.c: 240:         }
 }
@@ -1911,7 +1911,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e =+ _err _dx ]
 "244
 [; ;moduleDogm128.c: 244:             y0 += sy;
-[e =+ _y0 _sy ]
+[e =+ _y0 -> _sy `uc ]
 "245
 [; ;moduleDogm128.c: 245:         }
 }

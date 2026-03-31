@@ -58,6 +58,11 @@ const struct tile chart[] = { //store tiles in flash, one big array
     {2000, 300, 2},
     {2500, 400, 3},
     {3000, 700, 0},
+    {3200, 500, 3},
+    {3400, 200, 1},
+    {4000, 300, 2},
+    {4500, 400, 3},
+    {4800, 700, 0},
 };
 
 #define CHART_SIZE (sizeof(chart)/sizeof(chart[0]))
@@ -78,6 +83,8 @@ uint8_t Col3cnt = 0;
 uint8_t Col4cnt = 0;
 
 #define MAX_ACTIVE 4
+#define SPAWN_AHEAD 6000  // ms before visible
+#define DESPAWN_TIME 500
 struct tile Coll1[MAX_ACTIVE];
 
 
@@ -88,7 +95,7 @@ void addTile(struct tile col[], uint8_t *cnt, struct tile t){
     (*cnt)++;
 }
 
-#define SPAWN_AHEAD 2000  // ms before visible
+
 
 void spawnTiles(void){
     while (chartIndex < CHART_SIZE &&
@@ -107,7 +114,6 @@ void spawnTiles(void){
     }
 }
 
-#define DESPAWN_TIME 500
 
 void updateColumn(struct tile col[], uint8_t *cnt){
     for(uint8_t i = 0; i < *cnt; i++){
@@ -226,7 +232,7 @@ void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
         int32_t dt = millis - activeCol[i].start;
 
-        int16_t y = dt / 100;
+        int16_t y = dt / 100 + 60;
         uint8_t height = activeCol[i].len / 100;
 
         if (y < 64 && (y + height) > 0){
@@ -274,8 +280,8 @@ void drawUi(){
     drawColl(99, Col4, Col4cnt);
     
     
-    utoa32(score, DispCtrStr);
-    drawText(0,0, DispCtrStr);
+    //utoa32(score, DispCtrStr);
+    //drawText(0,0, DispCtrStr);
 }
 
 

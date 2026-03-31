@@ -5972,16 +5972,18 @@ void writeTextToDisplay(unsigned char page, unsigned char column, char* txt);
 void drawText(uint8_t page, uint8_t column, const char* txt);
 void updateDisplay(void);
 void drawPixel(uint8_t x, uint8_t y, uint8_t color);
-void drawLine(int x0, int y0, int x1, int y1);
+void drawLine(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
 void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h);
 void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t color);
 void clearBuffer(void);
 # 12 "main.c" 2
 
 
+
 struct tile{
     uint32_t start;
     uint16_t len;
+    uint8_t col;
 };
 
 
@@ -5994,22 +5996,7 @@ uint8_t switches = 0;
 
 void hadleSwitches(void);
 void drawUi(void);
-
-struct tile Col1[10];
-struct tile Col2[10];
-struct tile Col3[10];
-struct tile Col4[10];
-
-uint8_t Col1cnt = 0;
-uint8_t Col2cnt = 0;
-uint8_t Col3cnt = 0;
-uint8_t Col4cnt = 0;
-
-uint8_t Col1inc = 0;
-uint8_t Col2inc = 0;
-uint8_t Col3inc = 0;
-uint8_t Col4inc = 0;
-
+# 47 "main.c"
 uint16_t score = 0;
 
 char* utoa32(uint32_t value, char* buffer);
@@ -6018,7 +6005,90 @@ char DispCtrStr[5] = "asdd";
 int cnt = 0;
 volatile uint32_t millis = 0;
 
+const struct tile chart[] = {
+    {1000, 500, 0},
+    {1500, 200, 1},
+    {2000, 300, 2},
+    {2500, 400, 3},
+    {3000, 700, 0},
+    {3200, 500, 3},
+    {3400, 200, 1},
+    {4000, 300, 2},
+    {4500, 400, 3},
+    {4800, 700, 0},
+};
 
+
+
+
+uint16_t chartIndex = 0;
+
+
+
+struct tile Col1[4];
+struct tile Col2[4];
+struct tile Col3[4];
+struct tile Col4[4];
+
+uint8_t Col1cnt = 0;
+uint8_t Col2cnt = 0;
+uint8_t Col3cnt = 0;
+uint8_t Col4cnt = 0;
+
+
+
+
+struct tile Coll1[4];
+
+
+void addTile(struct tile col[], uint8_t *cnt, struct tile t){
+    if (*cnt >= 4) return;
+
+    col[*cnt] = t;
+    (*cnt)++;
+}
+
+
+
+void spawnTiles(void){
+    while (chartIndex < (sizeof(chart)/sizeof(chart[0])) &&
+           chart[chartIndex].start <= millis + 6000){
+
+        struct tile t = chart[chartIndex];
+
+        switch(t.col){
+            case 0: addTile(Col1, &Col1cnt, t); break;
+            case 1: addTile(Col2, &Col2cnt, t); break;
+            case 2: addTile(Col3, &Col3cnt, t); break;
+            case 3: addTile(Col4, &Col4cnt, t); break;
+        }
+
+        chartIndex++;
+    }
+}
+
+
+void updateColumn(struct tile col[], uint8_t *cnt){
+    for(uint8_t i = 0; i < *cnt; i++){
+        if (millis > col[i].start + col[i].len + 500){
+
+
+            for(uint8_t j = i; j < (*cnt - 1); j++){
+                col[j] = col[j + 1];
+            }
+
+            (*cnt)--;
+            i--;
+        }
+    }
+}
+
+void updateTiles(void){
+    updateColumn(Col1, &Col1cnt);
+    updateColumn(Col2, &Col2cnt);
+    updateColumn(Col3, &Col3cnt);
+    updateColumn(Col4, &Col4cnt);
+}
 
 
 void handleSwitches(void){
@@ -6046,34 +6116,7 @@ void handleSwitches(void){
         switches &= ~(1 << 3);
     }
 }
-
-void checkForActiveTiles(){
-    if(Col1inc){
-        Col1cnt++;
-        for(uint8_t i=0; i<10; i++){
-
-        }
-    }
-    if(Col2inc){
-        Col1cnt++;
-        for(uint8_t i=0; i<10; i++){
-
-        }
-    }
-    if(Col3inc){
-        Col1cnt++;
-        for(uint8_t i=0; i<10; i++){
-
-        }
-    }
-    if(Col4inc){
-        Col1cnt++;
-        for(uint8_t i=0; i<10; i++){
-
-        }
-    }
-}
-# 118 "main.c"
+# 203 "main.c"
 struct tile* tileInit(uint32_t start, uint16_t len){
     struct tile* outputTile = malloc(sizeof(struct tile));
 
@@ -6084,24 +6127,19 @@ struct tile* tileInit(uint32_t start, uint16_t len){
 
     return outputTile;
 }
+# 231 "main.c"
+void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
+    for(uint8_t i=0; i<cnt; i++){
+        int32_t dt = millis - activeCol[i].start;
 
-void drawColl(uint8_t x, struct tile activeCol[]){
-    for(uint8_t i=0; i<10; i++){
-        if(activeCol[i].len){
-            int16_t y = (millis - activeCol[i].start) / 100;
-            uint8_t height = activeCol[i].len / 100;
+        int16_t y = dt / 100 + 60;
+        uint8_t height = activeCol[i].len / 100;
 
-
-            if (y < 64 && (y + height) > 0){
-                drawRect(x, y, 26, height);
-            }
-
-
-
+        if (y < 64 && (y + height) > 0){
+            drawRect(x, y, 26, height);
         }
     }
 }
-
 
 void drawUi(){
     if (switches & 0x01){
@@ -6136,14 +6174,14 @@ void drawUi(){
         fillRect(99, 61, 26, 2, 0);
     }
 
-    drawColl(3, Col1);
-    drawColl(34, Col2);
-    drawColl(67, Col3);
-    drawColl(99, Col4);
+    drawColl(3, Col1, Col1cnt);
+    drawColl(34, Col2, Col2cnt);
+    drawColl(67, Col3, Col3cnt);
+    drawColl(99, Col4, Col4cnt);
 
 
-    utoa32(score, DispCtrStr);
-    drawText(0,0, DispCtrStr);
+
+
 }
 
 
@@ -6163,13 +6201,15 @@ void main()
     Col4[0] = *tileInit(1000, 500);
     Col4[1] = *tileInit(2000, 100);
     Col4[2] = *tileInit(3000, 700);
-# 227 "main.c"
+# 324 "main.c"
     while(1)
     {
         if ( (uint32_t) millis%2 == 0){
             handleSwitches();
         }
         if ( (uint32_t) millis%100 == 0){
+            spawnTiles();
+            updateTiles();
             drawUi();
             updateDisplay();
             clearBuffer();
@@ -6200,7 +6240,7 @@ void __attribute__((picinterrupt(("")))) isr(void)
     if(TMR2IF && TMR2IE)
     {
 
-       (uint32_t) millis++;
+       millis++;
         TMR2IF = 0;
     }
 

@@ -5750,7 +5750,7 @@ void writeTextToDisplay(unsigned char page, unsigned char column, char* txt);
 void drawText(uint8_t page, uint8_t column, const char* txt);
 void updateDisplay(void);
 void drawPixel(uint8_t x, uint8_t y, uint8_t color);
-void drawLine(int x0, int y0, int x1, int y1);
+void drawLine(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1);
 void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h);
 void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t color);
 void clearBuffer(void);
@@ -6070,7 +6070,7 @@ void drawPixel(uint8_t x, uint8_t y, uint8_t color)
         displayBuffer[page][x] &= ~(1 << bit);
 }
 
-void drawLine(int x0, int y0, int x1, int y1)
+void drawLine(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
 {
     int dx = abs(x1 - x0);
     int sx = x0 < x1 ? 1 : -1;
