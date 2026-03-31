@@ -1,6 +1,15 @@
 
 # SLRhythm
 
+OSU! mania-lile game on 128x64 LCD in the PIC18F4550 plaftorm (VUT UMEL graphickit)
+- runs at 20fps (LCD limitation)
+- fixed-point math
+- slightly vibecoded
+- 4k gameplay
+- adjustable AR, OD
+- map stored in flash and streamed to RAM
+
+
 ## Structure
 
 | Path                        | Purpose                                                                                                                             |

@@ -29,20 +29,6 @@ uint8_t switches = 0;
 void hadleSwitches(void);
 void drawUi(void);
 
-/* struct tile Col1[10];
-struct tile Col2[10];
-struct tile Col3[10];
-struct tile Col4[10];
-
-uint8_t Col1cnt = 0;
-uint8_t Col2cnt = 0;
-uint8_t Col3cnt = 0;
-uint8_t Col4cnt = 0;
-
-uint8_t Col1inc = 0;
-uint8_t Col2inc = 0;
-uint8_t Col3inc = 0;
-uint8_t Col4inc = 0; */
 
 uint16_t score = 0;
 uint16_t misses = 0;
@@ -213,10 +199,7 @@ void resetGame(void)
 
 
 void handleSwitches(void){
-    /*if((millis - Col1[0].start - 6300) <=8000 && (millis - Col1[0].start - 6300) <=Col1[0].len) {
-            score++;
-        }
-    */ //this stupid, we can do better
+
     if (!PORTBbits.RB2){
         resetGame();
     }   
@@ -247,42 +230,6 @@ void handleSwitches(void){
     }
     
 }
-
-/* void checkForActiveTiles(){
-    if(Col1inc){
-        Col1cnt++;
-        for(uint8_t i=0; i<10; i++){
-            //Col1[i] = bigArray[i+Collcnt];
-        }
-    }
-    if(Col2inc){
-        Col1cnt++;
-        for(uint8_t i=0; i<10; i++){
-            //Col2[i] = bigArray[i+Collcnt];
-        }
-    }
-    if(Col3inc){
-        Col1cnt++;
-        for(uint8_t i=0; i<10; i++){
-            //Col3[i] = bigArray[i+Collcnt];
-        }
-    }
-    if(Col4inc){
-        Col1cnt++;
-        for(uint8_t i=0; i<10; i++){
-            //Col4[i] = bigArray[i+Collcnt];
-        }
-    }
-} */
-
-/*
-struct tile* tileInit(uint32_t start, uint16_t len, uint8_t col){
-    struct tile outputTile = malloc(sizeof(struct tile));
-    outputTile.col = col;
-    outputTile.len = len;
-    outputTile.start = start;
-    return *outputTile;    
-}*/
 
 struct tile* tileInit(uint32_t start, uint16_t len){
     struct tile* outputTile = malloc(sizeof(struct tile));
@@ -388,31 +335,13 @@ void main()
     Col4[1] = *tileInit(2000, 100);
     Col4[2] = *tileInit(3000, 700);
     
-    //handleSwitches();
-
-    //drawLine(0, 0, 127, 63);
-    //drawRect(10, 10, 50, 30);
-    //fillRect(70, 20, 30, 20);
-
-    //updateDisplay();
     
-    //fillChessBoardDisplay();
-    //writeTextToDisplay(0,0, DispCtrStr);
-    //writeTextToDisplay(0,0, DispCtrStr);
-    /*writeTextToDisplay(1,0, "technicke v Brne");
-    writeTextToDisplay(2,0, "nejoblibenejsi");
-    writeTextToDisplay(3,0, "predmet je");
-    writeTextToDisplay(4,0, "MPC-NEN");
-    writeTextToDisplay(5,10, "pokus");
-    writeTextToDisplay(6,20, "&&& example ###");
-    writeTextToDisplay(7,20, "!!! do toho $$$ ");*/
-    
-    while(1)
+    while(1) //main loop
     {
-        if ( (uint32_t) millis%2 == 0){
+        if ( (uint32_t) millis%2 == 0){ //every 2ms
             handleSwitches();
         }
-        if ( (uint32_t) millis%100 == 0){
+        if ( (uint32_t) millis%100 == 0){ //every 100ms
             spawnTiles();   // NEW
             updateTiles();  // NEW
             drawUi();
@@ -477,6 +406,7 @@ void clearLeds(void)
 
 //*****************************************************************************
 // set and open the timer 0
+// not used, maybe i should not initialize it to save performance
 void setTimer0(void)
 {
     T0CON = 0xC3;           // ON, 8bit timer, fosc/4, prescaler, 1:16
@@ -486,7 +416,11 @@ void setTimer0(void)
 }
 
 //*****************************************************************************
-// set and open the timer 2 source fosc/4
+//This timer is used for measuring milliseconds
+//it triggers its interrupt (TMR2IE) independently on main loop
+//it increments the millis value
+//set and open the timer 2 source fosc/4
+//millis timer, do not touch
 void setTimer2(void)                        //millis timer, do not touch
 {
     T2CON = 0x1F;           // ON, Prescaler 1:16, Postscaler 1:1
