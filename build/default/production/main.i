@@ -5998,6 +5998,7 @@ void hadleSwitches(void);
 void drawUi(void);
 # 47 "main.c"
 uint16_t score = 0;
+int16_t ierror = 0;
 
 char* utoa32(uint32_t value, char* buffer);
 
@@ -6050,18 +6051,18 @@ void checkHit(struct tile col[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
         if(col[i].len > 0){
             int32_t error = millis - col[i].start;
-
-            if (error > -300 && error < 300 && !(error > -150 && error < 150)){
+            if (error > -500 && error < 500 && !(error > -300 && error < 300)){
                 if(score > 2){
                     score-=2;
                 }
                 col[i].len = 0;
+                ierror = error;
                 continue;
             }
 
-            if (error > -150 && error < 150){
+            if (error > -300 && error < 300){
                 score++;
-                col[i].len = 0;
+
             }
         }
     }
@@ -6193,7 +6194,7 @@ void handleSwitches(void){
     }
 
 }
-# 280 "main.c"
+# 281 "main.c"
 struct tile* tileInit(uint32_t start, uint16_t len){
     struct tile* outputTile = malloc(sizeof(struct tile));
 
@@ -6297,7 +6298,7 @@ void main()
     Col4[0] = *tileInit(1000, 500);
     Col4[1] = *tileInit(2000, 100);
     Col4[2] = *tileInit(3000, 700);
-# 403 "main.c"
+# 404 "main.c"
     while(1)
     {
         if ( (uint32_t) millis%2 == 0){
@@ -6311,13 +6312,7 @@ void main()
             clearBuffer();
 
 
-
-
         }
-
-
-
-
 
     }
 }

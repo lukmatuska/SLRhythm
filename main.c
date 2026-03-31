@@ -45,6 +45,10 @@ uint8_t Col3inc = 0;
 uint8_t Col4inc = 0; */
 
 uint16_t score = 0;
+uint16_t misses = 0;
+int16_t ierror = 0;
+uint16_t accuracy = 0;
+
 
 char* utoa32(uint32_t value, char* buffer);
 
@@ -90,28 +94,31 @@ uint8_t Col4cnt = 0;
 
 struct tile Coll1[MAX_ACTIVE];
 
-#define HIT_WINDOW 150
-#define MISS_WINDOW 300
+#define HIT_WINDOW 300
+#define MISS_WINDOW 500
 
 void checkHit(struct tile col[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
         if(col[i].len > 0){
             int32_t error = millis - col[i].start;
-                //(error > -MISS_WINDOW && error < MISS_WINDOW && !(error > -HIT_WINDOW && error < HIT_WINDOW))
-            if ((-MISS_WINDOW < error < MISS_WINDOW) && !(-HIT_WINDOW < error < HIT_WINDOW)){
-                if(score > 2){
-                    score-=2;
-                }
-                col[i].len = 0; // mark as hit
+            if (error > -MISS_WINDOW && error < MISS_WINDOW && !(error > -HIT_WINDOW && error < HIT_WINDOW)){
+                //add miss
+                misses++;
+                col[i].len = 0; // mark as miss
+                ierror = error;
                 continue;
             }
 
             if (error > -HIT_WINDOW && error < HIT_WINDOW){
                 score++;
-                col[i].len = 0; // mark as hit
+                //col[i].len = 0; // mark as hit
             }
         }
     }
+}
+
+void computeAcc(){
+    
 }
 
 
@@ -406,12 +413,6 @@ void main()
             handleSwitches();
         }
         if ( (uint32_t) millis%100 == 0){
-            drawRect(0, 0, 127, 10);
-            drawRect(0, 10, 2, 50);
-            drawRect(31, 10, 2, 50);
-            drawRect(63, 10, 2, 50);
-            drawRect(95, 10, 2, 50);
-            drawRect(125, 10, 2, 50);
             spawnTiles();   // NEW
             updateTiles();  // NEW
             drawUi();
@@ -419,14 +420,8 @@ void main()
             clearBuffer();
             //clearBuffer();
             //sprintf(DispCtrStr, "%u", (uint32_t)millis / 100);
-            
-            //LED2_TOGGLE;
         }
-        
-        
-        
-        
-        
+  
     }
 }
 
