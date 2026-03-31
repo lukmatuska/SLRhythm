@@ -95,8 +95,8 @@ void checkHit(struct tile col[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
         if(col[i].len > 0){
             int32_t error = millis - col[i].start;
-
-            if (error > -MISS_WINDOW && error < MISS_WINDOW && !(error > -HIT_WINDOW && error < HIT_WINDOW)){
+                //(error > -MISS_WINDOW && error < MISS_WINDOW && !(error > -HIT_WINDOW && error < HIT_WINDOW))
+            if ((-MISS_WINDOW < error < MISS_WINDOW) && !(-HIT_WINDOW < error < HIT_WINDOW)){
                 if(score > 2){
                     score-=2;
                 }
@@ -390,12 +390,12 @@ void main()
             handleSwitches();
         }
         if ( (uint32_t) millis%100 == 0){
-            drawRect(0, 0, 128, 10);
+            drawRect(0, 0, 127, 10);
             drawRect(0, 10, 2, 50);
-            drawRect(32, 10, 2, 50);
-            drawRect(64, 10, 2, 50);
-            drawRect(96, 10, 2, 50);
-            drawRect(126, 10, 2, 50);
+            drawRect(31, 10, 2, 50);
+            drawRect(63, 10, 2, 50);
+            drawRect(95, 10, 2, 50);
+            drawRect(125, 10, 2, 50);
             spawnTiles();   // NEW
             updateTiles();  // NEW
             drawUi();
