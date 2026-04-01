@@ -189,6 +189,30 @@ void drawText(uint8_t page, uint8_t column, const char* txt)
         displayBuffer[page][col++] = 0x00;
     }
 }
+void drawSmallText(uint8_t page, uint8_t column, const char* txt)
+{
+    uint8_t c, i, d, x;
+    uint8_t col = column;
+
+    if (page > 7 || column > 127) return;
+
+    for (c = 0; txt[c] != '\0'; c++)
+    {
+        if (col > 124) break; // prevent overflow (5 + 1 spacing)
+
+        x = txt[c] - 0x20; // ASCII offset
+
+        // write 5 columns of character
+        for (i = 0; i < 3; i++)
+        {
+            d = font3x5[x][i];
+            displayBuffer[page][col++] = d;
+        }
+
+        // spacing column
+        displayBuffer[page][col++] = 0x00;
+    }
+}
 
 void updateDisplay(void)
 {
