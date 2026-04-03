@@ -16,10 +16,12 @@ void checkHit(struct tile col[], uint8_t cnt){
             int32_t error = millis - col[i].start;
             if (error > -HIT_WINDOW && error < HIT_WINDOW){
                 score++;
+                passed_tiles++;
                 //col[i].len = 0; // mark as hit
             } else if (error > -MISS_WINDOW && error < MISS_WINDOW){
                 //add miss
                 misses++;
+                passed_tiles++;
                 col[i].len = 0; // mark as miss
                 ierror = error;
                 continue;
@@ -30,8 +32,8 @@ void checkHit(struct tile col[], uint8_t cnt){
 }
 
 void computeAcc(){
-        // passed_tiles * 100 / passed_tiles - misses
-    
+        // (passed_tiles-misses) * 100 / passed_tiles
+    accuracy = fx_div( fx_sub(FX(passed_tiles), FX(misses)), FX(passed_tiles)); 
 }
 
 

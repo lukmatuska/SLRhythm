@@ -1,5 +1,6 @@
 #ifndef GAME_LOGIC_H
 #define GAME_LOGIC_H
+#include "fx8.h"
 
 
 
@@ -13,7 +14,7 @@ struct tile{
 uint16_t score = 0;
 uint16_t misses = 0;
 int16_t ierror = 0;
-uint16_t accuracy = 0;
+fx_t accuracy = 0;
 
 #define CHART_SIZE (sizeof(chart)/sizeof(chart[0]))
 

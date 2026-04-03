@@ -174,11 +174,12 @@ void main()
             handleSwitches();
         }
         if ( (uint32_t) millis % FRAME_PERIOD == 0){ //render loop
+            updateDisplay();
+            clearBuffer();
+            computeAcc();
             spawnTiles();   // NEW
             updateTiles();  // NEW
             drawUi();
-            updateDisplay();
-            clearBuffer();
             //clearBuffer();
             //sprintf(DispCtrStr, "%u", (uint32_t)millis / 100);
         }
