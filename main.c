@@ -14,8 +14,6 @@
 #include "level.h"
 
 
-
-
 void setInterrupt(void);
 void setPinout(void);
 void clearLeds(void);
@@ -25,7 +23,7 @@ void setTimer2(void);
 
 void hadleSwitches(void);
 void drawUi(void);
-
+void drawBorders(void);
 
 
 char* utoa32(uint32_t value, char* buffer);
@@ -120,28 +118,34 @@ void drawButtons(){
     }
 }
 
-void drawBoard(){
-   // drawLine();
-    drawRect(0, 0, 128, 10);
-    drawRect(0, 10, 2, 50);
-    drawRect(32, 10, 2, 50);
-    drawRect(64, 10, 2, 50);
-    drawRect(96, 10, 2, 50);
-    drawRect(126, 10, 2, 50);
+void drawBorders(void){
+    //drawRect(0, 0, 127, 63);
+    drawLine(0, 6, 127, 6);
+    //drawLine
 }
 
 void drawUi(){
     
-    drawButtons();
+    drawButtons(); //self explanatory
     
+    //draw collumns of tiles
     drawColl(3, Col1, Col1cnt);
     drawColl(34, Col2, Col2cnt);
     drawColl(67, Col3, Col3cnt);
     drawColl(99, Col4, Col4cnt);
     
-    
+           
+    //draw score
     utoa32(score, DispCtrStr);
-    drawText(0,0, DispCtrStr);
+    drawSmallText(0,75, "SCORE:");
+    drawSmallText(0,100, DispCtrStr);
+    
+    //draw acc
+    utoa32(accuracy, DispCtrStr);
+    drawSmallText(0,0, "ACC:");
+    drawSmallText(0,15, DispCtrStr);
+    //draw borders
+    drawBorders();
 }
 
 

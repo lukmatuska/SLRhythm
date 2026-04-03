@@ -42,6 +42,7 @@
 // RC6  NC
 // RC7  MOSI-DSP    OUT     DISPLAY SPI
 
+
 // PORT D
 // RD0  A0-DSP      OUT     DISPLAY 
 // RD1-RD7 NC
@@ -72,6 +73,11 @@
 #define LED5_ON     (LATA |= (1<<4))
 #define LED5_OFF    (LATA &= ~(1<<4))
 #define LED5_TOGGLE (LATA ^= (1<<4))
+
+#define BL_ON     (LATC |= (1<<2))
+#define BL_OFF    (LATC &= ~(1<<2))
+#define BL_TOGGLE (LATC ^= (1<<2))
+
 
 // BUTTONS
 #define SW1         (PORTB & (1<<5))

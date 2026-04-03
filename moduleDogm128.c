@@ -8,6 +8,7 @@
 #include "moduleDogm128.h"
 #include "spi.h"
 #include "fontA.h"
+#include "mcu.h"
 
 // private functions
 void sendCommandToDisplay(unsigned char comm);
@@ -42,6 +43,8 @@ void initDisplay(void)
     sendCommandToDisplay(0xAC); // No indicator
     sendCommandToDisplay(0x00);
     sendCommandToDisplay(0xAF); // Display on
+    
+    BL_OFF;
     
     clearAllDisplay();
 }
@@ -193,22 +196,17 @@ void drawSmallText(uint8_t page, uint8_t column, const char* txt)
 {
     uint8_t c, i, d, x;
     uint8_t col = column;
-
-    if (page > 7 || column > 127) return;
-
+    if (page > 5 || column > 127) return;
     for (c = 0; txt[c] != '\0'; c++)
     {
-        if (col > 124) break; // prevent overflow (5 + 1 spacing)
-
+        if (col > 124) break; // prevent overflow (3 + 1 spacing)
         x = txt[c] - 0x20; // ASCII offset
-
         // write 5 columns of character
         for (i = 0; i < 3; i++)
         {
             d = font3x5[x][i];
             displayBuffer[page][col++] = d;
         }
-
         // spacing column
         displayBuffer[page][col++] = 0x00;
     }
