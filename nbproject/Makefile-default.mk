@@ -19,7 +19,7 @@ endif
 endif
 
 # Environment
-MKDIR=gnumkdir -p
+MKDIR=mkdir -p
 RM=rm -f 
 MV=mv 
 CP=cp 
@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c spi.c moduleDogm128.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c spi.c moduleDogm128.c gameLogic.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/spi.p1 ${OBJECTDIR}/moduleDogm128.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/spi.p1.d ${OBJECTDIR}/moduleDogm128.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/spi.p1 ${OBJECTDIR}/moduleDogm128.p1 ${OBJECTDIR}/gameLogic.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/spi.p1.d ${OBJECTDIR}/moduleDogm128.p1.d ${OBJECTDIR}/gameLogic.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/spi.p1 ${OBJECTDIR}/moduleDogm128.p1
+OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/spi.p1 ${OBJECTDIR}/moduleDogm128.p1 ${OBJECTDIR}/gameLogic.p1
 
 # Source Files
-SOURCEFILES=main.c spi.c moduleDogm128.c
+SOURCEFILES=main.c spi.c moduleDogm128.c gameLogic.c
 
 
 
@@ -112,6 +112,14 @@ ${OBJECTDIR}/moduleDogm128.p1: moduleDogm128.c  nbproject/Makefile-${CND_CONF}.m
 	@-${MV} ${OBJECTDIR}/moduleDogm128.d ${OBJECTDIR}/moduleDogm128.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/moduleDogm128.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/gameLogic.p1: gameLogic.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/gameLogic.p1.d 
+	@${RM} ${OBJECTDIR}/gameLogic.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -mdebugger=icd3   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/gameLogic.p1 gameLogic.c 
+	@-${MV} ${OBJECTDIR}/gameLogic.d ${OBJECTDIR}/gameLogic.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/gameLogic.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -136,6 +144,14 @@ ${OBJECTDIR}/moduleDogm128.p1: moduleDogm128.c  nbproject/Makefile-${CND_CONF}.m
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/moduleDogm128.p1 moduleDogm128.c 
 	@-${MV} ${OBJECTDIR}/moduleDogm128.d ${OBJECTDIR}/moduleDogm128.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/moduleDogm128.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/gameLogic.p1: gameLogic.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/gameLogic.p1.d 
+	@${RM} ${OBJECTDIR}/gameLogic.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-download -mno-default-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/gameLogic.p1 gameLogic.c 
+	@-${MV} ${OBJECTDIR}/gameLogic.d ${OBJECTDIR}/gameLogic.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/gameLogic.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

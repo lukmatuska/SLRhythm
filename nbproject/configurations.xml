@@ -9,6 +9,7 @@
       <itemPath>mcu.h</itemPath>
       <itemPath>fontA.h</itemPath>
       <itemPath>config.h</itemPath>
+      <itemPath>gameLogic.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -25,6 +26,7 @@
       <itemPath>main.c</itemPath>
       <itemPath>spi.c</itemPath>
       <itemPath>moduleDogm128.c</itemPath>
+      <itemPath>gameLogic.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -37,8 +39,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>ICD3PlatformTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.50</languageToolchainVersion>
-        <platform>3</platform>
+        <languageToolchainVersion>3.00</languageToolchainVersion>
+        <platform>2</platform>
       </toolsSet>
       <packs>
         <pack name="PIC18Fxxxx_DFP" vendor="Microchip" version="1.6.159"/>
@@ -151,6 +153,9 @@
         <property key="program-the-device-with-default-config-words" value="false"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
+      <ICD3PlatformTool>
+        <property key="firmware.download.all" value="false"/>
+      </ICD3PlatformTool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
         <property key="stack-guidance" value="false"/>

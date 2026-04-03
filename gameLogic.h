@@ -49,6 +49,9 @@ uint8_t Col4cnt = 0;
 #define HIT_WINDOW 300
 #define MISS_WINDOW 500
 
+#define FRAME_PERIOD 20
+#define HIT_SCAN_PERIOD 5
+
 
 void checkHit(struct tile col[], uint8_t cnt);
 void computeAcc();

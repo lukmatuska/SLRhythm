@@ -15,6 +15,7 @@
 
 
 
+
 void setInterrupt(void);
 void setPinout(void);
 void clearLeds(void);
@@ -164,10 +165,10 @@ void main()
     
     while(1) //main loop
     {
-        if ( (uint32_t) millis%2 == 0){ //every 2ms
+        if ( (uint32_t) millis % HIT_SCAN_PERIOD == 0){ //every 2ms
             handleSwitches();
         }
-        if ( (uint32_t) millis%100 == 0){ //every 100ms
+        if ( (uint32_t) millis % FRAME_PERIOD == 0){ //render loop
             spawnTiles();   // NEW
             updateTiles();  // NEW
             drawUi();
