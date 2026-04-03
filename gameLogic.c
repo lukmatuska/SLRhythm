@@ -6,32 +6,31 @@
 #include "mcu.h"
 #include "moduleDogm128.h"
 #include "gameLogic.h"
-#include "level.h"
-
-
+#include "level.h" 
+#include "fx8.h"
 
 
 void checkHit(struct tile col[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
         if(col[i].len > 0){
             int32_t error = millis - col[i].start;
-            if (error > -MISS_WINDOW && error < MISS_WINDOW && !(error > -HIT_WINDOW && error < HIT_WINDOW)){
+            if (error > -HIT_WINDOW && error < HIT_WINDOW){
+                score++;
+                //col[i].len = 0; // mark as hit
+            } else if (error > -MISS_WINDOW && error < MISS_WINDOW){
                 //add miss
                 misses++;
                 col[i].len = 0; // mark as miss
                 ierror = error;
                 continue;
-            }
+            } 
 
-            if (error > -HIT_WINDOW && error < HIT_WINDOW){
-                score++;
-                //col[i].len = 0; // mark as hit
-            }
         }
     }
 }
 
 void computeAcc(){
+        // passed_tiles * 100 / passed_tiles - misses
     
 }
 
@@ -94,6 +93,8 @@ void resetGame(void)
 
     // reset chart
     chartIndex = 0;
+    
+    passed_tiles = 0;
 
     // clear tile buffers
     Col1cnt = 0;

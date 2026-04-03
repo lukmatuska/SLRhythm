@@ -1,13 +1,6 @@
 #ifndef GAME_LOGIC_H
 #define GAME_LOGIC_H
 
-#include <xc.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include "config.h"
-#include "mcu.h"
-#include "moduleDogm128.h"
-
 
 
 struct tile{
@@ -25,6 +18,7 @@ uint16_t accuracy = 0;
 #define CHART_SIZE (sizeof(chart)/sizeof(chart[0]))
 
 uint16_t chartIndex = 0; //chart read index
+uint16_t passed_tiles = 0;
 
 #define MAX_ACTIVE 4
 

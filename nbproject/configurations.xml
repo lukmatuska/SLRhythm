@@ -10,6 +10,8 @@
       <itemPath>fontA.h</itemPath>
       <itemPath>config.h</itemPath>
       <itemPath>gameLogic.h</itemPath>
+      <itemPath>fx8.h</itemPath>
+      <itemPath>level.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

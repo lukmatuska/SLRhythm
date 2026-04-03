@@ -12,6 +12,7 @@
 #include "moduleDogm128.h"
 #include "gameLogic.h"
 #include "level.h"
+#include "fx8.h"
 
 
 void setInterrupt(void);
