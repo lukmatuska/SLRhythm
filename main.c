@@ -94,7 +94,7 @@ void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
 
         // draw only if visible
         if (y > 0 && (y - height) < 64){
-            drawRect(x, y - height, 26, height);
+            drawRoundRect(x, y - height, 26, height);
         }
     }
 }

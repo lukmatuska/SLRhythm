@@ -286,6 +286,42 @@ void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h)
     }
 }
 
+void drawRoundRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h){
+    if(h >= 7 && w >= 7) {
+        for (uint8_t i = 2; i < w; i++)
+    {
+        drawPixel(x + i, y, 1);
+        drawPixel(x + i, y + h - 1, 1);
+    }
+
+    // sides
+    for (uint8_t i = 2; i < h; i++)
+    {
+        drawPixel(x, y + i, 1);
+        drawPixel(x + w - 1, y + i, 1);
+    }
+    //corners
+    drawPixel(x+1, y+1, 1);
+    drawPixel(x+1, y+2, 1);
+    drawPixel(x+2, y+1, 1);
+
+    drawPixel(x+w-1, y+1, 1);
+    drawPixel(x+w-1, y+2, 1);
+    drawPixel(x+w-2, y+1, 1);
+
+    drawPixel(x+w-1, y+h-1, 1);
+    drawPixel(x+w-1, y+h-2, 1);
+    drawPixel(x+w-2, y+h-1, 1);
+
+    drawPixel(x+1, y+h-1, 1);
+    drawPixel(x+1, y+h-2, 1);
+    drawPixel(x+2, y+h-1, 1);
+    
+    } else {
+        drawRect(x, y, w, h);
+    }
+}
+
 void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t color)
 {
     
