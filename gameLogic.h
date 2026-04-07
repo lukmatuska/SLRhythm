@@ -34,15 +34,15 @@ uint8_t Col3cnt = 0;
 uint8_t Col4cnt = 0;
 
 //tile render logic
-#define PIXELS_PER_SECOND 10
+#define PIXELS_PER_SECOND 20
 #define SPEED_FP  (PIXELS_PER_SECOND << 8) / 1000
 #define MAX_ACTIVE 4
 #define SPAWN_AHEAD 6000  // ms before visible
 #define DESPAWN_TIME 500
 
 //hit logic
-#define HIT_WINDOW 300
-#define MISS_WINDOW 500
+#define HIT_WINDOW 500
+#define MISS_WINDOW 600
 
 #define FRAME_PERIOD 20
 #define HIT_SCAN_PERIOD 5

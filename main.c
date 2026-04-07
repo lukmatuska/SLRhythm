@@ -28,6 +28,7 @@ void drawBorders(void);
 
 
 char* utoa32(uint32_t value, char* buffer);
+void fx_to_str(fx_t x, char *buf);
 
 char DispCtrStr[5] = "asdd";
 int cnt = 0;
@@ -120,7 +121,7 @@ void drawButtons(){
 }
 
 void drawBorders(void){
-    //drawRect(0, 0, 127, 63);
+    drawRect(0, 1, 128, 63);
     drawLine(0, 6, 127, 6);
     //drawLine
 }
@@ -135,14 +136,22 @@ void drawUi(){
     drawColl(67, Col3, Col3cnt);
     drawColl(99, Col4, Col4cnt);
     
+    utoa32(misses, DispCtrStr);
+    drawSmallText(2,100, DispCtrStr);
+
+    utoa32(passed_tiles, DispCtrStr);
+    drawSmallText(1,100, DispCtrStr);
+    
            
-    //draw score
+    //draw score    
     utoa32(score, DispCtrStr);
     drawSmallText(0,75, "SCORE:");
     drawSmallText(0,100, DispCtrStr);
     
+    
     //draw acc
-    utoa32(accuracy, DispCtrStr);
+    fx_to_str(accuracy, DispCtrStr);
+    //utoa32(accuracy, DispCtrStr);
     drawSmallText(0,0, "ACC:");
     drawSmallText(0,15, DispCtrStr);
     //draw borders
@@ -159,7 +168,9 @@ void main()
     setTimer2();
     
     initDisplay();
+    BL_ON;
     setInterrupt();
+
     
     
     clearBuffer();
@@ -294,3 +305,51 @@ char* utoa32(uint32_t value, char* buffer)
     return buffer;
 }
 
+void fx_to_str(fx_t x, char *buf)
+{
+    char *p = buf;
+
+    // handle sign
+    if (x < 0) {
+        *p++ = '-';
+        x = -x;
+    }
+
+    // integer part
+    int16_t ip = FX_TO_INT(x);
+
+    // fractional part (0?255)
+    uint8_t frac = FX_FRAC(x);
+
+    // --- convert integer (reverse) ---
+    char tmp[6]; // enough for int16
+    int i = 0;
+
+    if (ip == 0) {
+        tmp[i++] = '0';
+    } else {
+        while (ip > 0) {
+            tmp[i++] = '0' + (ip % 10);
+            ip /= 10;
+        }
+    }
+
+    // write integer in correct order
+    while (i--) {
+        *p++ = tmp[i];
+    }
+
+    // decimal point
+    *p++ = '.';
+
+    // --- fractional: scale to 2 decimal digits ---
+    // frac is /256 ? convert to /100
+    // (frac * 100) / 256
+    uint16_t f = ((uint16_t)frac * 100) >> 8;
+
+    // two digits
+    *p++ = '0' + (f / 10);
+    *p++ = '0' + (f % 10);
+
+    *p = '\0';
+}

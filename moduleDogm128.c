@@ -44,7 +44,7 @@ void initDisplay(void)
     sendCommandToDisplay(0x00);
     sendCommandToDisplay(0xAF); // Display on
     
-    BL_OFF;
+    //BL_OFF;
     
     clearAllDisplay();
 }

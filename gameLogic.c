@@ -13,7 +13,7 @@
 void checkHit(struct tile col[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
         if(col[i].len > 0){
-            int32_t error = millis - col[i].start;
+            int32_t error = millis - col[i].start;  //
             if (error > -HIT_WINDOW && error < HIT_WINDOW){
                 score++;
                 passed_tiles++;
@@ -26,14 +26,23 @@ void checkHit(struct tile col[], uint8_t cnt){
                 ierror = error;
                 continue;
             } 
-
         }
     }
 }
 
-void computeAcc(){
-        // (passed_tiles-misses) * 100 / passed_tiles
-    accuracy = fx_div( fx_sub(FX(passed_tiles), FX(misses)), FX(passed_tiles)); 
+void computeAcc() {
+    if (passed_tiles == 0) {
+        accuracy = 0;
+        return;
+    }
+
+    fx_t good = FX(passed_tiles - misses);
+    fx_t total = FX(passed_tiles);
+
+    accuracy = fx_mul(
+        fx_div(good, total),
+        FX(100)
+    );
 }
 
 
@@ -97,6 +106,7 @@ void resetGame(void)
     chartIndex = 0;
     
     passed_tiles = 0;
+    misses = 0;
 
     // clear tile buffers
     Col1cnt = 0;
