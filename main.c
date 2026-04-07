@@ -44,26 +44,38 @@ void handleSwitches(void){
     if (!PORTBbits.RB5){
         switches |= (1 << 0);
         checkHit(Col1, Col1cnt);
+        LED1_ON;
     } else {
         switches &= ~(1 << 0);
+        checkRelease(Col1, Col1cnt);
+        LED1_OFF;
     }
     if (!PORTBbits.RB4){
         switches |= (1 << 1);
         checkHit(Col2, Col1cnt);
+        LED2_ON;
     } else {
         switches &= ~(1 << 1);
+        checkRelease(Col2, Col2cnt);
+        LED2_OFF;
     }
     if (!PORTBbits.RB3){
         switches |= (1 << 2);
         checkHit(Col3, Col1cnt);
+        LED4_ON;
     } else {
         switches &= ~(1 << 2);
+        checkRelease(Col3, Col3cnt);
+        LED4_OFF;
     }
     if (!PORTBbits.RB0){
         switches |= (1 << 3);
         checkHit(Col4, Col1cnt);
+        LED5_ON;
     } else {
         switches &= ~(1 << 3);
+        checkRelease(Col4, Col4cnt);
+        LED5_OFF;
     }
     
 }
@@ -74,17 +86,15 @@ void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
 
         int32_t dt = millis - activeCol[i].start;
 
-        // position in pixels
+        // position in pixels (now represents bottom of tile)
         int16_t y = (dt * PIXELS_PER_SECOND) / 1000 + 60;
-        //int16_t y = (dt * SPEED_FP) >> 8;
-        
 
         // scale tile length to pixels
         uint8_t height = (activeCol[i].len * PIXELS_PER_SECOND) / 1000;
 
         // draw only if visible
-        if (y < 64 && (y + height) > 0){
-            drawRect(x, y, 26, height);
+        if (y > 0 && (y - height) < 64){
+            drawRect(x, y - height, 26, height);
         }
     }
 }
@@ -183,6 +193,7 @@ void main()
     {
         if ( (uint32_t) millis % HIT_SCAN_PERIOD == 0){ //every 2ms
             handleSwitches();
+            LED3_OFF;
         }
         if ( (uint32_t) millis % FRAME_PERIOD == 0){ //render loop
             updateDisplay();
@@ -191,6 +202,7 @@ void main()
             spawnTiles();   // NEW
             updateTiles();  // NEW
             drawUi();
+            //LED3_TOGGLE;
             //clearBuffer();
             //sprintf(DispCtrStr, "%u", (uint32_t)millis / 100);
         }

@@ -2,7 +2,10 @@
 #define GAME_LOGIC_H
 #include "fx8.h"
 
+//main settings
 
+#define AR 5
+#define OD 7
 
 struct tile{
     uint32_t start; //start time of the individual tile
@@ -39,21 +42,38 @@ uint8_t Col3cnt = 0;
 uint8_t Col4cnt = 0;
 
 //tile render logic
-#define PIXELS_PER_SECOND 20
+//#define PIXELS_PER_SECOND 20
 #define SPEED_FP  (PIXELS_PER_SECOND << 8) / 1000
 #define MAX_ACTIVE 4
-#define SPAWN_AHEAD 6000  // ms before visible
+//#define SPAWN_AHEAD 6000  // ms before visible
 #define DESPAWN_TIME 500
 
+#define AR_MIN_MS 3000
+#define AR_MAX_MS 8000
+
+#define SPAWN_AHEAD (AR_MAX_MS - ((AR) * (AR_MAX_MS - AR_MIN_MS) / 10))
+
+#define HIT_WINDOW_MIN 80
+#define HIT_WINDOW_MAX 300
+
+#define MISS_WINDOW_MIN 150
+#define MISS_WINDOW_MAX 500
+
+#define HIT_WINDOW  (HIT_WINDOW_MAX - ((OD) * (HIT_WINDOW_MAX - HIT_WINDOW_MIN) / 10))
+#define MISS_WINDOW (MISS_WINDOW_MAX - ((OD) * (MISS_WINDOW_MAX - MISS_WINDOW_MIN) / 10))
+
+#define BASE_SPEED 20
+#define PIXELS_PER_SECOND (BASE_SPEED + (AR * 2))
 //hit logic
-#define HIT_WINDOW 300
-#define MISS_WINDOW 500
+//#define HIT_WINDOW 300
+//#define MISS_WINDOW 500
 
 #define FRAME_PERIOD 20
 #define HIT_SCAN_PERIOD 5
 
 
 void checkHit(struct tile col[], uint8_t cnt);
+void checkRelease(struct tile col[], uint8_t cnt);
 void computeAcc();
 void addTile(struct tile col[], uint8_t *cnt, struct tile t);
 void spawnTiles(void);

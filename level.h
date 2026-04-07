@@ -12,7 +12,8 @@
 
 const struct tile chart[] = { //store tiles in flash, one big array
     {1000, 500, 0},
-    {1500, 200, 1},
+    {1000, 200, 1},
+
     {2000, 300, 2},
     {2500, 400, 3},
     {3000, 700, 0},

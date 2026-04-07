@@ -13,21 +13,21 @@
 void checkHit(struct tile col[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
         int32_t error = millis - col[i].start;  //
-        if(col[i].len > 0 && col[i].tile_state == 1){
-            if (error > 0 && error <(col[i].len - HIT_WINDOW)){ 
+        /*if(col[i].len > 0 && col[i].tile_state == 1 && error > 0){
+            if ((error <(col[i].len - HIT_WINDOW)) || (error >(col[i].len + HIT_WINDOW))){ 
                 //if you lift before end
                 col[i].tile_state = 2;
                 misses++;
                 passed_tiles++;
             }
-            if (((col[i].len -HIT_WINDOW) < error) && 
-                    (error < (col[i].len + HIT_WINDOW))){ 
+            if ((error < (col[i].len +HIT_WINDOW)) && 
+                (error > (col[i].len - HIT_WINDOW))){ 
                 //if you hit the end
                 score++;
                 passed_tiles++;
                 col[i].tile_state = 3;
             }
-        }   
+        }   */
         if(col[i].len > 0 && col[i].tile_state == 0){ 
             
             if (error > -HIT_WINDOW && error < HIT_WINDOW){ //if you hit start
@@ -42,8 +42,40 @@ void checkHit(struct tile col[], uint8_t cnt){
                 passed_tiles++;
                 col[i].len = 0; // mark as miss
                 ierror = error;
-                col[i].tile_state = 1;
             } 
+        }
+    }
+}
+
+void checkRelease(struct tile col[], uint8_t cnt){
+    for(uint8_t i=0; i<cnt; i++){
+        int32_t error = millis - col[i].start;
+        if(col[i].len > 0 && col[i].tile_state == 1){ 
+            
+            if (error > (col[i].len - HIT_WINDOW) && error < (col[i].len + HIT_WINDOW)){ //if you hit start
+                score++;
+                passed_tiles++;
+                col[i].tile_state = 3;
+                //col[i].len = 0; // mark as hit
+            } else if (error > (col[i].len -MISS_WINDOW) && error < (col[i].len + MISS_WINDOW)){  
+                //if you miss start
+                //add miss
+                misses++;
+                passed_tiles++;
+                col[i].len = 0; // mark as miss
+                ierror = error;
+                col[i].tile_state = 2;
+            } 
+        }
+        if(col[i].len > 0 && col[i].tile_state == 0){  //miss as like you miss 
+                                                       //the tile by not clickin
+            if (error > HIT_WINDOW){ 
+                misses++;
+                passed_tiles++;
+                col[i].len = 0; // mark as miss
+                ierror = error;
+                col[i].tile_state = 2;
+            }
         }
     }
 }
