@@ -8,6 +8,11 @@ struct tile{
     uint32_t start; //start time of the individual tile
     uint16_t len; //lenth of the tile in time
     uint8_t col;
+    uint8_t tile_state;
+            //0 = to be hit
+            //1 = start was hit, leading
+            //2 = released prematurely
+            //3 = completed tile
 };
 
 
@@ -41,8 +46,8 @@ uint8_t Col4cnt = 0;
 #define DESPAWN_TIME 500
 
 //hit logic
-#define HIT_WINDOW 500
-#define MISS_WINDOW 600
+#define HIT_WINDOW 300
+#define MISS_WINDOW 500
 
 #define FRAME_PERIOD 20
 #define HIT_SCAN_PERIOD 5

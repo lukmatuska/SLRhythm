@@ -12,19 +12,37 @@
 
 void checkHit(struct tile col[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
-        if(col[i].len > 0){
-            int32_t error = millis - col[i].start;  //
-            if (error > -HIT_WINDOW && error < HIT_WINDOW){
+        int32_t error = millis - col[i].start;  //
+        if(col[i].len > 0 && col[i].tile_state == 1){
+            if (error > 0 && error <(col[i].len - HIT_WINDOW)){ 
+                //if you lift before end
+                col[i].tile_state = 2;
+                misses++;
+                passed_tiles++;
+            }
+            if (((col[i].len -HIT_WINDOW) < error) && 
+                    (error < (col[i].len + HIT_WINDOW))){ 
+                //if you hit the end
                 score++;
                 passed_tiles++;
+                col[i].tile_state = 3;
+            }
+        }   
+        if(col[i].len > 0 && col[i].tile_state == 0){ 
+            
+            if (error > -HIT_WINDOW && error < HIT_WINDOW){ //if you hit start
+                score++;
+                passed_tiles++;
+                col[i].tile_state = 1;
                 //col[i].len = 0; // mark as hit
-            } else if (error > -MISS_WINDOW && error < MISS_WINDOW){
+            } else if (error > -MISS_WINDOW && error < MISS_WINDOW){  
+                //if you miss start
                 //add miss
                 misses++;
                 passed_tiles++;
                 col[i].len = 0; // mark as miss
                 ierror = error;
-                continue;
+                col[i].tile_state = 1;
             } 
         }
     }
@@ -35,12 +53,10 @@ void computeAcc() {
         accuracy = 0;
         return;
     }
-
     fx_t good = FX(passed_tiles - misses);
     fx_t total = FX(passed_tiles);
-
     accuracy = fx_mul(
-        fx_div(good, total),
+        fx_from_ratio(good, total),
         FX(100)
     );
 }
