@@ -212,6 +212,49 @@ void drawSmallText(uint8_t page, uint8_t column, const char* txt)
     }
 }
 
+void drawSmallTextXY(uint8_t x, uint8_t y, const char* txt)
+{
+    if (x > 127 || y > 63) return;
+
+    uint8_t c, i, bit, page;
+    uint8_t col = x;
+
+    page = y / 8;
+    bit  = y % 8;
+
+    for (c = 0; txt[c] != '\0'; c++)
+    {
+        if (col > 124) break; // prevent overflow (3 + 1 spacing)
+
+        uint8_t ch = txt[c] - 0x20;
+
+        for (i = 0; i < 3; i++)
+        {
+            uint8_t d = font3x5[ch][i];
+
+            // draw 5 vertical pixels from font column
+            for (uint8_t row = 0; row < 5; row++)
+            {
+                if (d & (1 << row))
+                {
+                    uint8_t py = y + row;
+                    if (py > 63) continue;
+
+                    uint8_t p = py / 8;
+                    uint8_t b = py % 8;
+
+                    displayBuffer[p][col] |= (1 << b);
+                }
+            }
+
+            col++;
+        }
+
+        // spacing column
+        col++;
+    }
+}
+
 void updateDisplay(void)
 {
     for (uint8_t pg = 0; pg < 8; pg++)
@@ -270,8 +313,16 @@ void drawLine(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
 
 void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h)
 {
+    // reject invalid sizes
+    if (w == 0 || h == 0) return;
+
+    // clip to screen bounds (128x64)
+    if (x >= 128 || y >= 64) return;
+
+    if (x + w > 128) w = 128 - x;
+    if (y + h > 64)  h = 64 - y;
+
     // top & bottom
-    if(x <=128 && y <= 128 && x)
     for (uint8_t i = 0; i < w; i++)
     {
         drawPixel(x + i, y, 1);

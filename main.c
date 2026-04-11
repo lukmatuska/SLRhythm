@@ -94,7 +94,7 @@ void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
 
         // draw only if visible
         if (y > 0 && (y - height) < 64){
-            drawRoundRect(x, y - height, 26, height);
+            drawRect(x, y - height, 26, height);
         }
     }
 }
@@ -131,8 +131,9 @@ void drawButtons(){
 }
 
 void drawBorders(void){
-    drawRect(0, 1, 128, 63);
+    
     drawLine(0, 6, 127, 6);
+    drawRect(0, 0, 128, 64);
     //drawLine
 }
 
@@ -146,24 +147,30 @@ void drawUi(){
     drawColl(67, Col3, Col3cnt);
     drawColl(99, Col4, Col4cnt);
     
-    utoa32(misses, DispCtrStr);
-    drawSmallText(2,100, DispCtrStr);
+    //utoa32(misses, DispCtrStr);
+    //drawSmallText(2,100, DispCtrStr);
 
-    utoa32(passed_tiles, DispCtrStr);
-    drawSmallText(1,100, DispCtrStr);
+    //utoa32(passed_tiles, DispCtrStr);
+    //drawSmallText(1,100, DispCtrStr);
     
            
+    
     //draw score    
     utoa32(score, DispCtrStr);
-    drawSmallText(0,75, "SCORE:");
-    drawSmallText(0,100, DispCtrStr);
+    //drawSmallText(0,75, "SCORE:");
+    drawSmallTextXY(75, 1, "SCORE");
+    //drawSmallText(0,100, DispCtrStr);
+    drawSmallTextXY(100, 1, DispCtrStr);
+    
     
     
     //draw acc
     fx_to_str(accuracy, DispCtrStr);
     //utoa32(accuracy, DispCtrStr);
-    drawSmallText(0,0, "ACC:");
-    drawSmallText(0,15, DispCtrStr);
+    //drawSmallText(0,0, "ACC:");
+    drawSmallTextXY(1, 1, "ACC");
+    //drawSmallText(0,15, DispCtrStr);
+    drawSmallTextXY(15, 1, DispCtrStr);
     //draw borders
     drawBorders();
 }

@@ -32,6 +32,7 @@ void checkHit(struct tile col[], uint8_t cnt){
             
             if (error > -HIT_WINDOW && error < HIT_WINDOW){ //if you hit start
                 score++;
+                //score += (int) col[i].len %100;
                 passed_tiles++;
                 col[i].tile_state = 1;
                 //col[i].len = 0; // mark as hit
@@ -54,6 +55,7 @@ void checkRelease(struct tile col[], uint8_t cnt){
             
             if (error > (col[i].len - HIT_WINDOW) && error < (col[i].len + HIT_WINDOW)){ //if you hit start
                 score++;
+                //score += (int) col[i].len %100;
                 passed_tiles++;
                 col[i].tile_state = 3;
                 //col[i].len = 0; // mark as hit

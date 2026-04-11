@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mini Mania Editor</title>
+<style>
+    body { font-family: sans-serif; background:#111; color:#eee; }
+    canvas { border:1px solid #555; background:#000; }
+    button { margin:5px; }
+</style>
+</head>
+<body>
+
+<h3>Mini Mania Editor</h3>
+
+<canvas id="c" width="400" height="600"></canvas><br>
+
+<button onclick="exportChart()">Export</button>
+<button onclick="clearChart()">Clear</button>
+
+<pre id="output"></pre>
+
+<script>
+const canvas = document.getElementById("c");
+const ctx = canvas.getContext("2d");
+
+const COLS = 4;
+const COL_WIDTH = canvas.width / COLS;
+
+const PIXELS_PER_SECOND = 100;
+const MS_PER_PIXEL = 1000 / PIXELS_PER_SECOND;
+
+let tiles = [];
+let dragging = null;
+
+let scrollY = 0; // 🔥 camera offset
+
+// convert y → time (includes scroll)
+function yToTime(y){
+    return (y + scrollY) * MS_PER_PIXEL;
+}
+
+// convert time → y (includes scroll)
+function timeToY(t){
+    return (t / MS_PER_PIXEL) - scrollY;
+}
+
+// 🖱️ SCROLL
+canvas.addEventListener("wheel", e => {
+    e.preventDefault();
+    scrollY += e.deltaY;
+
+    if (scrollY < 0) scrollY = 0; // no negative scroll
+});
+
+// 🖱️ CLICK START
+canvas.addEventListener("mousedown", e => {
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const col = Math.floor(x / COL_WIDTH);
+    const start = yToTime(y);
+
+    dragging = { col, start, y0: y };
+});
+
+// 🖱️ RELEASE
+canvas.addEventListener("mouseup", e => {
+    if (!dragging) return;
+
+    const rect = canvas.getBoundingClientRect();
+    const y = e.clientY - rect.top;
+
+    let len = Math.abs(y - dragging.y0) * MS_PER_PIXEL;
+
+    if (len < 100) len = 0;
+
+    tiles.push({
+        start: Math.floor(dragging.start),
+        len: Math.floor(len),
+        col: dragging.col
+    });
+
+    dragging = null;
+});
+
+// ❌ DELETE (right click)
+canvas.addEventListener("contextmenu", e => {
+    e.preventDefault();
+
+    const rect = canvas.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const col = Math.floor(x / COL_WIDTH);
+    const t = yToTime(y);
+
+    tiles = tiles.filter(tile => {
+        return !(tile.col === col && Math.abs(tile.start - t) < 200);
+    });
+});
+
+// 🎨 DRAW
+function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    // columns
+    for(let i=0;i<COLS;i++){
+        ctx.strokeStyle="#333";
+        ctx.strokeRect(i*COL_WIDTH,0,COL_WIDTH,canvas.height);
+    }
+
+    // grid (every 1 second)
+    ctx.strokeStyle = "#222";
+    for(let t = 0; t < 60000; t += 1000){
+        let y = timeToY(t);
+        if (y >= 0 && y <= canvas.height){
+            ctx.beginPath();
+            ctx.moveTo(0, y);
+            ctx.lineTo(canvas.width, y);
+            ctx.stroke();
+        }
+    }
+
+    // tiles
+    for(let t of tiles){
+        const x = t.col * COL_WIDTH;
+        const y = timeToY(t.start);
+        const h = t.len > 0 ? (t.len / MS_PER_PIXEL) : 10;
+
+        if (y > canvas.height || y + h < 0) continue;
+
+        ctx.fillStyle = t.len > 0 ? "#0f0" : "#0ff";
+        ctx.fillRect(x+2, y, COL_WIDTH-4, h);
+    }
+
+    requestAnimationFrame(draw);
+}
+
+draw();
+
+// 📤 EXPORT
+function exportChart(){
+    let out = "const struct tile chart[] = {\n";
+
+    tiles.sort((a,b)=>a.start-b.start);
+
+    for(let t of tiles){
+        out += `    {${t.start}, ${t.len}, ${t.col}},\n`;
+    }
+
+    out += "};";
+
+    document.getElementById("output").textContent = out;
+}
+
+function clearChart(){
+    tiles = [];
+}
+</script>
+
+</body>
+</html>
