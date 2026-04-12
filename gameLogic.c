@@ -9,6 +9,8 @@
 #include "level.h" 
 #include "fx8.h"
 
+const struct tile* current_chart = NULL;
+uint16_t current_chart_size = 0;
 
 void checkHit(struct tile col[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
@@ -105,10 +107,12 @@ void addTile(struct tile col[], uint8_t *cnt, struct tile t){
 
 
 void spawnTiles(void){
-    while (chartIndex < CHART_SIZE &&
-           chart[chartIndex].start <= millis + SPAWN_AHEAD){
+    if (current_chart == NULL) return; 
 
-        struct tile t = chart[chartIndex];
+    while (chartIndex < current_chart_size &&
+           current_chart[chartIndex].start <= millis + SPAWN_AHEAD){
+
+        struct tile t = current_chart[chartIndex];
 
         switch(t.col){
             case 0: addTile(Col1, &Col1cnt, t); break;

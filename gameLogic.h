@@ -24,7 +24,9 @@ uint16_t misses = 0;
 int16_t ierror = 0;
 fx_t accuracy = 0;
 
-#define CHART_SIZE (sizeof(chart)/sizeof(chart[0]))
+//#define CHART_SIZE (sizeof(chart)/sizeof(chart[0]))
+extern const struct tile* current_chart;
+extern uint16_t current_chart_size;;
 
 uint16_t chartIndex = 0; //chart read index
 uint16_t passed_tiles = 0;

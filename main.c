@@ -20,7 +20,7 @@ void setPinout(void);
 void clearLeds(void);
 void setTimer0(void);
 void setTimer2(void);
-
+void handleMenuSwitches(void);
 
 void hadleSwitches(void);
 void drawUi(void);
@@ -33,14 +33,73 @@ void fx_to_str(fx_t x, char *buf);
 char DispCtrStr[5] = "asdd";
 int cnt = 0;
 
+typedef enum {
+    STATE_MENU,
+    STATE_PLAYING
+} GameState;
 
+GameState gameState = STATE_MENU;
+uint8_t menuSelection = 0; 
+uint32_t resetHoldStart = 0;
+uint8_t isResetHolding = 0;
 
+void handleMenuSwitches(void) {
+    
+    static uint8_t prev_up = 1;
+    static uint8_t prev_down = 1;
+    static uint8_t prev_sel = 1;
+
+    uint8_t up_btn = PORTBbits.RB5;   // Tlačítko úplně vlevo (nahoru)
+    uint8_t down_btn = PORTBbits.RB4; // Tlačítko vedle (dolů)
+    uint8_t sel_btn = PORTBbits.RB0;  // Tlačítko úplně vpravo (potvrdit)
+
+    // Posun nahoru
+    if (!up_btn && prev_up) {
+        if (menuSelection > 0) menuSelection--;
+    }
+    // Posun dolů
+    if (!down_btn && prev_down) {
+        if (menuSelection < 2) menuSelection++;
+    }
+ 
+    if (!sel_btn && prev_sel) {
+        if (menuSelection == 0) {
+            current_chart = chart1;
+            current_chart_size = CHART1_SIZE;
+        } else if (menuSelection == 1) {
+            current_chart = chart2;
+            current_chart_size = CHART2_SIZE;
+        } else {
+            current_chart = chart3;
+            current_chart_size = CHART3_SIZE;
+        }
+        
+        gameState = STATE_PLAYING;
+        resetGame(); // Inicializuje časovače a skóre pro novou hru
+    }
+
+    prev_up = up_btn;
+    prev_down = down_btn;
+    prev_sel = sel_btn;
+}
 void handleSwitches(void){
+    
 
     if (!PORTBbits.RB2){
-        resetGame();
+        if (!isResetHolding) {
+            isResetHolding = 1;
+            resetHoldStart = millis; 
+        } else if ((millis - resetHoldStart) >= 3000) {
+            
+            gameState = STATE_MENU;
+            isResetHolding = 0;
+            return; 
+        }
+    } else {
+        isResetHolding = 0; 
     }   
     
+
     if (!PORTBbits.RB5){
         switches |= (1 << 0);
         checkHit(Col1, Col1cnt);
@@ -50,6 +109,7 @@ void handleSwitches(void){
         checkRelease(Col1, Col1cnt);
         LED1_OFF;
     }
+
     if (!PORTBbits.RB4){
         switches |= (1 << 1);
         checkHit(Col2, Col1cnt);
@@ -77,7 +137,6 @@ void handleSwitches(void){
         checkRelease(Col4, Col4cnt);
         LED5_OFF;
     }
-    
 }
 
 void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
@@ -176,7 +235,7 @@ void drawUi(){
 }
 
 
-
+/*
 void main() 
 {
     setPinout();
@@ -216,7 +275,48 @@ void main()
   
     }
 }
+*/
 
+void main() 
+{
+    setPinout();
+    clearLeds();
+    setTimer0();
+    setTimer2();
+    
+    initDisplay();
+    BL_ON;
+    setInterrupt();
+    
+    clearBuffer();
+    
+    while(1) // main loop
+    {
+        if ( (uint32_t) millis % HIT_SCAN_PERIOD == 0){ 
+            if (gameState == STATE_PLAYING) {
+                handleSwitches();
+                LED3_OFF;
+            } else {
+                handleMenuSwitches(); 
+            }
+        }
+        
+        if ( (uint32_t) millis % FRAME_PERIOD == 0){ 
+            clearBuffer(); 
+            
+            if (gameState == STATE_PLAYING) {
+                computeAcc();
+                spawnTiles();   
+                updateTiles();  
+                drawUi();
+            } else {
+                drawMenu(); 
+            }
+            
+            updateDisplay(); 
+        }
+    }
+}
 //*****************************************************************************
 // interrupt
 void __interrupt() isr(void)
@@ -371,4 +471,12 @@ void fx_to_str(fx_t x, char *buf)
     *p++ = '0' + (f % 10);
 
     *p = '\0';
+}
+
+void drawMenu(void) {
+    drawText(1, 10, "VYBER MAPU:");
+    drawText(3, 20, "Level 1");
+    drawText(4, 20, "Level 2");
+    drawText(5, 20, "Level 3");
+    drawText(3 + menuSelection, 10, ">");
 }
