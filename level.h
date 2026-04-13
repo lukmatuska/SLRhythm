@@ -55,5 +55,3 @@ static const struct tile chart3[] = {
 #define CHART3_SIZE (sizeof(chart3)/sizeof(chart3[0]))
 
 #endif
-
-#endif

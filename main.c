@@ -24,6 +24,7 @@ void handleMenuSwitches(void);
 
 void hadleSwitches(void);
 void drawUi(void);
+void drawMenu(void); 
 void drawBorders(void);
 
 
