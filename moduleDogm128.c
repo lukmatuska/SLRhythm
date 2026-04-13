@@ -39,7 +39,7 @@ void initDisplay(void)
     sendCommandToDisplay(0x00);
     sendCommandToDisplay(0x27); // Voltage regulator set
     sendCommandToDisplay(0x81); // Contrast set
-    sendCommandToDisplay(0x16);
+    sendCommandToDisplay(0x14);
     sendCommandToDisplay(0xAC); // No indicator
     sendCommandToDisplay(0x00);
     sendCommandToDisplay(0xAF); // Display on
@@ -395,6 +395,47 @@ void clearBuffer(void)
         for (uint8_t col = 0; col < 128; col++)
         {
             displayBuffer[pg][col] = 0x00;
+        }
+    }
+}
+
+//*****************************************************************************
+// Draw a bitmap from program memory at pixel position (x, y).
+//
+// Bitmap format (row-major, big-endian):
+//   - rows are stored top to bottom
+//   - each row occupies ceil(width/8) bytes
+//   - within each byte the MSB is the leftmost pixel
+//   - rows are padded to a full byte boundary (unused LSBs are 0)
+//
+// Example: a 16x16 image ? 2 bytes/row × 16 rows = 32 bytes
+//          a 12x8  image ? 2 bytes/row × 8  rows = 16 bytes (4 bits wasted/row)
+//*****************************************************************************
+void drawBitmap(uint8_t x, uint8_t y, const Bitmap *bmp)
+{
+    if (!bmp || !bmp->data)         return;
+    if (x >= 128 || y >= 64)        return;
+
+    uint8_t bytesPerRow = (bmp->width + 7) / 8; // ceil(width / 8)
+
+    for (uint8_t row = 0; row < bmp->height; row++)
+    {
+        uint8_t py = y + row;
+        if (py >= 64) break;                     // clip bottom
+
+        for (uint8_t byteIdx = 0; byteIdx < bytesPerRow; byteIdx++)
+        {
+            uint8_t octet = bmp->data[row * bytesPerRow + byteIdx];
+
+            for (uint8_t bit = 0; bit < 8; bit++)
+            {
+                // MSB of the byte ? leftmost pixel in this group of 8
+                uint8_t px = x + byteIdx * 8 + bit;
+                if (px >= 128) break;            // clip right
+
+                uint8_t on = (octet & (0x80 >> bit)) ? 1 : 0;
+                drawPixel(px, py, on);
+            }
         }
     }
 }

@@ -37,6 +37,40 @@ void drawRoundRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h);
 void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t color);
 void clearBuffer(void);
 
+// Bitmap descriptor ? width and height travel with the data
+typedef struct {
+    uint8_t  width;
+    uint8_t  height;
+    const uint8_t *data; // row-major, MSB = leftmost pixel, rows padded to full bytes
+} Bitmap;
+
+void drawBitmap(uint8_t x, uint8_t y, const Bitmap *bmp);
+
+// ---------------------------------------------------------------------------
+// Example: 16x16 smiley face stored in program memory
+// Each row is ceil(16/8) = 2 bytes; 16 rows ? 32 bytes total
+// ---------------------------------------------------------------------------
+static const uint8_t smileyData[] = {
+    0x03, 0xC0,  // row  0  ......##.##......
+    0x0F, 0xF0,  // row  1  ....########.....
+    0x1E, 0x78,  // row  2  ...####..####....
+    0x3B, 0xDC,  // row  3  ..###.####.###...  ? eye pixels
+    0x7F, 0xFE,  // row  4  .##############..
+    0x7F, 0xFE,  // row  5  .##############..
+    0x63, 0xC6,  // row  6  .##....##....##..  ? eyes
+    0x7F, 0xFE,  // row  7  .##############..
+    0x7F, 0xFE,  // row  8  .##############..
+    0x5E, 0x7A,  // row  9  .#.####..####.#.  ? mouth corners
+    0x4F, 0xF2,  // row 10  .#..########..#.  ? mouth
+    0x47, 0xE2,  // row 11  .#...######...#.
+    0x3F, 0xFC,  // row 12  ..############..
+    0x1F, 0xF8,  // row 13  ...##########...
+    0x0F, 0xF0,  // row 14  ....########....
+    0x03, 0xC0,  // row 15  ......####......
+};
+
+static const Bitmap bmpSmiley = { 16, 16, smileyData };
+
 
 #endif	/* MODULEDOGM128_H */
 

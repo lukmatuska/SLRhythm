@@ -90,7 +90,7 @@ void handleSwitches(void){
         if (!isResetHolding) {
             isResetHolding = 1;
             resetHoldStart = millis; 
-        } else if ((millis - resetHoldStart) >= 3000) {
+        } else if ((millis - resetHoldStart) >= 1000) {
             
             gameState = STATE_MENU;
             isResetHolding = 0;
@@ -480,4 +480,5 @@ void drawMenu(void) {
     drawText(4, 20, "Level 2");
     drawText(5, 20, "Level 3");
     drawText(3 + menuSelection, 10, ">");
+    drawBitmap(70, 24, &bmpSmiley);
 }
