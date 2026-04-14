@@ -267,7 +267,15 @@ void main()
     setInterrupt();
     
     clearBuffer();
-    
+    uint8_t a_inc = 64;
+    while(a_inc>0){
+        if ( (uint32_t) millis % (FRAME_PERIOD/4) == 0){ 
+        drawBitmap(32, a_inc, &bmpBigVut); 
+        updateDisplay(); 
+        a_inc-=2;
+    }
+    }
+    millis = 0;  
     while(1) // main loop
     {
         if ( (uint32_t) millis % HIT_SCAN_PERIOD == 0){ 
