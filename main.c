@@ -228,9 +228,9 @@ void drawUi(){
     //draw score    
     utoa32(score, DispCtrStr);
     //drawSmallText(0,75, "SCORE:");
-    drawSmallTextXY(45, 1, "SCR");
+    drawSmallTextXY(45, 1, "SC");
     //drawSmallText(0,100, DispCtrStr);
-    drawSmallTextXY(65, 1, DispCtrStr);
+    drawSmallTextXY(55, 1, DispCtrStr);
     
     
     
@@ -267,10 +267,12 @@ void main()
     setInterrupt();
     
     clearBuffer();
-    uint8_t a_inc = 64;
+    uint8_t a_inc = 128;
     while(a_inc>0){
-        if ( (uint32_t) millis % (FRAME_PERIOD/4) == 0){ 
-        drawBitmap(32, a_inc, &bmpBigVut); 
+        if ( (uint32_t) millis % (FRAME_PERIOD) == 0){
+            if(a_inc>=64){
+                drawBitmap(32, a_inc-64, &bmpBigVut);   
+            }
         updateDisplay(); 
         a_inc-=2;
     }
