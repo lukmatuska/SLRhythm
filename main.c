@@ -473,13 +473,13 @@ void drawMenu(void) {
     drawText(3 + menuSelection, 10, ">");
     switch(menuSelection) {
         case 0: 
-            drawBitmap(74, 10, &bmpKrtkus); 
+            drawBitmap(70, 24, &bmpNote); 
             break;
         case 1: 
-            drawBitmap(70, 24, &bmpVut); 
+            drawBitmap(70, 20, &bmpVut); 
             break;
         case 2: 
-            drawBitmap(70, 24, &bmpNote); 
+            drawBitmap(74, 10, &bmpKrtkus); 
             break;
         default:
             drawBitmap(70, 24, &bmpSmiley);
