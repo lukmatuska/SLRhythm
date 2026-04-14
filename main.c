@@ -156,7 +156,8 @@ void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
 
         // draw only if visible
         if (y > 0 && (y - height) < 64){
-            drawRect(x, y - height, 26, height);
+            //drawRect(x, y - height, 26, height);
+            fillRect(x, y - height, 26, height, 1);
         }
     }
 }
@@ -211,9 +212,10 @@ void drawUi(){
     
     //draw collumns of tiles
     drawColl(3, Col1, Col1cnt);
-    drawColl(34, Col2, Col2cnt);
+    drawColl(35, Col2, Col2cnt);
     drawColl(67, Col3, Col3cnt);
     drawColl(99, Col4, Col4cnt);
+    fillRect(0, 0, 127, 7, 0);
     
     //utoa32(misses, DispCtrStr);
     //drawSmallText(2,100, DispCtrStr);
@@ -250,51 +252,8 @@ void drawUi(){
     drawSmallTextXY(120, 1, DispCtrStr);
     //draw borders
     drawBorders();
-    drawSectionBorders();
+    //drawSectionBorders();
 }
-
-
-/*
-void main() 
-{
-    setPinout();
-    clearLeds();
-    setTimer0();
-    setTimer2();
-    
-    initDisplay();
-    BL_ON;
-    setInterrupt();
-
-    
-    
-    clearBuffer();
-    Col4[0] = *tileInit(1000, 500);
-    Col4[1] = *tileInit(2000, 100);
-    Col4[2] = *tileInit(3000, 700);
-    
-    
-    while(1) //main loop
-    {
-        if ( (uint32_t) millis % HIT_SCAN_PERIOD == 0){ //every 2ms
-            handleSwitches();
-            LED3_OFF;
-        }
-        if ( (uint32_t) millis % FRAME_PERIOD == 0){ //render loop
-            updateDisplay();
-            clearBuffer();
-            computeAcc();
-            spawnTiles();   // NEW
-            updateTiles();  // NEW
-            drawUi();
-            //LED3_TOGGLE;
-            //clearBuffer();
-            //sprintf(DispCtrStr, "%u", (uint32_t)millis / 100);
-        }
-  
-    }
-}
-*/
 
 void main() 
 {
@@ -504,7 +463,7 @@ void drawMenu(void) {
     drawText(3 + menuSelection, 10, ">");
     switch(menuSelection) {
         case 0: 
-            drawBitmap(70, 24, &bmpSmiley); 
+            drawBitmap(74, 10, &bmpKrtkus); 
             break;
         case 1: 
             drawBitmap(70, 24, &bmpVut); 

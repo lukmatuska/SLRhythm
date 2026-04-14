@@ -5,6 +5,12 @@
         <group>
             <file>file:/C:/NEN/lcrm/SLRhythm/main.c</file>
             <file>file:/C:/NEN/lcrm/SLRhythm/moduleDogm128.c</file>
+            <file>file:/C:/NEN/lcrm/SLRhythm/mcu.h</file>
+            <file>file:/C:/NEN/lcrm/SLRhythm/fx8.h</file>
+            <file>file:/C:/NEN/lcrm/SLRhythm/gameLogic.c</file>
+            <file>file:/C:/NEN/lcrm/SLRhythm/config.h</file>
+            <file>file:/C:/NEN/lcrm/SLRhythm/level.h</file>
+            <file>file:/C:/NEN/lcrm/SLRhythm/gameLogic.h</file>
             <file>file:/C:/NEN/lcrm/SLRhythm/moduleDogm128.h</file>
         </group>
     </open-files>
