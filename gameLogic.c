@@ -11,6 +11,7 @@
 
 const struct tile* current_chart = NULL;
 uint16_t current_chart_size = 0;
+uint16_t high_scores[3] = {0, 0, 0};
 
 void checkHit(struct tile col[], uint8_t cnt){
     for(uint8_t i=0; i<cnt; i++){
@@ -201,4 +202,20 @@ struct tile* tileInit(uint32_t start, uint16_t len){
     outputTile->start = start;
     
     return outputTile;    
+}
+
+void updateHighScore(uint8_t mapIndex) {
+    if (mapIndex < 3) { 
+        if (score > high_scores[mapIndex]) {
+            high_scores[mapIndex] = score;
+        }
+    }
+}
+
+void checkEndOfMap(uint8_t currentMapIdx) {
+    if (chartIndex >= current_chart_size && 
+        Col1cnt == 0 && Col2cnt == 0 && Col3cnt == 0 && Col4cnt == 0) {
+        
+        updateHighScore(currentMapIdx);
+    }
 }

@@ -23,6 +23,7 @@ uint16_t score = 0;
 uint16_t misses = 0;
 int16_t ierror = 0;
 fx_t accuracy = 0;
+extern uint16_t high_scores[3];
 
 //#define CHART_SIZE (sizeof(chart)/sizeof(chart[0]))
 extern const struct tile* current_chart;

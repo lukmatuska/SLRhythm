@@ -21,12 +21,13 @@ void clearLeds(void);
 void setTimer0(void);
 void setTimer2(void);
 void handleMenuSwitches(void);
-
+void updateHighScore(uint8_t mapIndex);
+void checkEndOfMap(uint8_t currentMapIdx);
 void hadleSwitches(void);
 void drawUi(void);
 void drawMenu(void); 
 void drawBorders(void);
-
+void drawSectionBorders(void);
 
 char* utoa32(uint32_t value, char* buffer);
 void fx_to_str(fx_t x, char *buf);
@@ -50,15 +51,15 @@ void handleMenuSwitches(void) {
     static uint8_t prev_down = 1;
     static uint8_t prev_sel = 1;
 
-    uint8_t up_btn = PORTBbits.RB5;   // Tlačítko úplně vlevo (nahoru)
-    uint8_t down_btn = PORTBbits.RB4; // Tlačítko vedle (dolů)
-    uint8_t sel_btn = PORTBbits.RB0;  // Tlačítko úplně vpravo (potvrdit)
+    uint8_t up_btn = PORTBbits.RB5;   // Button 1 (up)
+    uint8_t down_btn = PORTBbits.RB4; // Button 2 (down)
+    uint8_t sel_btn = PORTBbits.RB0;  // Button 5 (potvrdit)
 
-    // Posun nahoru
+    // Move up
     if (!up_btn && prev_up) {
         if (menuSelection > 0) menuSelection--;
     }
-    // Posun dolů
+    // Move down
     if (!down_btn && prev_down) {
         if (menuSelection < 2) menuSelection++;
     }
@@ -88,6 +89,7 @@ void handleSwitches(void){
 
     if (!PORTBbits.RB2){
         if (!isResetHolding) {
+            resetGame(); //to return reset function for clicking button
             isResetHolding = 1;
             resetHoldStart = millis; 
         } else if ((millis - resetHoldStart) >= 1000) {
@@ -197,6 +199,12 @@ void drawBorders(void){
     //drawLine
 }
 
+void drawSectionBorders(void){
+drawLine(32, 7, 32, 57); 
+drawLine(64, 7, 64, 57); 
+drawLine(96, 7, 96, 57);
+}
+
 void drawUi(){
     
     drawButtons(); //self explanatory
@@ -218,9 +226,9 @@ void drawUi(){
     //draw score    
     utoa32(score, DispCtrStr);
     //drawSmallText(0,75, "SCORE:");
-    drawSmallTextXY(75, 1, "SCORE");
+    drawSmallTextXY(45, 1, "SCR");
     //drawSmallText(0,100, DispCtrStr);
-    drawSmallTextXY(100, 1, DispCtrStr);
+    drawSmallTextXY(65, 1, DispCtrStr);
     
     
     
@@ -228,11 +236,21 @@ void drawUi(){
     fx_to_str(accuracy, DispCtrStr);
     //utoa32(accuracy, DispCtrStr);
     //drawSmallText(0,0, "ACC:");
-    drawSmallTextXY(1, 1, "ACC");
+    drawSmallTextXY(5, 1, "ACC");
     //drawSmallText(0,15, DispCtrStr);
-    drawSmallTextXY(15, 1, DispCtrStr);
+    drawSmallTextXY(20, 1, DispCtrStr);
+    
+    utoa32(high_scores[menuSelection], DispCtrStr);
+    drawSmallTextXY(75, 1, "BEST"); //HIGHEST SCORE
+    //drawSmallText(0,100, DispCtrStr);
+    drawSmallTextXY(95, 1, DispCtrStr);
+    utoa32((menuSelection+1), DispCtrStr);
+    drawSmallTextXY(105, 1, "MAP");
+    //drawSmallText(0,100, DispCtrStr);
+    drawSmallTextXY(120, 1, DispCtrStr);
     //draw borders
     drawBorders();
+    drawSectionBorders();
 }
 
 
@@ -310,6 +328,9 @@ void main()
                 spawnTiles();   
                 updateTiles();  
                 drawUi();
+
+                checkEndOfMap(menuSelection);
+
             } else {
                 drawMenu(); 
             }
@@ -475,10 +496,24 @@ void fx_to_str(fx_t x, char *buf)
 }
 
 void drawMenu(void) {
+    drawRect(0, 0, 128, 64);
     drawText(1, 10, "VYBER MAPU:");
     drawText(3, 20, "Level 1");
     drawText(4, 20, "Level 2");
     drawText(5, 20, "Level 3");
     drawText(3 + menuSelection, 10, ">");
-    drawBitmap(70, 24, &bmpSmiley);
-}
+    switch(menuSelection) {
+        case 0: 
+            drawBitmap(70, 24, &bmpSmiley); 
+            break;
+        case 1: 
+            drawBitmap(70, 24, &bmpVut); 
+            break;
+        case 2: 
+            drawBitmap(70, 24, &bmpNote); 
+            break;
+        default:
+            drawBitmap(70, 24, &bmpSmiley);
+            break;
+            }
+    }
