@@ -56,7 +56,7 @@
 
 ### Timing & Interrupts
 The game utilizes **Timer 2** to generate a millisecond heartbeat (`millis`). 
-* **Hit Scanning:** Performed every 5ms.
+* **Hit Scanning:** Performed every 2ms.
 * **Frame Rate:** The display updates every 20ms (~50 FPS) to ensure smooth tile movement.
 
 ### Accuracy Calculation
