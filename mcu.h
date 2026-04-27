@@ -87,7 +87,7 @@
 #define SW5         (PORTB & (1<<0))
 
 uint8_t switches = 0;
-volatile uint32_t millis = 0;
+volatile uint32_t millis = 0; //32-bit milliseconds counter
 
 
 

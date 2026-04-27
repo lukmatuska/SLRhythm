@@ -3,6 +3,8 @@
 // project: module for graphic display DOGM128
 // author:  LL
 // created: 03/2024
+// modified: 03/2026
+// edit: added framebuffer support
 //*****************************************************************************
 #include <xc.h>
 #include "moduleDogm128.h"
@@ -169,6 +171,7 @@ void setPageAddress(unsigned char page)
 }
 
 void drawText(uint8_t page, uint8_t column, const char* txt)
+// draw text in the 5x7 font
 {
     uint8_t c, i, d, x;
     uint8_t col = column;
@@ -193,6 +196,7 @@ void drawText(uint8_t page, uint8_t column, const char* txt)
     }
 }
 void drawSmallText(uint8_t page, uint8_t column, const char* txt)
+// draw text in the 3x5 font
 {
     uint8_t c, i, d, x;
     uint8_t col = column;
@@ -213,6 +217,7 @@ void drawSmallText(uint8_t page, uint8_t column, const char* txt)
 }
 
 void drawSmallTextXY(uint8_t x, uint8_t y, const char* txt)
+// draw text in the 3x5 font, no paging
 {
     if (x > 127 || y > 63) return;
 
@@ -256,6 +261,7 @@ void drawSmallTextXY(uint8_t x, uint8_t y, const char* txt)
 }
 
 void updateDisplay(void)
+// write framebuffer to display
 {
     for (uint8_t pg = 0; pg < 8; pg++)
     {
@@ -283,6 +289,7 @@ void drawPixel(uint8_t x, uint8_t y, uint8_t color)
 }
 
 void drawLine(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
+//draw a line
 {
     int dx = abs(x1 - x0);
     int sx = x0 < x1 ? 1 : -1;
@@ -311,8 +318,9 @@ void drawLine(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1)
     }
 }
 
-void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h)
-{
+void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h){
+    // draw a rectangle
+
     // reject invalid sizes
     if (w == 0 || h == 0) return;
 
@@ -338,6 +346,7 @@ void drawRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h)
 }
 
 void drawRoundRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h){
+    // draw a rectangle with rounded corners
     if(h >= 7 && w >= 7) {
         for (uint8_t i = 2; i < w; i++)
     {
@@ -374,6 +383,7 @@ void drawRoundRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h){
 }
 
 void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t color)
+// draw and fill rectangle
 {
     
     if(h>=2 && w>=2 ){
@@ -385,10 +395,11 @@ void fillRect(uint8_t x, uint8_t y, uint8_t w, uint8_t h, uint8_t color)
             }
         }
     }
-    //drawRect(x, y, w, h);
+
 }
 
 void clearBuffer(void)
+//clear the framebuffer
 {
     for (uint8_t pg = 0; pg < 8; pg++)
     {
@@ -408,10 +419,12 @@ void clearBuffer(void)
 //   - within each byte the MSB is the leftmost pixel
 //   - rows are padded to a full byte boundary (unused LSBs are 0)
 //
-// Example: a 16x16 image ? 2 bytes/row × 16 rows = 32 bytes
-//          a 12x8  image ? 2 bytes/row × 8  rows = 16 bytes (4 bits wasted/row)
+// Example: a 16x16 image ? 2 bytes/row ï¿½ 16 rows = 32 bytes
+//          a 12x8  image ? 2 bytes/row ï¿½ 8  rows = 16 bytes (4 bits wasted/row)
 //*****************************************************************************
 void drawBitmap(uint8_t x, uint8_t y, const Bitmap *bmp)
+// render a bitmap from flash
+
 {
     if (!bmp || !bmp->data)         return;
     if (x >= 128 || y >= 64)        return;

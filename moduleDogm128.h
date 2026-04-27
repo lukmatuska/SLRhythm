@@ -2,8 +2,11 @@
 // header:  moduleDogm128.h
 // author:  LL
 // created: 03/2024
+// modified: 03/2026
 // project: header for graphic display DOGM128
+// edit: added framebuffer support
 //*****************************************************************************
+
 
 #ifndef MODULEDOGM128_H
 #define	MODULEDOGM128_H

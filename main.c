@@ -14,7 +14,7 @@
 #include "level.h"
 #include "fx8.h"
 
-
+//list main functions
 void setInterrupt(void);
 void setPinout(void);
 void clearLeds(void);
@@ -32,9 +32,11 @@ void drawSectionBorders(void);
 char* utoa32(uint32_t value, char* buffer);
 void fx_to_str(fx_t x, char *buf);
 
-char DispCtrStr[5] = "asdd";
+//make output string variable
+char DispCtrStr[5] = "";
 int cnt = 0;
 
+//define game state enum
 typedef enum {
     STATE_MENU,
     STATE_PLAYING
@@ -46,6 +48,7 @@ uint32_t resetHoldStart = 0;
 uint8_t isResetHolding = 0;
 
 void handleMenuSwitches(void) {
+    //react to switchesin menu state, switch the state
     
     static uint8_t prev_up = 1;
     static uint8_t prev_down = 1;
@@ -85,9 +88,11 @@ void handleMenuSwitches(void) {
     prev_sel = sel_btn;
 }
 void handleSwitches(void){
+    //react to switches during gameplay
+    //polling, this function runs every 2ms
     
 
-    if (!PORTBbits.RB2){
+    if (!PORTBbits.RB2){ //reset button
         if (!isResetHolding) {
             resetGame(); //to return reset function for clicking button
             isResetHolding = 1;
@@ -102,10 +107,10 @@ void handleSwitches(void){
         isResetHolding = 0; 
     }   
     
-
+    //tile buttons
     if (!PORTBbits.RB5){
         switches |= (1 << 0);
-        checkHit(Col1, Col1cnt);
+        checkHit(Col1, Col1cnt); //evaluate hit on this collumn
         LED1_ON;
     } else {
         switches &= ~(1 << 0);
@@ -143,6 +148,7 @@ void handleSwitches(void){
 }
 
 void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
+    //render a collumn with active tile buffer
     for(uint8_t i=0; i<cnt; i++){
         if(activeCol[i].len == 0) continue;
 
@@ -163,6 +169,7 @@ void drawColl(uint8_t x, struct tile activeCol[], uint8_t cnt){
 }
 
 void drawButtons(){
+    //render buttons on display
     if (switches & 0x01){
         drawRect(2, 60, 28, 4);
         fillRect(3, 61, 26, 2, 1);
@@ -194,6 +201,7 @@ void drawButtons(){
 }
 
 void drawBorders(void){
+    //render ingame borders
     
     drawLine(0, 6, 127, 6);
     drawRect(0, 0, 128, 64);
@@ -201,12 +209,14 @@ void drawBorders(void){
 }
 
 void drawSectionBorders(void){
+    //draw more ingame borders
 drawLine(32, 7, 32, 57); 
 drawLine(64, 7, 64, 57); 
 drawLine(96, 7, 96, 57);
 }
 
 void drawUi(){
+    //main function to draw stuff during gameplay
     
     drawButtons(); //self explanatory
     
@@ -217,45 +227,29 @@ void drawUi(){
     drawColl(99, Col4, Col4cnt);
     fillRect(0, 0, 127, 7, 0);
     
-    //utoa32(misses, DispCtrStr);
-    //drawSmallText(2,100, DispCtrStr);
-
-    //utoa32(passed_tiles, DispCtrStr);
-    //drawSmallText(1,100, DispCtrStr);
-    
-           
-    
     //draw score    
     utoa32(score, DispCtrStr);
-    //drawSmallText(0,75, "SCORE:");
     drawSmallTextXY(45, 1, "SC");
-    //drawSmallText(0,100, DispCtrStr);
     drawSmallTextXY(55, 1, DispCtrStr);
-    
     
     
     //draw acc
     fx_to_str(accuracy, DispCtrStr);
-    //utoa32(accuracy, DispCtrStr);
-    //drawSmallText(0,0, "ACC:");
     drawSmallTextXY(5, 1, "ACC");
-    //drawSmallText(0,15, DispCtrStr);
     drawSmallTextXY(20, 1, DispCtrStr);
     
     utoa32(high_scores[menuSelection], DispCtrStr);
     drawSmallTextXY(75, 1, "BEST"); //HIGHEST SCORE
-    //drawSmallText(0,100, DispCtrStr);
     drawSmallTextXY(95, 1, DispCtrStr);
     utoa32((menuSelection+1), DispCtrStr);
     drawSmallTextXY(105, 1, "MAP");
-    //drawSmallText(0,100, DispCtrStr);
     drawSmallTextXY(120, 1, DispCtrStr);
     //draw borders
     drawBorders();
-    //drawSectionBorders();
 }
 
 void main() 
+//main function
 {
     setPinout();
     clearLeds();
@@ -384,6 +378,7 @@ void setTimer2(void)                        //millis timer, do not touch
 }
 
 char* utoa32(uint32_t value, char* buffer)
+//simple converter from unsigned to String
 {
     char temp[10]; // max 10 digits for uint32_t
     int i = 0;
@@ -416,6 +411,7 @@ char* utoa32(uint32_t value, char* buffer)
 }
 
 void fx_to_str(fx_t x, char *buf)
+//convert fixed point to string
 {
     char *p = buf;
 

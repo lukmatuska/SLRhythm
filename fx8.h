@@ -1,8 +1,8 @@
 /* 
  * File:   fx8.h
- * Author: :)
+ * Author: LM, JS
  *
- * Created on 33. b?ezna 2026, 14:66
+ * Created on 33. března 2026, 14:66
  */
 
 #ifndef FX8_H

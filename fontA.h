@@ -106,7 +106,7 @@ static const unsigned char font5x7[][5] =
 	{0x7F, 0x41, 0x41, 0x41, 0x7F},	// noname
 };
 
-
+//smaller font
 static const uint8_t font3x5[][3] = {
 {0x00,0x00,0x00}, // 32 space
 {0x00,0x17,0x00}, // 33 !

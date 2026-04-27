@@ -1,5 +1,15 @@
+/* 
+ * File:   level.h
+ * Author: LM, JS
+ *
+ * Created on 22. března 2026
+ */
+
+
 #ifndef LEVEL_H
 #define LEVEL_H
+
+//this header is intended to store the levels
 
 #include <xc.h>
 #include <stdio.h>
@@ -8,23 +18,6 @@
 #include "mcu.h"
 #include "moduleDogm128.h"
 #include "gameLogic.h" 
-
-
-/*const struct tile chart[] = { //store tiles in flash, one big array
-    {1000, 500, 0},
-    {1000, 200, 1},
-
-    {2000, 300, 2},
-    {2500, 400, 3},
-    {3000, 700, 0},
-    {3200, 500, 3},
-    {3400, 200, 1},
-    {4000, 300, 2},
-    {4500, 400, 3},
-    {4800, 1500, 0},
-};
-*/
-
 
 // Mapa 1: 
 static const struct tile chart1[] = { 

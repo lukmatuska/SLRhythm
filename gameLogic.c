@@ -14,23 +14,10 @@ uint16_t current_chart_size = 0;
 uint16_t high_scores[3] = {0, 0, 0};
 
 void checkHit(struct tile col[], uint8_t cnt){
+// logic to check hit on a single tile using current time
+
     for(uint8_t i=0; i<cnt; i++){
         int32_t error = millis - col[i].start;  //
-        /*if(col[i].len > 0 && col[i].tile_state == 1 && error > 0){
-            if ((error <(col[i].len - HIT_WINDOW)) || (error >(col[i].len + HIT_WINDOW))){ 
-                //if you lift before end
-                col[i].tile_state = 2;
-                misses++;
-                passed_tiles++;
-            }
-            if ((error < (col[i].len +HIT_WINDOW)) && 
-                (error > (col[i].len - HIT_WINDOW))){ 
-                //if you hit the end
-                score++;
-                passed_tiles++;
-                col[i].tile_state = 3;
-            }
-        }   */
         if(col[i].len > 0 && col[i].tile_state == 0){ 
             
             if (error > -HIT_WINDOW && error < HIT_WINDOW){ //if you hit start
@@ -58,7 +45,6 @@ void checkRelease(struct tile col[], uint8_t cnt){
             
             if (error > (col[i].len - HIT_WINDOW) && error < (col[i].len + HIT_WINDOW)){ //if you hit start
                 score++;
-                //score += (int) col[i].len %100;
                 passed_tiles++;
                 col[i].tile_state = 3;
                 //col[i].len = 0; // mark as hit
@@ -72,8 +58,7 @@ void checkRelease(struct tile col[], uint8_t cnt){
                 col[i].tile_state = 2;
             } 
         }
-        if(col[i].len > 0 && col[i].tile_state == 0){  //miss as like you miss 
-                                                       //the tile by not clickin
+        if(col[i].len > 0 && col[i].tile_state == 0){  //miss timing-wise 
             if (error > HIT_WINDOW){ 
                 misses++;
                 passed_tiles++;
@@ -86,20 +71,21 @@ void checkRelease(struct tile col[], uint8_t cnt){
 }
 
 void computeAcc() {
+    //compute accuracy
     if (passed_tiles == 0) {
         accuracy = 0;
         return;
     }
     fx_t good = FX(passed_tiles - misses);
     fx_t total = FX(passed_tiles);
-    accuracy = fx_mul(
-        fx_from_ratio(good, total),
-        FX(100)
-    );
+
+    //averaging
+    accuracy = fx_mul(fx_from_ratio(good, total),FX(100));
 }
 
 
 void addTile(struct tile col[], uint8_t *cnt, struct tile t){
+    //add tile to col array
     if (*cnt >= MAX_ACTIVE) return;
 
     col[*cnt] = t;
@@ -108,6 +94,7 @@ void addTile(struct tile col[], uint8_t *cnt, struct tile t){
 
 
 void spawnTiles(void){
+    //check and add tiles to real-time buffer if there is space
     if (current_chart == NULL) return; 
 
     while (chartIndex < current_chart_size &&
@@ -128,6 +115,7 @@ void spawnTiles(void){
 
 
 void updateColumn(struct tile col[], uint8_t *cnt){
+    //shift collumn array
     for(uint8_t i = 0; i < *cnt; i++){
         if (millis > col[i].start + col[i].len + DESPAWN_TIME){
 
@@ -143,6 +131,7 @@ void updateColumn(struct tile col[], uint8_t *cnt){
 }
 
 void updateTiles(void){
+    // update all collumns
     updateColumn(Col1, &Col1cnt);
     updateColumn(Col2, &Col2cnt);
     updateColumn(Col3, &Col3cnt);
@@ -150,6 +139,7 @@ void updateTiles(void){
 }
 
 void resetGame(void)
+// Reset all variables for the game engine
 {
     // stop interrupts (avoid race conditions)
     INTCONbits.GIE = 0;
@@ -194,6 +184,7 @@ void resetGame(void)
 }
 
 struct tile* tileInit(uint32_t start, uint16_t len){
+    // initialize the tile, allocate space for it in RAM
     struct tile* outputTile = malloc(sizeof(struct tile));
     
     if (outputTile == NULL) return NULL; // good practice
